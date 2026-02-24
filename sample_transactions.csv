@@ -1,0 +1,1001 @@
+transaction_date,retailer_code,retailer_name,sku,product_name,quantity,amount
+2025-06-01,RT011,Minimart Ceria,SKU-023,Molto Pewangi 900ml,41,883173
+2025-06-01,RT012,Toko Subur Makmur,SKU-023,Molto Pewangi 900ml,7,160945
+2025-06-01,RT007,Toko Maju Bersama,SKU-009,Chitato Original 68g,143,1693197
+2025-06-02,RT004,Toko Berkah Abadi,SKU-013,Ultra Milk Coklat 250ml,20,106311
+2025-06-02,RT003,Minimart Jaya,SKU-006,Mie Sedaap Goreng,146,489286
+2025-06-02,RT011,Minimart Ceria,SKU-008,GoodDay Cappuccino 250ml,89,548651
+2025-06-02,RT011,Minimart Ceria,SKU-016,Sabun Lifebuoy 100g,44,210199
+2025-06-02,RT017,Toko Laris Manis,SKU-023,Molto Pewangi 900ml,128,2768298
+2025-06-03,RT009,Toko Harapan Baru,SKU-008,GoodDay Cappuccino 250ml,42,255933
+2025-06-03,RT014,Toko Mandiri Jaya,SKU-011,Beng Beng Wafer,97,279551
+2025-06-03,RT018,Swalayan Nusantara,SKU-011,Beng Beng Wafer,140,407004
+2025-06-03,RT010,Warung Sinar Pagi,SKU-018,Sarimi Ayam Bawang,41,118366
+2025-06-03,RT005,Sumber Rezeki,SKU-018,Sarimi Ayam Bawang,109,319080
+2025-06-03,RT004,Toko Berkah Abadi,SKU-007,Pocari Sweat 500ml,121,1009596
+2025-06-04,RT014,Toko Mandiri Jaya,SKU-001,Indomie Goreng,138,464541
+2025-06-04,RT006,Warung Bahagia,SKU-014,Kecap Bango 135ml,79,717897
+2025-06-05,RT016,Warung Harmoni,SKU-023,Molto Pewangi 900ml,82,1824147
+2025-06-05,RT003,Minimart Jaya,SKU-015,Royco Ayam Sachet,146,298005
+2025-06-05,RT004,Toko Berkah Abadi,SKU-021,Frisian Flag Susu Kental 370g,70,976038
+2025-06-05,RT011,Minimart Ceria,SKU-021,Frisian Flag Susu Kental 370g,125,1712506
+2025-06-05,RT003,Minimart Jaya,SKU-005,Kapal Api Kopi Sachet,41,98076
+2025-06-05,RT013,Warung Purnama,SKU-009,Chitato Original 68g,109,1309737
+2025-06-05,RT008,Agen Sentosa,SKU-005,Kapal Api Kopi Sachet,49,123739
+2025-06-05,RT007,Toko Maju Bersama,SKU-007,Pocari Sweat 500ml,140,1117184
+2025-06-05,RT015,Agen Mulia,SKU-014,Kecap Bango 135ml,95,856411
+2025-06-06,RT007,Toko Maju Bersama,SKU-015,Royco Ayam Sachet,140,273040
+2025-06-06,RT007,Toko Maju Bersama,SKU-009,Chitato Original 68g,89,1046848
+2025-06-06,RT006,Warung Bahagia,SKU-021,Frisian Flag Susu Kental 370g,100,1464035
+2025-06-07,RT004,Toko Berkah Abadi,SKU-017,Rinso Cair 750ml,5,85896
+2025-06-07,RT014,Toko Mandiri Jaya,SKU-015,Royco Ayam Sachet,85,173217
+2025-06-08,RT007,Toko Maju Bersama,SKU-018,Sarimi Ayam Bawang,30,85955
+2025-06-08,RT017,Toko Laris Manis,SKU-011,Beng Beng Wafer,82,257243
+2025-06-08,RT014,Toko Mandiri Jaya,SKU-003,Teh Botol Sosro 450ml,9,45393
+2025-06-09,RT001,Toko Makmur,SKU-013,Ultra Milk Coklat 250ml,100,536451
+2025-06-09,RT007,Toko Maju Bersama,SKU-021,Frisian Flag Susu Kental 370g,108,1501873
+2025-06-10,RT005,Sumber Rezeki,SKU-020,Le Minerale 600ml,130,503765
+2025-06-10,RT014,Toko Mandiri Jaya,SKU-017,Rinso Cair 750ml,102,1878900
+2025-06-11,RT007,Toko Maju Bersama,SKU-008,GoodDay Cappuccino 250ml,62,355782
+2025-06-14,RT001,Toko Makmur,SKU-003,Teh Botol Sosro 450ml,60,291980
+2025-06-14,RT014,Toko Mandiri Jaya,SKU-015,Royco Ayam Sachet,37,77557
+2025-06-14,RT011,Minimart Ceria,SKU-014,Kecap Bango 135ml,148,1395210
+2025-06-14,RT018,Swalayan Nusantara,SKU-008,GoodDay Cappuccino 250ml,120,747693
+2025-06-14,RT006,Warung Bahagia,SKU-009,Chitato Original 68g,68,853578
+2025-06-14,RT018,Swalayan Nusantara,SKU-019,Tango Wafer Coklat 130g,83,854631
+2025-06-14,RT011,Minimart Ceria,SKU-018,Sarimi Ayam Bawang,51,155780
+2025-06-14,RT010,Warung Sinar Pagi,SKU-020,Le Minerale 600ml,77,316592
+2025-06-14,RT007,Toko Maju Bersama,SKU-010,Silverqueen Cashew 65g,127,1847788
+2025-06-14,RT002,Warung Sejahtera,SKU-003,Teh Botol Sosro 450ml,126,633051
+2025-06-15,RT016,Warung Harmoni,SKU-019,Tango Wafer Coklat 130g,15,154879
+2025-06-16,RT017,Toko Laris Manis,SKU-019,Tango Wafer Coklat 130g,107,1023946
+2025-06-16,RT007,Toko Maju Bersama,SKU-015,Royco Ayam Sachet,130,251349
+2025-06-16,RT011,Minimart Ceria,SKU-010,Silverqueen Cashew 65g,117,1734188
+2025-06-17,RT004,Toko Berkah Abadi,SKU-021,Frisian Flag Susu Kental 370g,98,1353087
+2025-06-17,RT005,Sumber Rezeki,SKU-003,Teh Botol Sosro 450ml,76,395174
+2025-06-17,RT002,Warung Sejahtera,SKU-021,Frisian Flag Susu Kental 370g,68,932742
+2025-06-17,RT002,Warung Sejahtera,SKU-001,Indomie Goreng,105,380390
+2025-06-17,RT013,Warung Purnama,SKU-010,Silverqueen Cashew 65g,57,876682
+2025-06-17,RT001,Toko Makmur,SKU-014,Kecap Bango 135ml,127,1193253
+2025-06-17,RT006,Warung Bahagia,SKU-016,Sabun Lifebuoy 100g,100,498184
+2025-06-18,RT007,Toko Maju Bersama,SKU-015,Royco Ayam Sachet,68,139232
+2025-06-19,RT014,Toko Mandiri Jaya,SKU-001,Indomie Goreng,31,107452
+2025-06-20,RT012,Toko Subur Makmur,SKU-004,Aqua 600ml,40,152726
+2025-06-20,RT007,Toko Maju Bersama,SKU-003,Teh Botol Sosro 450ml,84,418393
+2025-06-20,RT012,Toko Subur Makmur,SKU-008,GoodDay Cappuccino 250ml,141,866193
+2025-06-20,RT013,Warung Purnama,SKU-005,Kapal Api Kopi Sachet,29,70161
+2025-06-21,RT007,Toko Maju Bersama,SKU-019,Tango Wafer Coklat 130g,68,685366
+2025-06-21,RT009,Toko Harapan Baru,SKU-016,Sabun Lifebuoy 100g,117,560456
+2025-06-21,RT018,Swalayan Nusantara,SKU-003,Teh Botol Sosro 450ml,134,679791
+2025-06-21,RT004,Toko Berkah Abadi,SKU-002,Indomie Kuah Soto,30,108288
+2025-06-22,RT002,Warung Sejahtera,SKU-010,Silverqueen Cashew 65g,35,540552
+2025-06-22,RT011,Minimart Ceria,SKU-022,ABC Sambal Asli 135ml,95,772945
+2025-06-22,RT011,Minimart Ceria,SKU-017,Rinso Cair 750ml,103,1847087
+2025-06-22,RT001,Toko Makmur,SKU-007,Pocari Sweat 500ml,16,131726
+2025-06-22,RT002,Warung Sejahtera,SKU-003,Teh Botol Sosro 450ml,131,662456
+2025-06-23,RT003,Minimart Jaya,SKU-023,Molto Pewangi 900ml,47,1056870
+2025-06-23,RT011,Minimart Ceria,SKU-015,Royco Ayam Sachet,17,33132
+2025-06-23,RT002,Warung Sejahtera,SKU-008,GoodDay Cappuccino 250ml,95,550981
+2025-06-24,RT003,Minimart Jaya,SKU-017,Rinso Cair 750ml,107,1926015
+2025-06-25,RT004,Toko Berkah Abadi,SKU-021,Frisian Flag Susu Kental 370g,53,726129
+2025-06-25,RT014,Toko Mandiri Jaya,SKU-020,Le Minerale 600ml,17,68639
+2025-06-25,RT015,Agen Mulia,SKU-010,Silverqueen Cashew 65g,69,1041431
+2025-06-26,RT017,Toko Laris Manis,SKU-005,Kapal Api Kopi Sachet,45,115362
+2025-06-27,RT003,Minimart Jaya,SKU-012,Kopiko 78C 240ml,132,935588
+2025-06-27,RT007,Toko Maju Bersama,SKU-022,ABC Sambal Asli 135ml,113,995855
+2025-06-27,RT018,Swalayan Nusantara,SKU-007,Pocari Sweat 500ml,40,331936
+2025-06-27,RT005,Sumber Rezeki,SKU-003,Teh Botol Sosro 450ml,100,480970
+2025-06-27,RT007,Toko Maju Bersama,SKU-011,Beng Beng Wafer,145,439960
+2025-06-27,RT008,Agen Sentosa,SKU-010,Silverqueen Cashew 65g,55,813485
+2025-06-28,RT012,Toko Subur Makmur,SKU-012,Kopiko 78C 240ml,113,783968
+2025-06-28,RT001,Toko Makmur,SKU-018,Sarimi Ayam Bawang,37,108495
+2025-06-28,RT002,Warung Sejahtera,SKU-003,Teh Botol Sosro 450ml,107,534558
+2025-06-28,RT017,Toko Laris Manis,SKU-001,Indomie Goreng,143,498597
+2025-06-28,RT005,Sumber Rezeki,SKU-006,Mie Sedaap Goreng,85,307674
+2025-06-29,RT009,Toko Harapan Baru,SKU-010,Silverqueen Cashew 65g,16,233292
+2025-06-29,RT008,Agen Sentosa,SKU-021,Frisian Flag Susu Kental 370g,82,1182019
+2025-06-29,RT007,Toko Maju Bersama,SKU-008,GoodDay Cappuccino 250ml,143,833742
+2025-06-29,RT017,Toko Laris Manis,SKU-004,Aqua 600ml,121,489435
+2025-06-29,RT004,Toko Berkah Abadi,SKU-008,GoodDay Cappuccino 250ml,73,439476
+2025-06-30,RT011,Minimart Ceria,SKU-014,Kecap Bango 135ml,75,684414
+2025-06-30,RT006,Warung Bahagia,SKU-023,Molto Pewangi 900ml,41,929581
+2025-06-30,RT011,Minimart Ceria,SKU-017,Rinso Cair 750ml,78,1433709
+2025-06-30,RT007,Toko Maju Bersama,SKU-014,Kecap Bango 135ml,99,917218
+2025-07-01,RT011,Minimart Ceria,SKU-008,GoodDay Cappuccino 250ml,61,347963
+2025-07-01,RT002,Warung Sejahtera,SKU-004,Aqua 600ml,100,412471
+2025-07-01,RT003,Minimart Jaya,SKU-018,Sarimi Ayam Bawang,130,377678
+2025-07-01,RT015,Agen Mulia,SKU-021,Frisian Flag Susu Kental 370g,47,632539
+2025-07-01,RT003,Minimart Jaya,SKU-003,Teh Botol Sosro 450ml,91,474604
+2025-07-02,RT003,Minimart Jaya,SKU-010,Silverqueen Cashew 65g,60,942184
+2025-07-02,RT009,Toko Harapan Baru,SKU-020,Le Minerale 600ml,125,518641
+2025-07-02,RT002,Warung Sejahtera,SKU-004,Aqua 600ml,40,153943
+2025-07-02,RT018,Swalayan Nusantara,SKU-022,ABC Sambal Asli 135ml,69,565763
+2025-07-02,RT012,Toko Subur Makmur,SKU-003,Teh Botol Sosro 450ml,124,638663
+2025-07-03,RT011,Minimart Ceria,SKU-002,Indomie Kuah Soto,113,389351
+2025-07-03,RT007,Toko Maju Bersama,SKU-004,Aqua 600ml,141,536133
+2025-07-03,RT011,Minimart Ceria,SKU-012,Kopiko 78C 240ml,66,453716
+2025-07-04,RT001,Toko Makmur,SKU-003,Teh Botol Sosro 450ml,87,439711
+2025-07-04,RT018,Swalayan Nusantara,SKU-005,Kapal Api Kopi Sachet,142,348850
+2025-07-04,RT018,Swalayan Nusantara,SKU-006,Mie Sedaap Goreng,142,498650
+2025-07-05,RT017,Toko Laris Manis,SKU-021,Frisian Flag Susu Kental 370g,85,1148464
+2025-07-05,RT018,Swalayan Nusantara,SKU-005,Kapal Api Kopi Sachet,117,278893
+2025-07-05,RT016,Warung Harmoni,SKU-009,Chitato Original 68g,86,1074395
+2025-07-06,RT017,Toko Laris Manis,SKU-003,Teh Botol Sosro 450ml,26,133015
+2025-07-06,RT012,Toko Subur Makmur,SKU-016,Sabun Lifebuoy 100g,143,681817
+2025-07-06,RT003,Minimart Jaya,SKU-017,Rinso Cair 750ml,16,301077
+2025-07-06,RT002,Warung Sejahtera,SKU-021,Frisian Flag Susu Kental 370g,65,873604
+2025-07-06,RT005,Sumber Rezeki,SKU-018,Sarimi Ayam Bawang,73,217093
+2025-07-07,RT009,Toko Harapan Baru,SKU-004,Aqua 600ml,66,263989
+2025-07-07,RT016,Warung Harmoni,SKU-009,Chitato Original 68g,140,1602830
+2025-07-08,RT003,Minimart Jaya,SKU-021,Frisian Flag Susu Kental 370g,81,1129149
+2025-07-08,RT001,Toko Makmur,SKU-020,Le Minerale 600ml,149,625567
+2025-07-08,RT003,Minimart Jaya,SKU-002,Indomie Kuah Soto,67,245848
+2025-07-08,RT014,Toko Mandiri Jaya,SKU-016,Sabun Lifebuoy 100g,56,269434
+2025-07-08,RT001,Toko Makmur,SKU-020,Le Minerale 600ml,80,329538
+2025-07-08,RT014,Toko Mandiri Jaya,SKU-019,Tango Wafer Coklat 130g,16,163214
+2025-07-08,RT004,Toko Berkah Abadi,SKU-014,Kecap Bango 135ml,134,1158540
+2025-07-09,RT003,Minimart Jaya,SKU-006,Mie Sedaap Goreng,76,265006
+2025-07-09,RT009,Toko Harapan Baru,SKU-016,Sabun Lifebuoy 100g,131,679197
+2025-07-10,RT005,Sumber Rezeki,SKU-003,Teh Botol Sosro 450ml,72,367644
+2025-07-10,RT016,Warung Harmoni,SKU-005,Kapal Api Kopi Sachet,142,344223
+2025-07-11,RT016,Warung Harmoni,SKU-005,Kapal Api Kopi Sachet,79,188456
+2025-07-12,RT018,Swalayan Nusantara,SKU-007,Pocari Sweat 500ml,59,460891
+2025-07-12,RT014,Toko Mandiri Jaya,SKU-016,Sabun Lifebuoy 100g,146,701445
+2025-07-13,RT017,Toko Laris Manis,SKU-019,Tango Wafer Coklat 130g,149,1514287
+2025-07-13,RT009,Toko Harapan Baru,SKU-010,Silverqueen Cashew 65g,54,795445
+2025-07-13,RT007,Toko Maju Bersama,SKU-009,Chitato Original 68g,127,1564517
+2025-07-14,RT007,Toko Maju Bersama,SKU-005,Kapal Api Kopi Sachet,126,301365
+2025-07-14,RT007,Toko Maju Bersama,SKU-012,Kopiko 78C 240ml,84,601030
+2025-07-14,RT018,Swalayan Nusantara,SKU-023,Molto Pewangi 900ml,105,2224288
+2025-07-14,RT011,Minimart Ceria,SKU-008,GoodDay Cappuccino 250ml,111,645175
+2025-07-14,RT010,Warung Sinar Pagi,SKU-012,Kopiko 78C 240ml,142,1003326
+2025-07-14,RT016,Warung Harmoni,SKU-023,Molto Pewangi 900ml,81,1856609
+2025-07-14,RT011,Minimart Ceria,SKU-013,Ultra Milk Coklat 250ml,142,784712
+2025-07-15,RT006,Warung Bahagia,SKU-014,Kecap Bango 135ml,66,567740
+2025-07-16,RT005,Sumber Rezeki,SKU-013,Ultra Milk Coklat 250ml,145,760552
+2025-07-16,RT006,Warung Bahagia,SKU-021,Frisian Flag Susu Kental 370g,20,291422
+2025-07-16,RT007,Toko Maju Bersama,SKU-011,Beng Beng Wafer,47,142920
+2025-07-16,RT014,Toko Mandiri Jaya,SKU-006,Mie Sedaap Goreng,45,157336
+2025-07-16,RT017,Toko Laris Manis,SKU-016,Sabun Lifebuoy 100g,143,695490
+2025-07-17,RT004,Toko Berkah Abadi,SKU-022,ABC Sambal Asli 135ml,78,695979
+2025-07-17,RT001,Toko Makmur,SKU-010,Silverqueen Cashew 65g,24,365208
+2025-07-17,RT007,Toko Maju Bersama,SKU-017,Rinso Cair 750ml,42,781027
+2025-07-18,RT006,Warung Bahagia,SKU-013,Ultra Milk Coklat 250ml,89,504830
+2025-07-18,RT007,Toko Maju Bersama,SKU-001,Indomie Goreng,27,93119
+2025-07-18,RT012,Toko Subur Makmur,SKU-013,Ultra Milk Coklat 250ml,120,631984
+2025-07-18,RT007,Toko Maju Bersama,SKU-002,Indomie Kuah Soto,41,146537
+2025-07-18,RT003,Minimart Jaya,SKU-003,Teh Botol Sosro 450ml,145,757033
+2025-07-18,RT006,Warung Bahagia,SKU-015,Royco Ayam Sachet,73,151526
+2025-07-18,RT017,Toko Laris Manis,SKU-018,Sarimi Ayam Bawang,133,409070
+2025-07-19,RT013,Warung Purnama,SKU-002,Indomie Kuah Soto,90,301326
+2025-07-19,RT001,Toko Makmur,SKU-014,Kecap Bango 135ml,89,806275
+2025-07-19,RT005,Sumber Rezeki,SKU-009,Chitato Original 68g,136,1711232
+2025-07-19,RT014,Toko Mandiri Jaya,SKU-008,GoodDay Cappuccino 250ml,114,694635
+2025-07-19,RT018,Swalayan Nusantara,SKU-022,ABC Sambal Asli 135ml,91,774977
+2025-07-20,RT004,Toko Berkah Abadi,SKU-016,Sabun Lifebuoy 100g,109,528127
+2025-07-20,RT008,Agen Sentosa,SKU-009,Chitato Original 68g,120,1403700
+2025-07-20,RT014,Toko Mandiri Jaya,SKU-009,Chitato Original 68g,35,404404
+2025-07-20,RT004,Toko Berkah Abadi,SKU-009,Chitato Original 68g,149,1709621
+2025-07-20,RT016,Warung Harmoni,SKU-003,Teh Botol Sosro 450ml,60,313818
+2025-07-21,RT006,Warung Bahagia,SKU-020,Le Minerale 600ml,20,80877
+2025-07-21,RT018,Swalayan Nusantara,SKU-012,Kopiko 78C 240ml,62,413523
+2025-07-21,RT004,Toko Berkah Abadi,SKU-016,Sabun Lifebuoy 100g,102,502376
+2025-07-22,RT005,Sumber Rezeki,SKU-019,Tango Wafer Coklat 130g,139,1403454
+2025-07-22,RT003,Minimart Jaya,SKU-005,Kapal Api Kopi Sachet,44,105349
+2025-07-22,RT011,Minimart Ceria,SKU-001,Indomie Goreng,66,224210
+2025-07-22,RT009,Toko Harapan Baru,SKU-019,Tango Wafer Coklat 130g,64,670335
+2025-07-22,RT017,Toko Laris Manis,SKU-006,Mie Sedaap Goreng,116,392078
+2025-07-22,RT007,Toko Maju Bersama,SKU-005,Kapal Api Kopi Sachet,150,378298
+2025-07-22,RT014,Toko Mandiri Jaya,SKU-007,Pocari Sweat 500ml,7,54886
+2025-07-22,RT003,Minimart Jaya,SKU-003,Teh Botol Sosro 450ml,135,646316
+2025-07-23,RT017,Toko Laris Manis,SKU-015,Royco Ayam Sachet,97,199070
+2025-07-23,RT003,Minimart Jaya,SKU-018,Sarimi Ayam Bawang,10,29058
+2025-07-24,RT012,Toko Subur Makmur,SKU-018,Sarimi Ayam Bawang,81,253492
+2025-07-24,RT007,Toko Maju Bersama,SKU-003,Teh Botol Sosro 450ml,93,452962
+2025-07-24,RT003,Minimart Jaya,SKU-011,Beng Beng Wafer,61,185556
+2025-07-24,RT012,Toko Subur Makmur,SKU-009,Chitato Original 68g,40,476104
+2025-07-25,RT017,Toko Laris Manis,SKU-005,Kapal Api Kopi Sachet,72,173078
+2025-07-25,RT016,Warung Harmoni,SKU-012,Kopiko 78C 240ml,27,187804
+2025-07-25,RT017,Toko Laris Manis,SKU-010,Silverqueen Cashew 65g,14,199695
+2025-07-25,RT009,Toko Harapan Baru,SKU-020,Le Minerale 600ml,35,136958
+2025-07-25,RT007,Toko Maju Bersama,SKU-007,Pocari Sweat 500ml,85,673801
+2025-07-25,RT016,Warung Harmoni,SKU-020,Le Minerale 600ml,96,370790
+2025-07-25,RT001,Toko Makmur,SKU-021,Frisian Flag Susu Kental 370g,44,628402
+2025-07-26,RT015,Agen Mulia,SKU-014,Kecap Bango 135ml,68,597729
+2025-07-26,RT004,Toko Berkah Abadi,SKU-022,ABC Sambal Asli 135ml,128,1057998
+2025-07-26,RT001,Toko Makmur,SKU-007,Pocari Sweat 500ml,39,320734
+2025-07-26,RT004,Toko Berkah Abadi,SKU-023,Molto Pewangi 900ml,22,476763
+2025-07-26,RT011,Minimart Ceria,SKU-020,Le Minerale 600ml,77,301793
+2025-07-27,RT008,Agen Sentosa,SKU-001,Indomie Goreng,99,340652
+2025-07-28,RT009,Toko Harapan Baru,SKU-001,Indomie Goreng,138,496605
+2025-07-29,RT006,Warung Bahagia,SKU-010,Silverqueen Cashew 65g,16,247444
+2025-07-29,RT018,Swalayan Nusantara,SKU-022,ABC Sambal Asli 135ml,87,730728
+2025-07-30,RT013,Warung Purnama,SKU-011,Beng Beng Wafer,35,102255
+2025-07-30,RT007,Toko Maju Bersama,SKU-009,Chitato Original 68g,31,386667
+2025-07-30,RT012,Toko Subur Makmur,SKU-021,Frisian Flag Susu Kental 370g,10,133675
+2025-07-30,RT017,Toko Laris Manis,SKU-012,Kopiko 78C 240ml,85,590597
+2025-07-31,RT014,Toko Mandiri Jaya,SKU-016,Sabun Lifebuoy 100g,137,677259
+2025-07-31,RT004,Toko Berkah Abadi,SKU-012,Kopiko 78C 240ml,65,435077
+2025-07-31,RT007,Toko Maju Bersama,SKU-012,Kopiko 78C 240ml,27,187848
+2025-07-31,RT007,Toko Maju Bersama,SKU-019,Tango Wafer Coklat 130g,80,797101
+2025-07-31,RT004,Toko Berkah Abadi,SKU-006,Mie Sedaap Goreng,45,155330
+2025-07-31,RT011,Minimart Ceria,SKU-023,Molto Pewangi 900ml,106,2386984
+2025-08-01,RT009,Toko Harapan Baru,SKU-013,Ultra Milk Coklat 250ml,49,268346
+2025-08-02,RT011,Minimart Ceria,SKU-018,Sarimi Ayam Bawang,148,436436
+2025-08-03,RT007,Toko Maju Bersama,SKU-003,Teh Botol Sosro 450ml,89,450480
+2025-08-03,RT017,Toko Laris Manis,SKU-003,Teh Botol Sosro 450ml,30,144600
+2025-08-04,RT011,Minimart Ceria,SKU-001,Indomie Goreng,49,167476
+2025-08-04,RT003,Minimart Jaya,SKU-014,Kecap Bango 135ml,20,188865
+2025-08-04,RT003,Minimart Jaya,SKU-006,Mie Sedaap Goreng,59,212870
+2025-08-05,RT017,Toko Laris Manis,SKU-006,Mie Sedaap Goreng,49,175453
+2025-08-05,RT009,Toko Harapan Baru,SKU-017,Rinso Cair 750ml,76,1354030
+2025-08-06,RT001,Toko Makmur,SKU-018,Sarimi Ayam Bawang,99,296032
+2025-08-06,RT002,Warung Sejahtera,SKU-018,Sarimi Ayam Bawang,51,157097
+2025-08-06,RT017,Toko Laris Manis,SKU-011,Beng Beng Wafer,93,292263
+2025-08-06,RT001,Toko Makmur,SKU-019,Tango Wafer Coklat 130g,20,198700
+2025-08-06,RT015,Agen Mulia,SKU-020,Le Minerale 600ml,12,49740
+2025-08-06,RT002,Warung Sejahtera,SKU-017,Rinso Cair 750ml,22,377934
+2025-08-07,RT009,Toko Harapan Baru,SKU-001,Indomie Goreng,97,354232
+2025-08-07,RT018,Swalayan Nusantara,SKU-013,Ultra Milk Coklat 250ml,9,48156
+2025-08-07,RT003,Minimart Jaya,SKU-020,Le Minerale 600ml,79,321897
+2025-08-07,RT007,Toko Maju Bersama,SKU-013,Ultra Milk Coklat 250ml,76,415940
+2025-08-08,RT014,Toko Mandiri Jaya,SKU-020,Le Minerale 600ml,139,546984
+2025-08-09,RT007,Toko Maju Bersama,SKU-020,Le Minerale 600ml,135,553300
+2025-08-09,RT006,Warung Bahagia,SKU-016,Sabun Lifebuoy 100g,34,163152
+2025-08-10,RT014,Toko Mandiri Jaya,SKU-014,Kecap Bango 135ml,107,949710
+2025-08-10,RT004,Toko Berkah Abadi,SKU-007,Pocari Sweat 500ml,69,561813
+2025-08-10,RT016,Warung Harmoni,SKU-021,Frisian Flag Susu Kental 370g,90,1296714
+2025-08-10,RT006,Warung Bahagia,SKU-022,ABC Sambal Asli 135ml,49,400650
+2025-08-11,RT012,Toko Subur Makmur,SKU-001,Indomie Goreng,75,255803
+2025-08-11,RT006,Warung Bahagia,SKU-013,Ultra Milk Coklat 250ml,29,154472
+2025-08-11,RT013,Warung Purnama,SKU-018,Sarimi Ayam Bawang,89,263899
+2025-08-11,RT016,Warung Harmoni,SKU-003,Teh Botol Sosro 450ml,109,554427
+2025-08-11,RT017,Toko Laris Manis,SKU-020,Le Minerale 600ml,114,440769
+2025-08-11,RT014,Toko Mandiri Jaya,SKU-002,Indomie Kuah Soto,108,384068
+2025-08-11,RT009,Toko Harapan Baru,SKU-016,Sabun Lifebuoy 100g,6,30006
+2025-08-12,RT017,Toko Laris Manis,SKU-003,Teh Botol Sosro 450ml,34,175632
+2025-08-12,RT017,Toko Laris Manis,SKU-001,Indomie Goreng,95,347381
+2025-08-13,RT011,Minimart Ceria,SKU-008,GoodDay Cappuccino 250ml,132,824696
+2025-08-13,RT007,Toko Maju Bersama,SKU-011,Beng Beng Wafer,147,460358
+2025-08-13,RT011,Minimart Ceria,SKU-022,ABC Sambal Asli 135ml,87,720044
+2025-08-13,RT003,Minimart Jaya,SKU-011,Beng Beng Wafer,9,28246
+2025-08-13,RT015,Agen Mulia,SKU-018,Sarimi Ayam Bawang,80,251043
+2025-08-13,RT017,Toko Laris Manis,SKU-006,Mie Sedaap Goreng,61,220553
+2025-08-14,RT007,Toko Maju Bersama,SKU-016,Sabun Lifebuoy 100g,125,608983
+2025-08-14,RT006,Warung Bahagia,SKU-002,Indomie Kuah Soto,149,540487
+2025-08-14,RT016,Warung Harmoni,SKU-017,Rinso Cair 750ml,32,548656
+2025-08-14,RT014,Toko Mandiri Jaya,SKU-005,Kapal Api Kopi Sachet,119,287362
+2025-08-14,RT003,Minimart Jaya,SKU-021,Frisian Flag Susu Kental 370g,6,86557
+2025-08-14,RT017,Toko Laris Manis,SKU-013,Ultra Milk Coklat 250ml,78,427445
+2025-08-15,RT017,Toko Laris Manis,SKU-012,Kopiko 78C 240ml,94,672962
+2025-08-15,RT001,Toko Makmur,SKU-003,Teh Botol Sosro 450ml,116,562711
+2025-08-15,RT003,Minimart Jaya,SKU-017,Rinso Cair 750ml,15,280552
+2025-08-16,RT011,Minimart Ceria,SKU-013,Ultra Milk Coklat 250ml,77,412997
+2025-08-16,RT004,Toko Berkah Abadi,SKU-016,Sabun Lifebuoy 100g,98,484266
+2025-08-17,RT014,Toko Mandiri Jaya,SKU-013,Ultra Milk Coklat 250ml,103,594169
+2025-08-17,RT003,Minimart Jaya,SKU-021,Frisian Flag Susu Kental 370g,64,857290
+2025-08-18,RT009,Toko Harapan Baru,SKU-003,Teh Botol Sosro 450ml,17,88069
+2025-08-18,RT002,Warung Sejahtera,SKU-004,Aqua 600ml,123,513995
+2025-08-18,RT004,Toko Berkah Abadi,SKU-005,Kapal Api Kopi Sachet,70,169702
+2025-08-18,RT017,Toko Laris Manis,SKU-020,Le Minerale 600ml,38,153478
+2025-08-18,RT001,Toko Makmur,SKU-005,Kapal Api Kopi Sachet,102,260398
+2025-08-18,RT014,Toko Mandiri Jaya,SKU-003,Teh Botol Sosro 450ml,142,712674
+2025-08-19,RT001,Toko Makmur,SKU-005,Kapal Api Kopi Sachet,109,282608
+2025-08-19,RT007,Toko Maju Bersama,SKU-012,Kopiko 78C 240ml,143,992905
+2025-08-19,RT009,Toko Harapan Baru,SKU-008,GoodDay Cappuccino 250ml,68,406394
+2025-08-19,RT014,Toko Mandiri Jaya,SKU-017,Rinso Cair 750ml,26,449464
+2025-08-19,RT005,Sumber Rezeki,SKU-020,Le Minerale 600ml,146,564164
+2025-08-20,RT017,Toko Laris Manis,SKU-015,Royco Ayam Sachet,78,158771
+2025-08-20,RT002,Warung Sejahtera,SKU-005,Kapal Api Kopi Sachet,6,15697
+2025-08-20,RT003,Minimart Jaya,SKU-018,Sarimi Ayam Bawang,18,51363
+2025-08-20,RT015,Agen Mulia,SKU-018,Sarimi Ayam Bawang,107,321151
+2025-08-21,RT004,Toko Berkah Abadi,SKU-015,Royco Ayam Sachet,117,234563
+2025-08-21,RT001,Toko Makmur,SKU-021,Frisian Flag Susu Kental 370g,108,1491333
+2025-08-21,RT001,Toko Makmur,SKU-013,Ultra Milk Coklat 250ml,112,600493
+2025-08-21,RT016,Warung Harmoni,SKU-019,Tango Wafer Coklat 130g,85,823636
+2025-08-21,RT017,Toko Laris Manis,SKU-008,GoodDay Cappuccino 250ml,137,795240
+2025-08-21,RT008,Agen Sentosa,SKU-022,ABC Sambal Asli 135ml,84,745146
+2025-08-22,RT016,Warung Harmoni,SKU-017,Rinso Cair 750ml,55,955631
+2025-08-22,RT001,Toko Makmur,SKU-002,Indomie Kuah Soto,56,191433
+2025-08-22,RT001,Toko Makmur,SKU-002,Indomie Kuah Soto,37,130452
+2025-08-23,RT014,Toko Mandiri Jaya,SKU-006,Mie Sedaap Goreng,34,122306
+2025-08-24,RT012,Toko Subur Makmur,SKU-009,Chitato Original 68g,41,470913
+2025-08-24,RT001,Toko Makmur,SKU-011,Beng Beng Wafer,32,97701
+2025-08-24,RT007,Toko Maju Bersama,SKU-016,Sabun Lifebuoy 100g,96,492006
+2025-08-24,RT009,Toko Harapan Baru,SKU-022,ABC Sambal Asli 135ml,66,580522
+2025-08-25,RT009,Toko Harapan Baru,SKU-017,Rinso Cair 750ml,97,1668380
+2025-08-25,RT013,Warung Purnama,SKU-023,Molto Pewangi 900ml,114,2604012
+2025-08-26,RT013,Warung Purnama,SKU-017,Rinso Cair 750ml,126,2334619
+2025-08-26,RT017,Toko Laris Manis,SKU-011,Beng Beng Wafer,61,179945
+2025-08-26,RT002,Warung Sejahtera,SKU-010,Silverqueen Cashew 65g,141,2029010
+2025-08-27,RT004,Toko Berkah Abadi,SKU-009,Chitato Original 68g,23,279012
+2025-08-27,RT007,Toko Maju Bersama,SKU-016,Sabun Lifebuoy 100g,19,96299
+2025-08-27,RT017,Toko Laris Manis,SKU-022,ABC Sambal Asli 135ml,96,816597
+2025-08-27,RT002,Warung Sejahtera,SKU-002,Indomie Kuah Soto,7,25362
+2025-08-27,RT007,Toko Maju Bersama,SKU-005,Kapal Api Kopi Sachet,38,95254
+2025-08-28,RT011,Minimart Ceria,SKU-012,Kopiko 78C 240ml,95,687977
+2025-08-28,RT007,Toko Maju Bersama,SKU-019,Tango Wafer Coklat 130g,112,1104926
+2025-08-28,RT014,Toko Mandiri Jaya,SKU-008,GoodDay Cappuccino 250ml,104,614940
+2025-08-28,RT006,Warung Bahagia,SKU-006,Mie Sedaap Goreng,24,81371
+2025-08-29,RT005,Sumber Rezeki,SKU-005,Kapal Api Kopi Sachet,38,95382
+2025-08-29,RT009,Toko Harapan Baru,SKU-022,ABC Sambal Asli 135ml,81,671987
+2025-08-29,RT011,Minimart Ceria,SKU-007,Pocari Sweat 500ml,131,1052415
+2025-08-30,RT018,Swalayan Nusantara,SKU-005,Kapal Api Kopi Sachet,65,168425
+2025-08-30,RT017,Toko Laris Manis,SKU-006,Mie Sedaap Goreng,111,403350
+2025-08-30,RT015,Agen Mulia,SKU-016,Sabun Lifebuoy 100g,90,455896
+2025-08-30,RT003,Minimart Jaya,SKU-005,Kapal Api Kopi Sachet,126,324629
+2025-08-31,RT001,Toko Makmur,SKU-023,Molto Pewangi 900ml,115,2607460
+2025-08-31,RT013,Warung Purnama,SKU-011,Beng Beng Wafer,24,72393
+2025-08-31,RT009,Toko Harapan Baru,SKU-008,GoodDay Cappuccino 250ml,150,911279
+2025-09-01,RT014,Toko Mandiri Jaya,SKU-010,Silverqueen Cashew 65g,91,1344665
+2025-09-01,RT007,Toko Maju Bersama,SKU-019,Tango Wafer Coklat 130g,122,1176473
+2025-09-02,RT002,Warung Sejahtera,SKU-009,Chitato Original 68g,148,1822694
+2025-09-03,RT001,Toko Makmur,SKU-023,Molto Pewangi 900ml,86,1896805
+2025-09-04,RT017,Toko Laris Manis,SKU-002,Indomie Kuah Soto,106,381683
+2025-09-04,RT003,Minimart Jaya,SKU-023,Molto Pewangi 900ml,21,465573
+2025-09-05,RT001,Toko Makmur,SKU-013,Ultra Milk Coklat 250ml,15,85582
+2025-09-06,RT007,Toko Maju Bersama,SKU-017,Rinso Cair 750ml,34,604974
+2025-09-06,RT017,Toko Laris Manis,SKU-003,Teh Botol Sosro 450ml,142,725946
+2025-09-06,RT017,Toko Laris Manis,SKU-013,Ultra Milk Coklat 250ml,104,585541
+2025-09-07,RT007,Toko Maju Bersama,SKU-008,GoodDay Cappuccino 250ml,62,354280
+2025-09-07,RT006,Warung Bahagia,SKU-023,Molto Pewangi 900ml,80,1769577
+2025-09-07,RT005,Sumber Rezeki,SKU-009,Chitato Original 68g,64,738866
+2025-09-07,RT010,Warung Sinar Pagi,SKU-022,ABC Sambal Asli 135ml,72,618737
+2025-09-07,RT017,Toko Laris Manis,SKU-005,Kapal Api Kopi Sachet,134,333929
+2025-09-07,RT014,Toko Mandiri Jaya,SKU-001,Indomie Goreng,91,327761
+2025-09-07,RT002,Warung Sejahtera,SKU-004,Aqua 600ml,139,536479
+2025-09-07,RT003,Minimart Jaya,SKU-017,Rinso Cair 750ml,150,2572816
+2025-09-07,RT003,Minimart Jaya,SKU-002,Indomie Kuah Soto,56,188298
+2025-09-07,RT002,Warung Sejahtera,SKU-008,GoodDay Cappuccino 250ml,141,836299
+2025-09-08,RT001,Toko Makmur,SKU-021,Frisian Flag Susu Kental 370g,34,477457
+2025-09-08,RT014,Toko Mandiri Jaya,SKU-012,Kopiko 78C 240ml,16,110887
+2025-09-08,RT008,Agen Sentosa,SKU-021,Frisian Flag Susu Kental 370g,23,321105
+2025-09-08,RT014,Toko Mandiri Jaya,SKU-018,Sarimi Ayam Bawang,55,169556
+2025-09-09,RT004,Toko Berkah Abadi,SKU-023,Molto Pewangi 900ml,116,2424832
+2025-09-09,RT001,Toko Makmur,SKU-018,Sarimi Ayam Bawang,111,326180
+2025-09-09,RT004,Toko Berkah Abadi,SKU-008,GoodDay Cappuccino 250ml,131,793373
+2025-09-09,RT015,Agen Mulia,SKU-018,Sarimi Ayam Bawang,115,357293
+2025-09-10,RT002,Warung Sejahtera,SKU-008,GoodDay Cappuccino 250ml,84,490122
+2025-09-10,RT012,Toko Subur Makmur,SKU-006,Mie Sedaap Goreng,115,398297
+2025-09-10,RT017,Toko Laris Manis,SKU-003,Teh Botol Sosro 450ml,10,52486
+2025-09-10,RT007,Toko Maju Bersama,SKU-014,Kecap Bango 135ml,36,319175
+2025-09-11,RT007,Toko Maju Bersama,SKU-014,Kecap Bango 135ml,39,343995
+2025-09-11,RT006,Warung Bahagia,SKU-009,Chitato Original 68g,105,1242992
+2025-09-11,RT015,Agen Mulia,SKU-012,Kopiko 78C 240ml,106,734984
+2025-09-11,RT003,Minimart Jaya,SKU-022,ABC Sambal Asli 135ml,53,450455
+2025-09-12,RT001,Toko Makmur,SKU-016,Sabun Lifebuoy 100g,5,24579
+2025-09-12,RT009,Toko Harapan Baru,SKU-020,Le Minerale 600ml,56,230226
+2025-09-12,RT018,Swalayan Nusantara,SKU-002,Indomie Kuah Soto,8,28682
+2025-09-12,RT017,Toko Laris Manis,SKU-006,Mie Sedaap Goreng,131,455702
+2025-09-12,RT004,Toko Berkah Abadi,SKU-008,GoodDay Cappuccino 250ml,72,419333
+2025-09-13,RT005,Sumber Rezeki,SKU-010,Silverqueen Cashew 65g,25,375424
+2025-09-14,RT004,Toko Berkah Abadi,SKU-009,Chitato Original 68g,99,1156401
+2025-09-15,RT004,Toko Berkah Abadi,SKU-005,Kapal Api Kopi Sachet,149,361519
+2025-09-15,RT015,Agen Mulia,SKU-019,Tango Wafer Coklat 130g,148,1438118
+2025-09-15,RT003,Minimart Jaya,SKU-004,Aqua 600ml,138,561164
+2025-09-15,RT001,Toko Makmur,SKU-008,GoodDay Cappuccino 250ml,23,131281
+2025-09-16,RT014,Toko Mandiri Jaya,SKU-005,Kapal Api Kopi Sachet,74,180962
+2025-09-16,RT006,Warung Bahagia,SKU-002,Indomie Kuah Soto,6,20899
+2025-09-17,RT006,Warung Bahagia,SKU-016,Sabun Lifebuoy 100g,88,426001
+2025-09-17,RT003,Minimart Jaya,SKU-004,Aqua 600ml,121,464237
+2025-09-18,RT007,Toko Maju Bersama,SKU-015,Royco Ayam Sachet,70,143463
+2025-09-18,RT007,Toko Maju Bersama,SKU-014,Kecap Bango 135ml,104,889617
+2025-09-18,RT011,Minimart Ceria,SKU-006,Mie Sedaap Goreng,117,403406
+2025-09-19,RT002,Warung Sejahtera,SKU-023,Molto Pewangi 900ml,34,774389
+2025-09-19,RT007,Toko Maju Bersama,SKU-001,Indomie Goreng,25,83291
+2025-09-20,RT017,Toko Laris Manis,SKU-009,Chitato Original 68g,13,158968
+2025-09-20,RT007,Toko Maju Bersama,SKU-018,Sarimi Ayam Bawang,125,384651
+2025-09-20,RT014,Toko Mandiri Jaya,SKU-013,Ultra Milk Coklat 250ml,70,397183
+2025-09-20,RT007,Toko Maju Bersama,SKU-013,Ultra Milk Coklat 250ml,94,514880
+2025-09-20,RT006,Warung Bahagia,SKU-023,Molto Pewangi 900ml,145,3305066
+2025-09-21,RT006,Warung Bahagia,SKU-009,Chitato Original 68g,51,582995
+2025-09-21,RT009,Toko Harapan Baru,SKU-003,Teh Botol Sosro 450ml,19,92460
+2025-09-21,RT007,Toko Maju Bersama,SKU-006,Mie Sedaap Goreng,104,375955
+2025-09-22,RT008,Agen Sentosa,SKU-020,Le Minerale 600ml,148,581818
+2025-09-22,RT013,Warung Purnama,SKU-021,Frisian Flag Susu Kental 370g,80,1105165
+2025-09-22,RT004,Toko Berkah Abadi,SKU-017,Rinso Cair 750ml,147,2667305
+2025-09-22,RT014,Toko Mandiri Jaya,SKU-004,Aqua 600ml,29,119008
+2025-09-22,RT018,Swalayan Nusantara,SKU-006,Mie Sedaap Goreng,6,20608
+2025-09-23,RT002,Warung Sejahtera,SKU-018,Sarimi Ayam Bawang,105,315909
+2025-09-23,RT018,Swalayan Nusantara,SKU-011,Beng Beng Wafer,27,78750
+2025-09-23,RT001,Toko Makmur,SKU-009,Chitato Original 68g,85,970261
+2025-09-23,RT007,Toko Maju Bersama,SKU-015,Royco Ayam Sachet,31,62720
+2025-09-24,RT017,Toko Laris Manis,SKU-021,Frisian Flag Susu Kental 370g,55,764236
+2025-09-24,RT003,Minimart Jaya,SKU-020,Le Minerale 600ml,66,257201
+2025-09-24,RT007,Toko Maju Bersama,SKU-018,Sarimi Ayam Bawang,126,368209
+2025-09-24,RT001,Toko Makmur,SKU-013,Ultra Milk Coklat 250ml,122,675362
+2025-09-24,RT015,Agen Mulia,SKU-008,GoodDay Cappuccino 250ml,79,451850
+2025-09-24,RT001,Toko Makmur,SKU-016,Sabun Lifebuoy 100g,24,115592
+2025-09-24,RT010,Warung Sinar Pagi,SKU-004,Aqua 600ml,127,522667
+2025-09-24,RT001,Toko Makmur,SKU-019,Tango Wafer Coklat 130g,59,611070
+2025-09-25,RT011,Minimart Ceria,SKU-023,Molto Pewangi 900ml,22,462018
+2025-09-25,RT001,Toko Makmur,SKU-012,Kopiko 78C 240ml,143,992390
+2025-09-25,RT006,Warung Bahagia,SKU-016,Sabun Lifebuoy 100g,30,157087
+2025-09-25,RT017,Toko Laris Manis,SKU-003,Teh Botol Sosro 450ml,25,120775
+2025-09-26,RT017,Toko Laris Manis,SKU-011,Beng Beng Wafer,69,197185
+2025-09-26,RT016,Warung Harmoni,SKU-014,Kecap Bango 135ml,38,341237
+2025-09-26,RT001,Toko Makmur,SKU-021,Frisian Flag Susu Kental 370g,61,869108
+2025-09-27,RT006,Warung Bahagia,SKU-018,Sarimi Ayam Bawang,25,72288
+2025-09-27,RT007,Toko Maju Bersama,SKU-023,Molto Pewangi 900ml,125,2692596
+2025-09-28,RT005,Sumber Rezeki,SKU-010,Silverqueen Cashew 65g,121,1737169
+2025-09-28,RT017,Toko Laris Manis,SKU-023,Molto Pewangi 900ml,66,1462425
+2025-09-28,RT011,Minimart Ceria,SKU-021,Frisian Flag Susu Kental 370g,100,1345168
+2025-09-28,RT014,Toko Mandiri Jaya,SKU-011,Beng Beng Wafer,86,256781
+2025-09-28,RT005,Sumber Rezeki,SKU-005,Kapal Api Kopi Sachet,117,299143
+2025-09-29,RT001,Toko Makmur,SKU-006,Mie Sedaap Goreng,22,77732
+2025-09-29,RT008,Agen Sentosa,SKU-008,GoodDay Cappuccino 250ml,6,35139
+2025-09-29,RT007,Toko Maju Bersama,SKU-006,Mie Sedaap Goreng,10,33688
+2025-09-30,RT004,Toko Berkah Abadi,SKU-002,Indomie Kuah Soto,89,298132
+2025-09-30,RT002,Warung Sejahtera,SKU-001,Indomie Goreng,38,126548
+2025-09-30,RT014,Toko Mandiri Jaya,SKU-013,Ultra Milk Coklat 250ml,83,438420
+2025-09-30,RT017,Toko Laris Manis,SKU-005,Kapal Api Kopi Sachet,89,227959
+2025-10-01,RT016,Warung Harmoni,SKU-009,Chitato Original 68g,138,1653449
+2025-10-01,RT017,Toko Laris Manis,SKU-016,Sabun Lifebuoy 100g,36,171520
+2025-10-01,RT017,Toko Laris Manis,SKU-023,Molto Pewangi 900ml,57,1241038
+2025-10-01,RT003,Minimart Jaya,SKU-013,Ultra Milk Coklat 250ml,80,446431
+2025-10-02,RT001,Toko Makmur,SKU-012,Kopiko 78C 240ml,83,565862
+2025-10-02,RT014,Toko Mandiri Jaya,SKU-017,Rinso Cair 750ml,148,2559087
+2025-10-02,RT009,Toko Harapan Baru,SKU-003,Teh Botol Sosro 450ml,105,525286
+2025-10-02,RT009,Toko Harapan Baru,SKU-021,Frisian Flag Susu Kental 370g,36,513131
+2025-10-03,RT007,Toko Maju Bersama,SKU-023,Molto Pewangi 900ml,55,1158696
+2025-10-03,RT003,Minimart Jaya,SKU-021,Frisian Flag Susu Kental 370g,102,1377702
+2025-10-03,RT007,Toko Maju Bersama,SKU-003,Teh Botol Sosro 450ml,148,769985
+2025-10-03,RT014,Toko Mandiri Jaya,SKU-021,Frisian Flag Susu Kental 370g,130,1905133
+2025-10-03,RT002,Warung Sejahtera,SKU-012,Kopiko 78C 240ml,119,811371
+2025-10-04,RT018,Swalayan Nusantara,SKU-007,Pocari Sweat 500ml,144,1182008
+2025-10-05,RT017,Toko Laris Manis,SKU-016,Sabun Lifebuoy 100g,120,585551
+2025-10-05,RT004,Toko Berkah Abadi,SKU-003,Teh Botol Sosro 450ml,15,76907
+2025-10-06,RT007,Toko Maju Bersama,SKU-002,Indomie Kuah Soto,96,326259
+2025-10-06,RT003,Minimart Jaya,SKU-019,Tango Wafer Coklat 130g,82,785985
+2025-10-06,RT015,Agen Mulia,SKU-008,GoodDay Cappuccino 250ml,75,456508
+2025-10-06,RT001,Toko Makmur,SKU-013,Ultra Milk Coklat 250ml,120,663693
+2025-10-06,RT007,Toko Maju Bersama,SKU-014,Kecap Bango 135ml,56,511190
+2025-10-06,RT016,Warung Harmoni,SKU-001,Indomie Goreng,36,131980
+2025-10-06,RT013,Warung Purnama,SKU-005,Kapal Api Kopi Sachet,100,256770
+2025-10-07,RT014,Toko Mandiri Jaya,SKU-007,Pocari Sweat 500ml,72,576312
+2025-10-07,RT003,Minimart Jaya,SKU-009,Chitato Original 68g,28,341194
+2025-10-07,RT001,Toko Makmur,SKU-003,Teh Botol Sosro 450ml,18,87102
+2025-10-07,RT012,Toko Subur Makmur,SKU-003,Teh Botol Sosro 450ml,79,401782
+2025-10-07,RT001,Toko Makmur,SKU-016,Sabun Lifebuoy 100g,51,247151
+2025-10-08,RT003,Minimart Jaya,SKU-006,Mie Sedaap Goreng,61,215995
+2025-10-08,RT012,Toko Subur Makmur,SKU-002,Indomie Kuah Soto,145,508562
+2025-10-09,RT007,Toko Maju Bersama,SKU-004,Aqua 600ml,85,337510
+2025-10-09,RT001,Toko Makmur,SKU-010,Silverqueen Cashew 65g,59,908660
+2025-10-09,RT014,Toko Mandiri Jaya,SKU-002,Indomie Kuah Soto,101,366811
+2025-10-09,RT011,Minimart Ceria,SKU-005,Kapal Api Kopi Sachet,46,115966
+2025-10-09,RT007,Toko Maju Bersama,SKU-023,Molto Pewangi 900ml,46,967476
+2025-10-10,RT013,Warung Purnama,SKU-019,Tango Wafer Coklat 130g,60,597902
+2025-10-10,RT016,Warung Harmoni,SKU-011,Beng Beng Wafer,46,141189
+2025-10-10,RT009,Toko Harapan Baru,SKU-011,Beng Beng Wafer,34,105090
+2025-10-10,RT004,Toko Berkah Abadi,SKU-012,Kopiko 78C 240ml,148,1041956
+2025-10-10,RT002,Warung Sejahtera,SKU-019,Tango Wafer Coklat 130g,104,1056424
+2025-10-11,RT018,Swalayan Nusantara,SKU-014,Kecap Bango 135ml,32,273904
+2025-10-11,RT007,Toko Maju Bersama,SKU-021,Frisian Flag Susu Kental 370g,26,366997
+2025-10-11,RT011,Minimart Ceria,SKU-012,Kopiko 78C 240ml,93,629095
+2025-10-11,RT014,Toko Mandiri Jaya,SKU-021,Frisian Flag Susu Kental 370g,132,1939932
+2025-10-11,RT013,Warung Purnama,SKU-019,Tango Wafer Coklat 130g,12,119784
+2025-10-11,RT013,Warung Purnama,SKU-013,Ultra Milk Coklat 250ml,30,162120
+2025-10-12,RT011,Minimart Ceria,SKU-014,Kecap Bango 135ml,149,1344055
+2025-10-12,RT012,Toko Subur Makmur,SKU-005,Kapal Api Kopi Sachet,123,297713
+2025-10-13,RT003,Minimart Jaya,SKU-005,Kapal Api Kopi Sachet,68,174165
+2025-10-13,RT002,Warung Sejahtera,SKU-014,Kecap Bango 135ml,45,403126
+2025-10-13,RT001,Toko Makmur,SKU-011,Beng Beng Wafer,38,115563
+2025-10-13,RT001,Toko Makmur,SKU-018,Sarimi Ayam Bawang,36,107512
+2025-10-13,RT008,Agen Sentosa,SKU-020,Le Minerale 600ml,116,444890
+2025-10-14,RT017,Toko Laris Manis,SKU-004,Aqua 600ml,71,274871
+2025-10-14,RT016,Warung Harmoni,SKU-022,ABC Sambal Asli 135ml,90,760917
+2025-10-14,RT006,Warung Bahagia,SKU-007,Pocari Sweat 500ml,109,889196
+2025-10-14,RT016,Warung Harmoni,SKU-010,Silverqueen Cashew 65g,106,1585380
+2025-10-16,RT011,Minimart Ceria,SKU-018,Sarimi Ayam Bawang,128,382651
+2025-10-16,RT018,Swalayan Nusantara,SKU-019,Tango Wafer Coklat 130g,10,104996
+2025-10-16,RT011,Minimart Ceria,SKU-006,Mie Sedaap Goreng,102,345201
+2025-10-16,RT016,Warung Harmoni,SKU-022,ABC Sambal Asli 135ml,105,891559
+2025-10-16,RT015,Agen Mulia,SKU-009,Chitato Original 68g,47,556773
+2025-10-16,RT008,Agen Sentosa,SKU-012,Kopiko 78C 240ml,60,436561
+2025-10-17,RT009,Toko Harapan Baru,SKU-008,GoodDay Cappuccino 250ml,46,274958
+2025-10-17,RT012,Toko Subur Makmur,SKU-015,Royco Ayam Sachet,44,87432
+2025-10-17,RT018,Swalayan Nusantara,SKU-022,ABC Sambal Asli 135ml,63,552325
+2025-10-18,RT009,Toko Harapan Baru,SKU-018,Sarimi Ayam Bawang,61,182785
+2025-10-18,RT002,Warung Sejahtera,SKU-023,Molto Pewangi 900ml,82,1840032
+2025-10-18,RT009,Toko Harapan Baru,SKU-023,Molto Pewangi 900ml,79,1739542
+2025-10-18,RT011,Minimart Ceria,SKU-022,ABC Sambal Asli 135ml,73,591272
+2025-10-18,RT017,Toko Laris Manis,SKU-010,Silverqueen Cashew 65g,26,400262
+2025-10-18,RT003,Minimart Jaya,SKU-018,Sarimi Ayam Bawang,74,231613
+2025-10-18,RT004,Toko Berkah Abadi,SKU-014,Kecap Bango 135ml,66,594987
+2025-10-19,RT016,Warung Harmoni,SKU-009,Chitato Original 68g,55,668914
+2025-10-19,RT006,Warung Bahagia,SKU-012,Kopiko 78C 240ml,148,1080931
+2025-10-19,RT018,Swalayan Nusantara,SKU-017,Rinso Cair 750ml,61,1088509
+2025-10-19,RT004,Toko Berkah Abadi,SKU-020,Le Minerale 600ml,83,339063
+2025-10-19,RT017,Toko Laris Manis,SKU-002,Indomie Kuah Soto,87,292418
+2025-10-19,RT017,Toko Laris Manis,SKU-012,Kopiko 78C 240ml,85,594544
+2025-10-20,RT017,Toko Laris Manis,SKU-002,Indomie Kuah Soto,28,99316
+2025-10-20,RT007,Toko Maju Bersama,SKU-009,Chitato Original 68g,92,1079674
+2025-10-20,RT010,Warung Sinar Pagi,SKU-021,Frisian Flag Susu Kental 370g,96,1284938
+2025-10-20,RT001,Toko Makmur,SKU-018,Sarimi Ayam Bawang,106,319655
+2025-10-20,RT008,Agen Sentosa,SKU-011,Beng Beng Wafer,75,228163
+2025-10-20,RT004,Toko Berkah Abadi,SKU-001,Indomie Goreng,45,150993
+2025-10-20,RT014,Toko Mandiri Jaya,SKU-018,Sarimi Ayam Bawang,94,277699
+2025-10-21,RT007,Toko Maju Bersama,SKU-009,Chitato Original 68g,22,276326
+2025-10-21,RT007,Toko Maju Bersama,SKU-018,Sarimi Ayam Bawang,99,285562
+2025-10-21,RT014,Toko Mandiri Jaya,SKU-011,Beng Beng Wafer,66,194652
+2025-10-21,RT014,Toko Mandiri Jaya,SKU-004,Aqua 600ml,101,385442
+2025-10-22,RT015,Agen Mulia,SKU-007,Pocari Sweat 500ml,20,161121
+2025-10-22,RT007,Toko Maju Bersama,SKU-018,Sarimi Ayam Bawang,127,364273
+2025-10-22,RT007,Toko Maju Bersama,SKU-008,GoodDay Cappuccino 250ml,24,144209
+2025-10-24,RT007,Toko Maju Bersama,SKU-022,ABC Sambal Asli 135ml,65,578445
+2025-10-24,RT003,Minimart Jaya,SKU-011,Beng Beng Wafer,62,183136
+2025-10-24,RT011,Minimart Ceria,SKU-019,Tango Wafer Coklat 130g,9,93407
+2025-10-24,RT009,Toko Harapan Baru,SKU-023,Molto Pewangi 900ml,22,504288
+2025-10-24,RT011,Minimart Ceria,SKU-021,Frisian Flag Susu Kental 370g,142,1923298
+2025-10-24,RT001,Toko Makmur,SKU-013,Ultra Milk Coklat 250ml,84,449496
+2025-10-25,RT004,Toko Berkah Abadi,SKU-009,Chitato Original 68g,119,1387241
+2025-10-25,RT001,Toko Makmur,SKU-017,Rinso Cair 750ml,75,1354825
+2025-10-26,RT016,Warung Harmoni,SKU-018,Sarimi Ayam Bawang,140,416777
+2025-10-26,RT007,Toko Maju Bersama,SKU-016,Sabun Lifebuoy 100g,127,644559
+2025-10-26,RT014,Toko Mandiri Jaya,SKU-018,Sarimi Ayam Bawang,104,303813
+2025-10-27,RT012,Toko Subur Makmur,SKU-023,Molto Pewangi 900ml,21,464310
+2025-10-27,RT011,Minimart Ceria,SKU-001,Indomie Goreng,132,479972
+2025-10-27,RT012,Toko Subur Makmur,SKU-005,Kapal Api Kopi Sachet,98,242366
+2025-10-28,RT008,Agen Sentosa,SKU-006,Mie Sedaap Goreng,106,388390
+2025-10-28,RT018,Swalayan Nusantara,SKU-015,Royco Ayam Sachet,58,115286
+2025-10-28,RT011,Minimart Ceria,SKU-006,Mie Sedaap Goreng,87,319086
+2025-10-29,RT017,Toko Laris Manis,SKU-002,Indomie Kuah Soto,88,317121
+2025-10-29,RT004,Toko Berkah Abadi,SKU-019,Tango Wafer Coklat 130g,49,484041
+2025-10-30,RT001,Toko Makmur,SKU-012,Kopiko 78C 240ml,38,255098
+2025-10-30,RT017,Toko Laris Manis,SKU-021,Frisian Flag Susu Kental 370g,64,892125
+2025-10-31,RT018,Swalayan Nusantara,SKU-006,Mie Sedaap Goreng,134,488352
+2025-10-31,RT018,Swalayan Nusantara,SKU-009,Chitato Original 68g,147,1728455
+2025-11-01,RT007,Toko Maju Bersama,SKU-004,Aqua 600ml,30,119324
+2025-11-01,RT016,Warung Harmoni,SKU-018,Sarimi Ayam Bawang,130,398141
+2025-11-01,RT015,Agen Mulia,SKU-011,Beng Beng Wafer,111,329945
+2025-11-01,RT014,Toko Mandiri Jaya,SKU-023,Molto Pewangi 900ml,106,2432014
+2025-11-01,RT007,Toko Maju Bersama,SKU-004,Aqua 600ml,31,121686
+2025-11-02,RT007,Toko Maju Bersama,SKU-013,Ultra Milk Coklat 250ml,49,272613
+2025-11-02,RT016,Warung Harmoni,SKU-010,Silverqueen Cashew 65g,63,931853
+2025-11-02,RT012,Toko Subur Makmur,SKU-021,Frisian Flag Susu Kental 370g,123,1792497
+2025-11-02,RT009,Toko Harapan Baru,SKU-020,Le Minerale 600ml,16,65454
+2025-11-02,RT003,Minimart Jaya,SKU-023,Molto Pewangi 900ml,38,867948
+2025-11-02,RT007,Toko Maju Bersama,SKU-017,Rinso Cair 750ml,32,563895
+2025-11-03,RT007,Toko Maju Bersama,SKU-002,Indomie Kuah Soto,36,126228
+2025-11-03,RT001,Toko Makmur,SKU-007,Pocari Sweat 500ml,79,636033
+2025-11-03,RT004,Toko Berkah Abadi,SKU-004,Aqua 600ml,28,108165
+2025-11-03,RT017,Toko Laris Manis,SKU-012,Kopiko 78C 240ml,10,68865
+2025-11-03,RT011,Minimart Ceria,SKU-001,Indomie Goreng,28,100859
+2025-11-03,RT007,Toko Maju Bersama,SKU-012,Kopiko 78C 240ml,110,751505
+2025-11-04,RT001,Toko Makmur,SKU-022,ABC Sambal Asli 135ml,47,381594
+2025-11-04,RT006,Warung Bahagia,SKU-004,Aqua 600ml,103,412137
+2025-11-04,RT017,Toko Laris Manis,SKU-011,Beng Beng Wafer,129,385090
+2025-11-05,RT011,Minimart Ceria,SKU-005,Kapal Api Kopi Sachet,115,276789
+2025-11-05,RT009,Toko Harapan Baru,SKU-017,Rinso Cair 750ml,124,2231723
+2025-11-05,RT008,Agen Sentosa,SKU-002,Indomie Kuah Soto,148,516051
+2025-11-05,RT003,Minimart Jaya,SKU-018,Sarimi Ayam Bawang,147,440284
+2025-11-06,RT006,Warung Bahagia,SKU-019,Tango Wafer Coklat 130g,41,427087
+2025-11-06,RT014,Toko Mandiri Jaya,SKU-015,Royco Ayam Sachet,64,128435
+2025-11-06,RT012,Toko Subur Makmur,SKU-021,Frisian Flag Susu Kental 370g,149,2072436
+2025-11-07,RT008,Agen Sentosa,SKU-006,Mie Sedaap Goreng,108,385034
+2025-11-08,RT001,Toko Makmur,SKU-020,Le Minerale 600ml,116,456840
+2025-11-08,RT008,Agen Sentosa,SKU-007,Pocari Sweat 500ml,92,743850
+2025-11-08,RT014,Toko Mandiri Jaya,SKU-002,Indomie Kuah Soto,102,352986
+2025-11-09,RT016,Warung Harmoni,SKU-002,Indomie Kuah Soto,63,227596
+2025-11-09,RT007,Toko Maju Bersama,SKU-003,Teh Botol Sosro 450ml,59,307188
+2025-11-09,RT011,Minimart Ceria,SKU-013,Ultra Milk Coklat 250ml,94,540950
+2025-11-09,RT014,Toko Mandiri Jaya,SKU-005,Kapal Api Kopi Sachet,149,374991
+2025-11-09,RT007,Toko Maju Bersama,SKU-005,Kapal Api Kopi Sachet,137,343664
+2025-11-09,RT009,Toko Harapan Baru,SKU-020,Le Minerale 600ml,118,492462
+2025-11-10,RT012,Toko Subur Makmur,SKU-011,Beng Beng Wafer,141,417924
+2025-11-10,RT009,Toko Harapan Baru,SKU-014,Kecap Bango 135ml,23,199244
+2025-11-11,RT007,Toko Maju Bersama,SKU-023,Molto Pewangi 900ml,118,2725089
+2025-11-11,RT003,Minimart Jaya,SKU-017,Rinso Cair 750ml,40,707614
+2025-11-11,RT003,Minimart Jaya,SKU-010,Silverqueen Cashew 65g,64,990315
+2025-11-11,RT004,Toko Berkah Abadi,SKU-008,GoodDay Cappuccino 250ml,111,693696
+2025-11-11,RT003,Minimart Jaya,SKU-003,Teh Botol Sosro 450ml,13,63667
+2025-11-12,RT018,Swalayan Nusantara,SKU-016,Sabun Lifebuoy 100g,94,465692
+2025-11-12,RT010,Warung Sinar Pagi,SKU-018,Sarimi Ayam Bawang,101,301647
+2025-11-12,RT001,Toko Makmur,SKU-020,Le Minerale 600ml,51,204928
+2025-11-12,RT014,Toko Mandiri Jaya,SKU-005,Kapal Api Kopi Sachet,68,163986
+2025-11-12,RT014,Toko Mandiri Jaya,SKU-005,Kapal Api Kopi Sachet,77,189085
+2025-11-13,RT008,Agen Sentosa,SKU-019,Tango Wafer Coklat 130g,119,1211555
+2025-11-13,RT004,Toko Berkah Abadi,SKU-014,Kecap Bango 135ml,59,530719
+2025-11-13,RT015,Agen Mulia,SKU-011,Beng Beng Wafer,50,156282
+2025-11-13,RT018,Swalayan Nusantara,SKU-021,Frisian Flag Susu Kental 370g,50,700273
+2025-11-13,RT001,Toko Makmur,SKU-015,Royco Ayam Sachet,44,83951
+2025-11-14,RT018,Swalayan Nusantara,SKU-021,Frisian Flag Susu Kental 370g,147,2000297
+2025-11-14,RT001,Toko Makmur,SKU-022,ABC Sambal Asli 135ml,96,845406
+2025-11-15,RT011,Minimart Ceria,SKU-020,Le Minerale 600ml,106,443882
+2025-11-15,RT016,Warung Harmoni,SKU-023,Molto Pewangi 900ml,15,320596
+2025-11-16,RT006,Warung Bahagia,SKU-020,Le Minerale 600ml,102,420406
+2025-11-17,RT007,Toko Maju Bersama,SKU-017,Rinso Cair 750ml,107,1960575
+2025-11-17,RT009,Toko Harapan Baru,SKU-002,Indomie Kuah Soto,37,129530
+2025-11-17,RT011,Minimart Ceria,SKU-021,Frisian Flag Susu Kental 370g,107,1567928
+2025-11-17,RT017,Toko Laris Manis,SKU-015,Royco Ayam Sachet,37,70981
+2025-11-17,RT014,Toko Mandiri Jaya,SKU-010,Silverqueen Cashew 65g,112,1728399
+2025-11-17,RT001,Toko Makmur,SKU-008,GoodDay Cappuccino 250ml,59,359782
+2025-11-17,RT012,Toko Subur Makmur,SKU-003,Teh Botol Sosro 450ml,44,209523
+2025-11-18,RT017,Toko Laris Manis,SKU-001,Indomie Goreng,50,179140
+2025-11-18,RT017,Toko Laris Manis,SKU-015,Royco Ayam Sachet,142,283555
+2025-11-18,RT012,Toko Subur Makmur,SKU-020,Le Minerale 600ml,10,38202
+2025-11-19,RT012,Toko Subur Makmur,SKU-010,Silverqueen Cashew 65g,136,2073426
+2025-11-19,RT005,Sumber Rezeki,SKU-003,Teh Botol Sosro 450ml,78,379645
+2025-11-19,RT008,Agen Sentosa,SKU-021,Frisian Flag Susu Kental 370g,29,403964
+2025-11-20,RT009,Toko Harapan Baru,SKU-018,Sarimi Ayam Bawang,139,397724
+2025-11-20,RT011,Minimart Ceria,SKU-019,Tango Wafer Coklat 130g,44,425533
+2025-11-20,RT018,Swalayan Nusantara,SKU-012,Kopiko 78C 240ml,106,748382
+2025-11-21,RT013,Warung Purnama,SKU-021,Frisian Flag Susu Kental 370g,30,401546
+2025-11-21,RT007,Toko Maju Bersama,SKU-010,Silverqueen Cashew 65g,104,1545768
+2025-11-21,RT014,Toko Mandiri Jaya,SKU-011,Beng Beng Wafer,39,111669
+2025-11-22,RT011,Minimart Ceria,SKU-001,Indomie Goreng,45,160621
+2025-11-22,RT013,Warung Purnama,SKU-004,Aqua 600ml,142,582250
+2025-11-22,RT007,Toko Maju Bersama,SKU-014,Kecap Bango 135ml,99,852594
+2025-11-22,RT001,Toko Makmur,SKU-014,Kecap Bango 135ml,64,595508
+2025-11-23,RT009,Toko Harapan Baru,SKU-002,Indomie Kuah Soto,120,403347
+2025-11-23,RT009,Toko Harapan Baru,SKU-011,Beng Beng Wafer,49,146407
+2025-11-23,RT009,Toko Harapan Baru,SKU-015,Royco Ayam Sachet,7,13311
+2025-11-23,RT001,Toko Makmur,SKU-005,Kapal Api Kopi Sachet,40,104923
+2025-11-23,RT007,Toko Maju Bersama,SKU-020,Le Minerale 600ml,68,265842
+2025-11-23,RT015,Agen Mulia,SKU-006,Mie Sedaap Goreng,135,461374
+2025-11-23,RT003,Minimart Jaya,SKU-009,Chitato Original 68g,65,762014
+2025-11-24,RT013,Warung Purnama,SKU-010,Silverqueen Cashew 65g,99,1481029
+2025-11-24,RT012,Toko Subur Makmur,SKU-015,Royco Ayam Sachet,124,252467
+2025-11-24,RT017,Toko Laris Manis,SKU-019,Tango Wafer Coklat 130g,30,308572
+2025-11-24,RT012,Toko Subur Makmur,SKU-008,GoodDay Cappuccino 250ml,62,379199
+2025-11-24,RT018,Swalayan Nusantara,SKU-008,GoodDay Cappuccino 250ml,137,814260
+2025-11-25,RT015,Agen Mulia,SKU-023,Molto Pewangi 900ml,25,550044
+2025-11-25,RT003,Minimart Jaya,SKU-014,Kecap Bango 135ml,11,96357
+2025-11-25,RT002,Warung Sejahtera,SKU-008,GoodDay Cappuccino 250ml,86,540854
+2025-11-26,RT009,Toko Harapan Baru,SKU-017,Rinso Cair 750ml,72,1248366
+2025-11-26,RT007,Toko Maju Bersama,SKU-022,ABC Sambal Asli 135ml,143,1170890
+2025-11-27,RT001,Toko Makmur,SKU-018,Sarimi Ayam Bawang,18,56700
+2025-11-27,RT014,Toko Mandiri Jaya,SKU-008,GoodDay Cappuccino 250ml,58,358812
+2025-11-27,RT018,Swalayan Nusantara,SKU-014,Kecap Bango 135ml,131,1224011
+2025-11-28,RT016,Warung Harmoni,SKU-010,Silverqueen Cashew 65g,63,955118
+2025-11-28,RT003,Minimart Jaya,SKU-015,Royco Ayam Sachet,94,187006
+2025-11-28,RT018,Swalayan Nusantara,SKU-021,Frisian Flag Susu Kental 370g,130,1812871
+2025-11-29,RT005,Sumber Rezeki,SKU-021,Frisian Flag Susu Kental 370g,98,1325716
+2025-11-30,RT001,Toko Makmur,SKU-009,Chitato Original 68g,120,1438647
+2025-11-30,RT015,Agen Mulia,SKU-016,Sabun Lifebuoy 100g,86,415991
+2025-11-30,RT002,Warung Sejahtera,SKU-019,Tango Wafer Coklat 130g,129,1348249
+2025-12-01,RT017,Toko Laris Manis,SKU-004,Aqua 600ml,65,256915
+2025-12-01,RT010,Warung Sinar Pagi,SKU-010,Silverqueen Cashew 65g,102,1524836
+2025-12-01,RT012,Toko Subur Makmur,SKU-018,Sarimi Ayam Bawang,9,28321
+2025-12-01,RT003,Minimart Jaya,SKU-019,Tango Wafer Coklat 130g,86,886334
+2025-12-01,RT011,Minimart Ceria,SKU-021,Frisian Flag Susu Kental 370g,82,1146915
+2025-12-01,RT003,Minimart Jaya,SKU-011,Beng Beng Wafer,127,379585
+2025-12-01,RT011,Minimart Ceria,SKU-018,Sarimi Ayam Bawang,111,341195
+2025-12-02,RT005,Sumber Rezeki,SKU-010,Silverqueen Cashew 65g,128,1974272
+2025-12-02,RT014,Toko Mandiri Jaya,SKU-021,Frisian Flag Susu Kental 370g,116,1587733
+2025-12-02,RT009,Toko Harapan Baru,SKU-008,GoodDay Cappuccino 250ml,48,293012
+2025-12-03,RT009,Toko Harapan Baru,SKU-013,Ultra Milk Coklat 250ml,25,138216
+2025-12-03,RT001,Toko Makmur,SKU-014,Kecap Bango 135ml,130,1123848
+2025-12-03,RT012,Toko Subur Makmur,SKU-014,Kecap Bango 135ml,135,1198212
+2025-12-03,RT014,Toko Mandiri Jaya,SKU-022,ABC Sambal Asli 135ml,25,213042
+2025-12-04,RT001,Toko Makmur,SKU-005,Kapal Api Kopi Sachet,41,105312
+2025-12-04,RT006,Warung Bahagia,SKU-020,Le Minerale 600ml,126,514920
+2025-12-04,RT003,Minimart Jaya,SKU-017,Rinso Cair 750ml,135,2330505
+2025-12-05,RT006,Warung Bahagia,SKU-014,Kecap Bango 135ml,49,427805
+2025-12-05,RT017,Toko Laris Manis,SKU-014,Kecap Bango 135ml,39,364424
+2025-12-05,RT010,Warung Sinar Pagi,SKU-004,Aqua 600ml,34,132843
+2025-12-05,RT004,Toko Berkah Abadi,SKU-001,Indomie Goreng,134,453475
+2025-12-06,RT007,Toko Maju Bersama,SKU-008,GoodDay Cappuccino 250ml,97,558682
+2025-12-06,RT017,Toko Laris Manis,SKU-011,Beng Beng Wafer,74,213663
+2025-12-06,RT007,Toko Maju Bersama,SKU-006,Mie Sedaap Goreng,132,470874
+2025-12-06,RT011,Minimart Ceria,SKU-015,Royco Ayam Sachet,62,129102
+2025-12-07,RT002,Warung Sejahtera,SKU-023,Molto Pewangi 900ml,43,950313
+2025-12-07,RT002,Warung Sejahtera,SKU-016,Sabun Lifebuoy 100g,86,447816
+2025-12-08,RT011,Minimart Ceria,SKU-022,ABC Sambal Asli 135ml,120,1065780
+2025-12-08,RT001,Toko Makmur,SKU-008,GoodDay Cappuccino 250ml,138,820801
+2025-12-08,RT007,Toko Maju Bersama,SKU-016,Sabun Lifebuoy 100g,113,548645
+2025-12-09,RT004,Toko Berkah Abadi,SKU-005,Kapal Api Kopi Sachet,127,306489
+2025-12-09,RT011,Minimart Ceria,SKU-001,Indomie Goreng,135,496098
+2025-12-09,RT007,Toko Maju Bersama,SKU-002,Indomie Kuah Soto,141,478666
+2025-12-09,RT001,Toko Makmur,SKU-012,Kopiko 78C 240ml,79,555637
+2025-12-10,RT018,Swalayan Nusantara,SKU-004,Aqua 600ml,11,45887
+2025-12-10,RT004,Toko Berkah Abadi,SKU-004,Aqua 600ml,23,90545
+2025-12-10,RT016,Warung Harmoni,SKU-009,Chitato Original 68g,144,1740124
+2025-12-10,RT012,Toko Subur Makmur,SKU-012,Kopiko 78C 240ml,24,168280
+2025-12-11,RT007,Toko Maju Bersama,SKU-013,Ultra Milk Coklat 250ml,119,678692
+2025-12-11,RT017,Toko Laris Manis,SKU-019,Tango Wafer Coklat 130g,69,703399
+2025-12-11,RT015,Agen Mulia,SKU-015,Royco Ayam Sachet,54,102831
+2025-12-12,RT005,Sumber Rezeki,SKU-007,Pocari Sweat 500ml,91,699041
+2025-12-12,RT014,Toko Mandiri Jaya,SKU-003,Teh Botol Sosro 450ml,64,331727
+2025-12-12,RT007,Toko Maju Bersama,SKU-019,Tango Wafer Coklat 130g,10,103567
+2025-12-12,RT007,Toko Maju Bersama,SKU-007,Pocari Sweat 500ml,121,951239
+2025-12-12,RT004,Toko Berkah Abadi,SKU-015,Royco Ayam Sachet,150,303310
+2025-12-12,RT002,Warung Sejahtera,SKU-014,Kecap Bango 135ml,62,573384
+2025-12-12,RT006,Warung Bahagia,SKU-003,Teh Botol Sosro 450ml,13,62358
+2025-12-12,RT010,Warung Sinar Pagi,SKU-013,Ultra Milk Coklat 250ml,115,612623
+2025-12-12,RT015,Agen Mulia,SKU-022,ABC Sambal Asli 135ml,117,962801
+2025-12-13,RT011,Minimart Ceria,SKU-006,Mie Sedaap Goreng,48,162541
+2025-12-13,RT002,Warung Sejahtera,SKU-020,Le Minerale 600ml,145,592305
+2025-12-13,RT011,Minimart Ceria,SKU-002,Indomie Kuah Soto,93,339874
+2025-12-13,RT001,Toko Makmur,SKU-018,Sarimi Ayam Bawang,104,302168
+2025-12-14,RT008,Agen Sentosa,SKU-021,Frisian Flag Susu Kental 370g,54,772507
+2025-12-14,RT013,Warung Purnama,SKU-015,Royco Ayam Sachet,82,159067
+2025-12-14,RT017,Toko Laris Manis,SKU-001,Indomie Goreng,129,435090
+2025-12-14,RT002,Warung Sejahtera,SKU-022,ABC Sambal Asli 135ml,87,739804
+2025-12-15,RT012,Toko Subur Makmur,SKU-022,ABC Sambal Asli 135ml,113,969760
+2025-12-15,RT007,Toko Maju Bersama,SKU-013,Ultra Milk Coklat 250ml,133,722280
+2025-12-15,RT007,Toko Maju Bersama,SKU-013,Ultra Milk Coklat 250ml,117,668895
+2025-12-15,RT014,Toko Mandiri Jaya,SKU-023,Molto Pewangi 900ml,28,602760
+2025-12-15,RT007,Toko Maju Bersama,SKU-008,GoodDay Cappuccino 250ml,128,756154
+2025-12-15,RT017,Toko Laris Manis,SKU-020,Le Minerale 600ml,22,85622
+2025-12-16,RT011,Minimart Ceria,SKU-014,Kecap Bango 135ml,147,1326968
+2025-12-17,RT003,Minimart Jaya,SKU-008,GoodDay Cappuccino 250ml,150,930119
+2025-12-18,RT009,Toko Harapan Baru,SKU-021,Frisian Flag Susu Kental 370g,85,1201540
+2025-12-18,RT008,Agen Sentosa,SKU-018,Sarimi Ayam Bawang,61,176346
+2025-12-18,RT006,Warung Bahagia,SKU-005,Kapal Api Kopi Sachet,19,46391
+2025-12-19,RT008,Agen Sentosa,SKU-003,Teh Botol Sosro 450ml,29,145079
+2025-12-19,RT004,Toko Berkah Abadi,SKU-009,Chitato Original 68g,85,1063456
+2025-12-19,RT012,Toko Subur Makmur,SKU-010,Silverqueen Cashew 65g,65,935602
+2025-12-19,RT002,Warung Sejahtera,SKU-020,Le Minerale 600ml,55,213126
+2025-12-20,RT003,Minimart Jaya,SKU-023,Molto Pewangi 900ml,85,1821134
+2025-12-20,RT011,Minimart Ceria,SKU-023,Molto Pewangi 900ml,80,1675861
+2025-12-20,RT018,Swalayan Nusantara,SKU-018,Sarimi Ayam Bawang,98,281955
+2025-12-20,RT004,Toko Berkah Abadi,SKU-019,Tango Wafer Coklat 130g,107,1072564
+2025-12-20,RT005,Sumber Rezeki,SKU-019,Tango Wafer Coklat 130g,144,1422676
+2025-12-20,RT008,Agen Sentosa,SKU-005,Kapal Api Kopi Sachet,82,194889
+2025-12-20,RT003,Minimart Jaya,SKU-023,Molto Pewangi 900ml,68,1566073
+2025-12-20,RT011,Minimart Ceria,SKU-008,GoodDay Cappuccino 250ml,126,740793
+2025-12-20,RT006,Warung Bahagia,SKU-021,Frisian Flag Susu Kental 370g,79,1129274
+2025-12-20,RT006,Warung Bahagia,SKU-006,Mie Sedaap Goreng,75,264723
+2025-12-21,RT001,Toko Makmur,SKU-009,Chitato Original 68g,91,1105460
+2025-12-21,RT018,Swalayan Nusantara,SKU-005,Kapal Api Kopi Sachet,62,160582
+2025-12-21,RT007,Toko Maju Bersama,SKU-003,Teh Botol Sosro 450ml,40,200589
+2025-12-21,RT011,Minimart Ceria,SKU-009,Chitato Original 68g,95,1113475
+2025-12-21,RT012,Toko Subur Makmur,SKU-023,Molto Pewangi 900ml,96,2185942
+2025-12-21,RT004,Toko Berkah Abadi,SKU-002,Indomie Kuah Soto,20,73141
+2025-12-21,RT008,Agen Sentosa,SKU-022,ABC Sambal Asli 135ml,138,1211042
+2025-12-21,RT011,Minimart Ceria,SKU-020,Le Minerale 600ml,75,314754
+2025-12-21,RT012,Toko Subur Makmur,SKU-023,Molto Pewangi 900ml,25,534081
+2025-12-22,RT018,Swalayan Nusantara,SKU-018,Sarimi Ayam Bawang,56,171578
+2025-12-22,RT007,Toko Maju Bersama,SKU-011,Beng Beng Wafer,51,147092
+2025-12-22,RT014,Toko Mandiri Jaya,SKU-009,Chitato Original 68g,68,798643
+2025-12-23,RT008,Agen Sentosa,SKU-001,Indomie Goreng,20,73490
+2025-12-23,RT016,Warung Harmoni,SKU-008,GoodDay Cappuccino 250ml,38,221117
+2025-12-23,RT001,Toko Makmur,SKU-009,Chitato Original 68g,108,1249843
+2025-12-23,RT004,Toko Berkah Abadi,SKU-003,Teh Botol Sosro 450ml,14,71571
+2025-12-24,RT006,Warung Bahagia,SKU-011,Beng Beng Wafer,34,106796
+2025-12-24,RT015,Agen Mulia,SKU-003,Teh Botol Sosro 450ml,84,428802
+2025-12-24,RT001,Toko Makmur,SKU-008,GoodDay Cappuccino 250ml,145,882469
+2025-12-24,RT009,Toko Harapan Baru,SKU-017,Rinso Cair 750ml,45,803190
+2025-12-25,RT007,Toko Maju Bersama,SKU-001,Indomie Goreng,104,358035
+2025-12-25,RT007,Toko Maju Bersama,SKU-001,Indomie Goreng,28,95984
+2025-12-25,RT011,Minimart Ceria,SKU-023,Molto Pewangi 900ml,111,2390600
+2025-12-25,RT012,Toko Subur Makmur,SKU-010,Silverqueen Cashew 65g,128,1871017
+2025-12-25,RT006,Warung Bahagia,SKU-014,Kecap Bango 135ml,123,1077316
+2025-12-25,RT014,Toko Mandiri Jaya,SKU-001,Indomie Goreng,134,475173
+2025-12-25,RT001,Toko Makmur,SKU-009,Chitato Original 68g,51,613018
+2025-12-25,RT017,Toko Laris Manis,SKU-021,Frisian Flag Susu Kental 370g,91,1264039
+2025-12-26,RT012,Toko Subur Makmur,SKU-012,Kopiko 78C 240ml,148,1075796
+2025-12-26,RT007,Toko Maju Bersama,SKU-005,Kapal Api Kopi Sachet,59,141072
+2025-12-26,RT011,Minimart Ceria,SKU-017,Rinso Cair 750ml,53,914467
+2025-12-26,RT014,Toko Mandiri Jaya,SKU-010,Silverqueen Cashew 65g,146,2083495
+2025-12-26,RT017,Toko Laris Manis,SKU-021,Frisian Flag Susu Kental 370g,30,434015
+2025-12-26,RT003,Minimart Jaya,SKU-006,Mie Sedaap Goreng,120,418574
+2025-12-26,RT011,Minimart Ceria,SKU-003,Teh Botol Sosro 450ml,53,263455
+2025-12-26,RT011,Minimart Ceria,SKU-019,Tango Wafer Coklat 130g,63,655892
+2025-12-27,RT014,Toko Mandiri Jaya,SKU-010,Silverqueen Cashew 65g,134,1971666
+2025-12-27,RT014,Toko Mandiri Jaya,SKU-002,Indomie Kuah Soto,47,164375
+2025-12-28,RT007,Toko Maju Bersama,SKU-014,Kecap Bango 135ml,42,368331
+2025-12-28,RT006,Warung Bahagia,SKU-005,Kapal Api Kopi Sachet,110,280239
+2025-12-28,RT012,Toko Subur Makmur,SKU-001,Indomie Goreng,6,21068
+2025-12-28,RT013,Warung Purnama,SKU-016,Sabun Lifebuoy 100g,58,292633
+2025-12-29,RT009,Toko Harapan Baru,SKU-003,Teh Botol Sosro 450ml,17,87247
+2025-12-29,RT011,Minimart Ceria,SKU-011,Beng Beng Wafer,103,293931
+2025-12-29,RT009,Toko Harapan Baru,SKU-022,ABC Sambal Asli 135ml,102,869587
+2025-12-30,RT006,Warung Bahagia,SKU-003,Teh Botol Sosro 450ml,20,96581
+2025-12-30,RT007,Toko Maju Bersama,SKU-002,Indomie Kuah Soto,121,407913
+2025-12-30,RT003,Minimart Jaya,SKU-001,Indomie Goreng,128,430284
+2025-12-30,RT004,Toko Berkah Abadi,SKU-007,Pocari Sweat 500ml,91,699445
+2025-12-31,RT001,Toko Makmur,SKU-021,Frisian Flag Susu Kental 370g,72,1023234
+2025-12-31,RT003,Minimart Jaya,SKU-015,Royco Ayam Sachet,87,169988
+2025-12-31,RT014,Toko Mandiri Jaya,SKU-012,Kopiko 78C 240ml,148,1033966
+2026-01-01,RT008,Agen Sentosa,SKU-012,Kopiko 78C 240ml,81,581372
+2026-01-01,RT008,Agen Sentosa,SKU-010,Silverqueen Cashew 65g,102,1530445
+2026-01-01,RT005,Sumber Rezeki,SKU-004,Aqua 600ml,13,53609
+2026-01-01,RT011,Minimart Ceria,SKU-018,Sarimi Ayam Bawang,134,419025
+2026-01-01,RT003,Minimart Jaya,SKU-023,Molto Pewangi 900ml,41,902976
+2026-01-01,RT003,Minimart Jaya,SKU-002,Indomie Kuah Soto,146,526489
+2026-01-01,RT014,Toko Mandiri Jaya,SKU-002,Indomie Kuah Soto,103,358273
+2026-01-02,RT006,Warung Bahagia,SKU-015,Royco Ayam Sachet,111,212282
+2026-01-02,RT001,Toko Makmur,SKU-014,Kecap Bango 135ml,51,471346
+2026-01-02,RT001,Toko Makmur,SKU-001,Indomie Goreng,131,445533
+2026-01-03,RT014,Toko Mandiri Jaya,SKU-022,ABC Sambal Asli 135ml,144,1173441
+2026-01-03,RT018,Swalayan Nusantara,SKU-006,Mie Sedaap Goreng,72,252697
+2026-01-03,RT012,Toko Subur Makmur,SKU-008,GoodDay Cappuccino 250ml,69,420569
+2026-01-03,RT009,Toko Harapan Baru,SKU-021,Frisian Flag Susu Kental 370g,133,1911736
+2026-01-03,RT013,Warung Purnama,SKU-018,Sarimi Ayam Bawang,78,242833
+2026-01-03,RT003,Minimart Jaya,SKU-021,Frisian Flag Susu Kental 370g,69,942942
+2026-01-04,RT001,Toko Makmur,SKU-012,Kopiko 78C 240ml,81,574878
+2026-01-04,RT017,Toko Laris Manis,SKU-017,Rinso Cair 750ml,73,1353571
+2026-01-04,RT016,Warung Harmoni,SKU-001,Indomie Goreng,81,282451
+2026-01-04,RT010,Warung Sinar Pagi,SKU-002,Indomie Kuah Soto,117,411398
+2026-01-04,RT004,Toko Berkah Abadi,SKU-021,Frisian Flag Susu Kental 370g,59,856145
+2026-01-05,RT002,Warung Sejahtera,SKU-011,Beng Beng Wafer,80,235356
+2026-01-05,RT001,Toko Makmur,SKU-019,Tango Wafer Coklat 130g,49,496174
+2026-01-05,RT016,Warung Harmoni,SKU-013,Ultra Milk Coklat 250ml,132,691840
+2026-01-06,RT007,Toko Maju Bersama,SKU-015,Royco Ayam Sachet,81,167835
+2026-01-06,RT007,Toko Maju Bersama,SKU-015,Royco Ayam Sachet,24,49738
+2026-01-06,RT001,Toko Makmur,SKU-006,Mie Sedaap Goreng,117,407719
+2026-01-06,RT014,Toko Mandiri Jaya,SKU-004,Aqua 600ml,12,47208
+2026-01-06,RT009,Toko Harapan Baru,SKU-012,Kopiko 78C 240ml,16,114214
+2026-01-07,RT007,Toko Maju Bersama,SKU-001,Indomie Goreng,82,280884
+2026-01-07,RT018,Swalayan Nusantara,SKU-017,Rinso Cair 750ml,80,1433335
+2026-01-07,RT005,Sumber Rezeki,SKU-004,Aqua 600ml,6,23994
+2026-01-07,RT006,Warung Bahagia,SKU-020,Le Minerale 600ml,128,522471
+2026-01-07,RT008,Agen Sentosa,SKU-005,Kapal Api Kopi Sachet,143,369209
+2026-01-08,RT002,Warung Sejahtera,SKU-015,Royco Ayam Sachet,17,32871
+2026-01-09,RT006,Warung Bahagia,SKU-016,Sabun Lifebuoy 100g,42,200829
+2026-01-09,RT016,Warung Harmoni,SKU-007,Pocari Sweat 500ml,142,1173346
+2026-01-09,RT017,Toko Laris Manis,SKU-007,Pocari Sweat 500ml,33,257029
+2026-01-10,RT006,Warung Bahagia,SKU-005,Kapal Api Kopi Sachet,45,115114
+2026-01-10,RT010,Warung Sinar Pagi,SKU-007,Pocari Sweat 500ml,110,913630
+2026-01-11,RT017,Toko Laris Manis,SKU-008,GoodDay Cappuccino 250ml,99,581228
+2026-01-11,RT015,Agen Mulia,SKU-020,Le Minerale 600ml,150,625272
+2026-01-11,RT003,Minimart Jaya,SKU-018,Sarimi Ayam Bawang,38,118875
+2026-01-12,RT002,Warung Sejahtera,SKU-001,Indomie Goreng,77,268675
+2026-01-12,RT012,Toko Subur Makmur,SKU-021,Frisian Flag Susu Kental 370g,15,205988
+2026-01-12,RT018,Swalayan Nusantara,SKU-016,Sabun Lifebuoy 100g,54,266432
+2026-01-12,RT001,Toko Makmur,SKU-023,Molto Pewangi 900ml,33,703551
+2026-01-12,RT008,Agen Sentosa,SKU-016,Sabun Lifebuoy 100g,33,171395
+2026-01-13,RT015,Agen Mulia,SKU-020,Le Minerale 600ml,87,346782
+2026-01-13,RT012,Toko Subur Makmur,SKU-018,Sarimi Ayam Bawang,86,269611
+2026-01-13,RT011,Minimart Ceria,SKU-006,Mie Sedaap Goreng,125,438330
+2026-01-13,RT003,Minimart Jaya,SKU-018,Sarimi Ayam Bawang,43,124673
+2026-01-13,RT012,Toko Subur Makmur,SKU-005,Kapal Api Kopi Sachet,110,278192
+2026-01-14,RT007,Toko Maju Bersama,SKU-004,Aqua 600ml,130,531045
+2026-01-14,RT017,Toko Laris Manis,SKU-015,Royco Ayam Sachet,143,298437
+2026-01-15,RT011,Minimart Ceria,SKU-017,Rinso Cair 750ml,114,2119833
+2026-01-15,RT003,Minimart Jaya,SKU-007,Pocari Sweat 500ml,52,406639
+2026-01-15,RT016,Warung Harmoni,SKU-012,Kopiko 78C 240ml,136,980828
+2026-01-15,RT007,Toko Maju Bersama,SKU-022,ABC Sambal Asli 135ml,135,1146065
+2026-01-16,RT011,Minimart Ceria,SKU-023,Molto Pewangi 900ml,144,3142504
+2026-01-16,RT015,Agen Mulia,SKU-004,Aqua 600ml,68,263611
+2026-01-16,RT015,Agen Mulia,SKU-022,ABC Sambal Asli 135ml,42,343444
+2026-01-16,RT016,Warung Harmoni,SKU-003,Teh Botol Sosro 450ml,122,606596
+2026-01-17,RT006,Warung Bahagia,SKU-008,GoodDay Cappuccino 250ml,27,158419
+2026-01-17,RT007,Toko Maju Bersama,SKU-010,Silverqueen Cashew 65g,23,341079
+2026-01-17,RT004,Toko Berkah Abadi,SKU-007,Pocari Sweat 500ml,89,722445
+2026-01-17,RT001,Toko Makmur,SKU-021,Frisian Flag Susu Kental 370g,36,517716
+2026-01-17,RT005,Sumber Rezeki,SKU-015,Royco Ayam Sachet,97,198809
+2026-01-18,RT007,Toko Maju Bersama,SKU-012,Kopiko 78C 240ml,136,960917
+2026-01-18,RT007,Toko Maju Bersama,SKU-004,Aqua 600ml,117,478389
+2026-01-18,RT003,Minimart Jaya,SKU-010,Silverqueen Cashew 65g,33,501776
+2026-01-19,RT007,Toko Maju Bersama,SKU-018,Sarimi Ayam Bawang,89,263043
+2026-01-19,RT007,Toko Maju Bersama,SKU-008,GoodDay Cappuccino 250ml,110,649369
+2026-01-19,RT001,Toko Makmur,SKU-017,Rinso Cair 750ml,60,1066629
+2026-01-19,RT018,Swalayan Nusantara,SKU-012,Kopiko 78C 240ml,18,129989
+2026-01-19,RT009,Toko Harapan Baru,SKU-012,Kopiko 78C 240ml,104,725792
+2026-01-20,RT017,Toko Laris Manis,SKU-015,Royco Ayam Sachet,30,60156
+2026-01-20,RT001,Toko Makmur,SKU-023,Molto Pewangi 900ml,90,2040185
+2026-01-20,RT017,Toko Laris Manis,SKU-010,Silverqueen Cashew 65g,84,1238240
+2026-01-20,RT017,Toko Laris Manis,SKU-007,Pocari Sweat 500ml,19,148192
+2026-01-20,RT003,Minimart Jaya,SKU-002,Indomie Kuah Soto,81,296214
+2026-01-20,RT017,Toko Laris Manis,SKU-018,Sarimi Ayam Bawang,57,173644
+2026-01-20,RT003,Minimart Jaya,SKU-023,Molto Pewangi 900ml,143,3044396
+2026-01-21,RT004,Toko Berkah Abadi,SKU-016,Sabun Lifebuoy 100g,106,550388
+2026-01-21,RT004,Toko Berkah Abadi,SKU-004,Aqua 600ml,17,66221
+2026-01-21,RT012,Toko Subur Makmur,SKU-005,Kapal Api Kopi Sachet,21,53634
+2026-01-21,RT006,Warung Bahagia,SKU-001,Indomie Goreng,28,100263
+2026-01-21,RT011,Minimart Ceria,SKU-008,GoodDay Cappuccino 250ml,91,571184
+2026-01-22,RT002,Warung Sejahtera,SKU-012,Kopiko 78C 240ml,72,519479
+2026-01-22,RT007,Toko Maju Bersama,SKU-002,Indomie Kuah Soto,125,425356
+2026-01-22,RT001,Toko Makmur,SKU-011,Beng Beng Wafer,48,148339
+2026-01-22,RT015,Agen Mulia,SKU-022,ABC Sambal Asli 135ml,17,137939
+2026-01-23,RT003,Minimart Jaya,SKU-006,Mie Sedaap Goreng,150,543493
+2026-01-24,RT017,Toko Laris Manis,SKU-004,Aqua 600ml,113,439292
+2026-01-24,RT001,Toko Makmur,SKU-008,GoodDay Cappuccino 250ml,36,215060
+2026-01-24,RT002,Warung Sejahtera,SKU-012,Kopiko 78C 240ml,58,404048
+2026-01-24,RT001,Toko Makmur,SKU-012,Kopiko 78C 240ml,55,376298
+2026-01-25,RT006,Warung Bahagia,SKU-012,Kopiko 78C 240ml,136,988444
+2026-01-25,RT007,Toko Maju Bersama,SKU-015,Royco Ayam Sachet,16,31243
+2026-01-26,RT018,Swalayan Nusantara,SKU-010,Silverqueen Cashew 65g,91,1406528
+2026-01-26,RT003,Minimart Jaya,SKU-006,Mie Sedaap Goreng,144,496322
+2026-01-27,RT005,Sumber Rezeki,SKU-014,Kecap Bango 135ml,69,641798
+2026-01-27,RT001,Toko Makmur,SKU-016,Sabun Lifebuoy 100g,40,205177
+2026-01-27,RT015,Agen Mulia,SKU-017,Rinso Cair 750ml,146,2501944
+2026-01-27,RT001,Toko Makmur,SKU-017,Rinso Cair 750ml,39,691041
+2026-01-28,RT012,Toko Subur Makmur,SKU-002,Indomie Kuah Soto,30,104090
+2026-01-28,RT010,Warung Sinar Pagi,SKU-002,Indomie Kuah Soto,22,80743
+2026-01-28,RT001,Toko Makmur,SKU-009,Chitato Original 68g,19,235037
+2026-01-28,RT016,Warung Harmoni,SKU-018,Sarimi Ayam Bawang,51,149845
+2026-01-28,RT014,Toko Mandiri Jaya,SKU-007,Pocari Sweat 500ml,14,112578
+2026-01-28,RT018,Swalayan Nusantara,SKU-007,Pocari Sweat 500ml,119,962141
+2026-01-29,RT005,Sumber Rezeki,SKU-016,Sabun Lifebuoy 100g,59,296157
+2026-01-29,RT003,Minimart Jaya,SKU-001,Indomie Goreng,44,149974
+2026-01-29,RT017,Toko Laris Manis,SKU-014,Kecap Bango 135ml,16,141382
+2026-01-29,RT006,Warung Bahagia,SKU-010,Silverqueen Cashew 65g,136,2019238
+2026-01-29,RT003,Minimart Jaya,SKU-021,Frisian Flag Susu Kental 370g,79,1158763
+2026-01-29,RT017,Toko Laris Manis,SKU-009,Chitato Original 68g,103,1255132
+2026-01-29,RT007,Toko Maju Bersama,SKU-020,Le Minerale 600ml,119,460653
+2026-01-29,RT007,Toko Maju Bersama,SKU-013,Ultra Milk Coklat 250ml,36,198936
+2026-01-30,RT018,Swalayan Nusantara,SKU-018,Sarimi Ayam Bawang,37,106875
+2026-01-30,RT014,Toko Mandiri Jaya,SKU-017,Rinso Cair 750ml,34,627035
+2026-01-30,RT007,Toko Maju Bersama,SKU-019,Tango Wafer Coklat 130g,53,520541
+2026-01-30,RT017,Toko Laris Manis,SKU-002,Indomie Kuah Soto,63,214137
+2026-01-30,RT010,Warung Sinar Pagi,SKU-013,Ultra Milk Coklat 250ml,138,752824
+2026-01-30,RT001,Toko Makmur,SKU-011,Beng Beng Wafer,65,186211
+2026-01-30,RT007,Toko Maju Bersama,SKU-023,Molto Pewangi 900ml,61,1367004
+2026-01-30,RT015,Agen Mulia,SKU-001,Indomie Goreng,15,52926
+2026-01-31,RT007,Toko Maju Bersama,SKU-002,Indomie Kuah Soto,69,252152
+2026-01-31,RT014,Toko Mandiri Jaya,SKU-017,Rinso Cair 750ml,58,1050357
+2026-01-31,RT002,Warung Sejahtera,SKU-014,Kecap Bango 135ml,114,1016088
+2026-01-31,RT018,Swalayan Nusantara,SKU-009,Chitato Original 68g,103,1259472
+2026-01-31,RT009,Toko Harapan Baru,SKU-023,Molto Pewangi 900ml,130,2987830
+2026-02-01,RT016,Warung Harmoni,SKU-006,Mie Sedaap Goreng,123,451199
+2026-02-01,RT011,Minimart Ceria,SKU-003,Teh Botol Sosro 450ml,21,102998
+2026-02-01,RT011,Minimart Ceria,SKU-009,Chitato Original 68g,63,772738
+2026-02-01,RT004,Toko Berkah Abadi,SKU-007,Pocari Sweat 500ml,35,286913
+2026-02-01,RT015,Agen Mulia,SKU-003,Teh Botol Sosro 450ml,119,624197
+2026-02-02,RT018,Swalayan Nusantara,SKU-008,GoodDay Cappuccino 250ml,47,279361
+2026-02-02,RT009,Toko Harapan Baru,SKU-009,Chitato Original 68g,47,550293
+2026-02-02,RT012,Toko Subur Makmur,SKU-014,Kecap Bango 135ml,89,818642
+2026-02-03,RT006,Warung Bahagia,SKU-018,Sarimi Ayam Bawang,52,151188
+2026-02-03,RT001,Toko Makmur,SKU-017,Rinso Cair 750ml,121,2150383
+2026-02-03,RT007,Toko Maju Bersama,SKU-011,Beng Beng Wafer,121,373319
+2026-02-03,RT018,Swalayan Nusantara,SKU-006,Mie Sedaap Goreng,31,107589
+2026-02-03,RT001,Toko Makmur,SKU-002,Indomie Kuah Soto,146,533244
+2026-02-03,RT014,Toko Mandiri Jaya,SKU-014,Kecap Bango 135ml,146,1351290
+2026-02-04,RT013,Warung Purnama,SKU-009,Chitato Original 68g,118,1438931
+2026-02-04,RT006,Warung Bahagia,SKU-007,Pocari Sweat 500ml,92,768948
+2026-02-04,RT016,Warung Harmoni,SKU-011,Beng Beng Wafer,145,438390
+2026-02-04,RT007,Toko Maju Bersama,SKU-005,Kapal Api Kopi Sachet,69,179377
+2026-02-05,RT018,Swalayan Nusantara,SKU-009,Chitato Original 68g,121,1420818
+2026-02-05,RT002,Warung Sejahtera,SKU-014,Kecap Bango 135ml,33,290562
+2026-02-05,RT011,Minimart Ceria,SKU-019,Tango Wafer Coklat 130g,103,1022073
+2026-02-05,RT007,Toko Maju Bersama,SKU-009,Chitato Original 68g,99,1182618
+2026-02-05,RT014,Toko Mandiri Jaya,SKU-016,Sabun Lifebuoy 100g,96,457940
+2026-02-06,RT010,Warung Sinar Pagi,SKU-017,Rinso Cair 750ml,5,90891
+2026-02-06,RT004,Toko Berkah Abadi,SKU-001,Indomie Goreng,77,275592
+2026-02-06,RT014,Toko Mandiri Jaya,SKU-023,Molto Pewangi 900ml,58,1300275
+2026-02-06,RT010,Warung Sinar Pagi,SKU-022,ABC Sambal Asli 135ml,91,754729
+2026-02-06,RT007,Toko Maju Bersama,SKU-007,Pocari Sweat 500ml,122,938322
+2026-02-06,RT012,Toko Subur Makmur,SKU-023,Molto Pewangi 900ml,49,1083920
+2026-02-06,RT014,Toko Mandiri Jaya,SKU-018,Sarimi Ayam Bawang,80,241026
+2026-02-07,RT009,Toko Harapan Baru,SKU-008,GoodDay Cappuccino 250ml,126,767030
+2026-02-07,RT010,Warung Sinar Pagi,SKU-023,Molto Pewangi 900ml,37,825223
+2026-02-07,RT017,Toko Laris Manis,SKU-006,Mie Sedaap Goreng,116,411472
+2026-02-07,RT018,Swalayan Nusantara,SKU-017,Rinso Cair 750ml,131,2336574
+2026-02-08,RT014,Toko Mandiri Jaya,SKU-021,Frisian Flag Susu Kental 370g,24,325152
+2026-02-08,RT004,Toko Berkah Abadi,SKU-007,Pocari Sweat 500ml,40,311576
+2026-02-08,RT017,Toko Laris Manis,SKU-011,Beng Beng Wafer,77,229945
+2026-02-08,RT014,Toko Mandiri Jaya,SKU-008,GoodDay Cappuccino 250ml,123,728279
+2026-02-08,RT001,Toko Makmur,SKU-003,Teh Botol Sosro 450ml,33,170531
+2026-02-09,RT013,Warung Purnama,SKU-006,Mie Sedaap Goreng,89,308748
+2026-02-09,RT004,Toko Berkah Abadi,SKU-012,Kopiko 78C 240ml,17,113651
+2026-02-09,RT009,Toko Harapan Baru,SKU-006,Mie Sedaap Goreng,122,429803
+2026-02-10,RT005,Sumber Rezeki,SKU-019,Tango Wafer Coklat 130g,17,176980
+2026-02-10,RT007,Toko Maju Bersama,SKU-014,Kecap Bango 135ml,80,695547
+2026-02-10,RT001,Toko Makmur,SKU-016,Sabun Lifebuoy 100g,119,584056
+2026-02-10,RT012,Toko Subur Makmur,SKU-018,Sarimi Ayam Bawang,104,302324
+2026-02-11,RT006,Warung Bahagia,SKU-013,Ultra Milk Coklat 250ml,150,852502
+2026-02-11,RT017,Toko Laris Manis,SKU-002,Indomie Kuah Soto,67,237954
+2026-02-11,RT008,Agen Sentosa,SKU-019,Tango Wafer Coklat 130g,134,1291041
+2026-02-12,RT003,Minimart Jaya,SKU-013,Ultra Milk Coklat 250ml,141,791295
+2026-02-12,RT007,Toko Maju Bersama,SKU-013,Ultra Milk Coklat 250ml,123,694924
+2026-02-13,RT014,Toko Mandiri Jaya,SKU-002,Indomie Kuah Soto,17,60001
+2026-02-13,RT008,Agen Sentosa,SKU-016,Sabun Lifebuoy 100g,93,484189
+2026-02-14,RT001,Toko Makmur,SKU-019,Tango Wafer Coklat 130g,33,315538
+2026-02-14,RT003,Minimart Jaya,SKU-001,Indomie Goreng,56,196445
+2026-02-15,RT017,Toko Laris Manis,SKU-009,Chitato Original 68g,111,1310671
+2026-02-15,RT018,Swalayan Nusantara,SKU-020,Le Minerale 600ml,84,331015
+2026-02-15,RT009,Toko Harapan Baru,SKU-012,Kopiko 78C 240ml,22,160982
+2026-02-15,RT003,Minimart Jaya,SKU-020,Le Minerale 600ml,81,327037
+2026-02-16,RT017,Toko Laris Manis,SKU-017,Rinso Cair 750ml,45,774107
+2026-02-16,RT017,Toko Laris Manis,SKU-006,Mie Sedaap Goreng,49,176537
+2026-02-16,RT017,Toko Laris Manis,SKU-022,ABC Sambal Asli 135ml,82,676470
+2026-02-16,RT014,Toko Mandiri Jaya,SKU-015,Royco Ayam Sachet,46,88323
+2026-02-17,RT002,Warung Sejahtera,SKU-007,Pocari Sweat 500ml,130,997458
+2026-02-17,RT017,Toko Laris Manis,SKU-017,Rinso Cair 750ml,78,1361142
+2026-02-18,RT011,Minimart Ceria,SKU-014,Kecap Bango 135ml,74,647057
+2026-02-18,RT003,Minimart Jaya,SKU-006,Mie Sedaap Goreng,115,400441
+2026-02-18,RT018,Swalayan Nusantara,SKU-015,Royco Ayam Sachet,39,75178
+2026-02-18,RT006,Warung Bahagia,SKU-012,Kopiko 78C 240ml,59,409393
+2026-02-19,RT001,Toko Makmur,SKU-016,Sabun Lifebuoy 100g,142,675667
+2026-02-19,RT003,Minimart Jaya,SKU-021,Frisian Flag Susu Kental 370g,108,1561441
+2026-02-19,RT014,Toko Mandiri Jaya,SKU-017,Rinso Cair 750ml,100,1857783
+2026-02-20,RT018,Swalayan Nusantara,SKU-021,Frisian Flag Susu Kental 370g,100,1391334
+2026-02-20,RT012,Toko Subur Makmur,SKU-012,Kopiko 78C 240ml,146,1066385
+2026-02-20,RT014,Toko Mandiri Jaya,SKU-006,Mie Sedaap Goreng,132,482929
+2026-02-20,RT017,Toko Laris Manis,SKU-023,Molto Pewangi 900ml,13,286060
+2026-02-20,RT004,Toko Berkah Abadi,SKU-023,Molto Pewangi 900ml,81,1726466
+2026-02-20,RT007,Toko Maju Bersama,SKU-018,Sarimi Ayam Bawang,77,220021
