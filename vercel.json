@@ -1,7 +1,5 @@
 {
-  "rewrites": [
-    { "source": "/api/transactions/upload", "destination": "/api/transactions?action=upload" },
-    { "source": "/api/recommendations/refresh", "destination": "/api/recommendations?action=refresh" },
-    { "source": "/api/recommendations/:retailer_id", "destination": "/api/recommendations?retailer_id=:retailer_id" }
-  ]
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build"
 }
