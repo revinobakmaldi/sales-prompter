@@ -22,12 +22,12 @@ SalesPrompter helps distributor salesmen know exactly which products to prioriti
 |-------|------------|
 | Frontend | Next.js 16 (App Router, Turbopack) |
 | Styling | Tailwind CSS v4, Framer Motion, Lucide React |
-| Backend | Python serverless functions (Vercel) |
-| ML Engine | `implicit` (ALS), `LightFM`, `scikit-learn` |
+| Backend | Python Flask (local) |
+| ML Engine | `implicit` (ALS), `scikit-learn` |
 | Database | Supabase Postgres |
 | Auth | Password gate via environment variable |
-| Deployment | Vercel |
-| LLM (optional) | OpenRouter API — natural language insight generation |
+| Deployment | Vercel (frontend), local Flask server (backend) |
+| LLM | OpenRouter API (Gemini 2.0 Flash) — visit briefing insights |
 
 ---
 
@@ -47,7 +47,16 @@ Adds collaborative filtering (ALS) to surface cross-retailer patterns. Final sco
 Final Score = (Rule Score × 0.5) + (CF Score × 0.3) + (Promo Boost × 0.2)
 ```
 
-Phase 1 runs on every request. Phase 2 scores are pre-computed, cached in Postgres, and refreshed weekly via Vercel cron.
+Phase 1 runs on every request. Phase 2 scores are pre-computed, cached in Postgres, and refreshed weekly.
+
+### LLM-Powered Visit Briefings
+
+Each retailer detail page includes an AI-generated **visit briefing** — a concise 3–4 sentence summary telling the salesman exactly what to focus on. Powered by OpenRouter (Gemini 2.0 Flash), the insight highlights:
+- The single most important action for this visit
+- Active promotions the salesman should mention
+- Declining or new-to-retailer products worth pushing
+
+Insights are cached in the `insights` table and flagged as stale when recommendations are refreshed.
 
 ---
 
@@ -55,15 +64,17 @@ Phase 1 runs on every request. Phase 2 scores are pre-computed, cached in Postgr
 
 ```
 sales-prompter/
-├── api/                  # Python serverless functions
+├── api/                  # Python Flask API modules
 │   ├── auth.py
 │   ├── retailers.py
 │   ├── products.py
 │   ├── promotions.py
 │   ├── transactions.py
 │   ├── recommendations.py
+│   ├── insights.py
 │   ├── model_train.py
 │   └── visits.py
+├── server.py             # Local dev server (combines all Flask apps)
 ├── app/                  # Next.js App Router pages
 │   ├── page.tsx          # Login
 │   ├── dashboard/        # Manager KPI overview
@@ -97,7 +108,7 @@ sales-prompter/
 git clone https://github.com/revinobakmaldi/sales-prompter.git
 cd sales-prompter
 npm install
-pip install -r requirements.txt
+uv sync --extra ml    # Python deps (requires uv)
 ```
 
 ### 2. Configure environment
@@ -112,18 +123,26 @@ Fill in your values:
 SUPABASE_URL=https://xxxxx.supabase.co
 SUPABASE_ANON_KEY=eyJhbGciOi...
 APP_PASSWORD=your-chosen-password
-OPENROUTER_API_KEY=sk-or-...   # optional
+OPENROUTER_API_KEY=sk-or-...   # required for visit briefing insights
 ```
 
 ### 3. Run database migrations
 
 Run the SQL in `supabase/migrations/001_initial_schema.sql` against your Supabase project.
 
-### 4. Start the dev server
+### 4. Start the dev servers
 
+**Terminal 1 — Flask backend (port 5328):**
+```bash
+uv run python server.py
+```
+
+**Terminal 2 — Next.js frontend (port 3000):**
 ```bash
 npm run dev
 ```
+
+The Next.js dev server proxies `/api/*` requests to Flask automatically.
 
 ---
 
@@ -142,10 +161,10 @@ The upload API auto-creates retailers and products if they don't exist, deduplic
 
 ## Deployment
 
-Deployed on Vercel. Push to `main` to deploy.
+The Next.js frontend is deployed on Vercel. Push to `main` to deploy. The Python backend runs locally.
 
 ```bash
-vercel --prod
+vercel --prod   # frontend only
 ```
 
 ---
