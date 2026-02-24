@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { User, MapPin, RefreshCw, Loader2, ChevronDown, ChevronUp } from "lucide-react";
 import { staggerContainer, fadeInUp } from "@/lib/animations";
 import { RecommendationCard } from "@/components/recommendations/RecommendationCard";
+import { InsightSummary } from "@/components/recommendations/InsightSummary";
 import type { Salesman, Retailer, Recommendation } from "@/lib/types";
 import { refreshRecommendations } from "@/lib/api";
 
@@ -122,6 +123,11 @@ export function SalesmanView({
           </motion.div>
         )}
       </motion.div>
+
+      {/* Visit briefing insight */}
+      {selectedRetailerId && (
+        <InsightSummary retailerId={selectedRetailerId} />
+      )}
 
       {/* Priority products header */}
       <div className="mb-3 flex items-center justify-between">

@@ -6,6 +6,7 @@ import type {
   Transaction,
   Recommendation,
   DashboardStats,
+  InsightResponse,
 } from "./types";
 
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
@@ -136,6 +137,17 @@ export async function refreshRecommendations(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ retailer_ids: retailerIds }),
   });
+}
+
+// Insights
+export async function getInsight(retailerId: string): Promise<InsightResponse> {
+  return request(`/api/insights/${retailerId}`);
+}
+
+export async function generateInsight(
+  retailerId: string
+): Promise<InsightResponse> {
+  return request(`/api/insights/${retailerId}`, { method: "POST" });
 }
 
 // Model training

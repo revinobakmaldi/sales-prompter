@@ -88,6 +88,19 @@ export interface Visit {
   notes: string;
 }
 
+export interface Insight {
+  id: string;
+  retailer_id: string;
+  summary: string;
+  model_used: string;
+  generated_at: string;
+}
+
+export interface InsightResponse {
+  insight: Insight | null;
+  fresh: boolean;
+}
+
 export interface DashboardStats {
   total_retailers: number;
   total_salesmen: number;
