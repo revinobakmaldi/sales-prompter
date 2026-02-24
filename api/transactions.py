@@ -137,9 +137,15 @@ def upload_transactions():
             }
         )
 
+    # Deduplicate: keep last occurrence per (retailer, product, date)
+    seen: dict[tuple, int] = {}
+    for i, rec in enumerate(records):
+        key = (rec["retailer_id"], rec["product_id"], rec["transaction_date"])
+        seen[key] = i
+    records = [records[i] for i in sorted(seen.values())]
+
     inserted = 0
     if records:
-        # Upsert in batches; the UNIQUE constraint deduplicates on re-upload
         batch_size = 500
         for i in range(0, len(records), batch_size):
             batch = records[i : i + batch_size]
