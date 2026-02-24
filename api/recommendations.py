@@ -87,9 +87,15 @@ def refresh_recommendations():
         all_retailers = db.table("retailers").select("id").execute()
         retailer_ids = [r["id"] for r in all_retailers.data]
 
+    import traceback
+
     total_updated = 0
     for rid in retailer_ids:
-        total_updated += refresh_phase1_for_retailer(rid, db)
+        try:
+            total_updated += refresh_phase1_for_retailer(rid, db)
+        except Exception as exc:
+            traceback.print_exc()
+            return jsonify({"error": f"Failed on retailer {rid}: {exc}"}), 500
 
     return jsonify(
         {

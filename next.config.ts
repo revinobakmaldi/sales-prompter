@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
+  experimental: {
+    proxyTimeout: 60_000,
+  },
   async rewrites() {
     return [
       {
