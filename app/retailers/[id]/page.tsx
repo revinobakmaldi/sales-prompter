@@ -10,6 +10,7 @@ import { Footer } from "@/components/shared/Footer";
 import { AuthGate } from "@/components/shared/AuthGate";
 import { PurchaseHistory } from "@/components/retailers/PurchaseHistory";
 import { RecommendationCard } from "@/components/recommendations/RecommendationCard";
+import { InsightSummary } from "@/components/recommendations/InsightSummary";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import {
   getRetailer,
@@ -124,6 +125,9 @@ export default function RetailerDetailPage() {
                 </div>
               </div>
             </motion.div>
+
+            {/* AI Visit Briefing */}
+            <InsightSummary retailerId={id} />
 
             {/* Tab switcher */}
             <div className="mb-4 flex gap-1 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 p-1">
