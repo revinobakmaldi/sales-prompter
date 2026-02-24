@@ -1,0 +1,153 @@
+# SalesPrompter
+
+> Next Best Product to Offer Engine for Distributor Salesmen
+
+SalesPrompter helps distributor salesmen know exactly which products to prioritize when visiting a retailer. Instead of memorizing a long promotion list, each salesman gets a personalized **Top 3–5 Products to Push Today** for each retailer — derived from purchase history, promo eligibility, and behavioral patterns.
+
+---
+
+## Why It Exists
+
+| Who | Benefit |
+|-----|---------|
+| Salesmen | Less cognitive load, more confidence in the field |
+| Sales Managers | Better promo execution, measurable product penetration |
+| Distributor Owners | ROI visibility on promo budget |
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | Next.js 16 (App Router, Turbopack) |
+| Styling | Tailwind CSS v4, Framer Motion, Lucide React |
+| Backend | Python serverless functions (Vercel) |
+| ML Engine | `implicit` (ALS), `LightFM`, `scikit-learn` |
+| Database | Supabase Postgres |
+| Auth | Password gate via environment variable |
+| Deployment | Vercel |
+| LLM (optional) | OpenRouter API — natural language insight generation |
+
+---
+
+## How It Works
+
+### Phase 1 — Rule-Based Engine
+Scores each product per retailer using four signals:
+- **Recency** — days since last purchase
+- **Promo boost** — product has an active discount/NPL
+- **New product bonus** — retailer has never ordered this product
+- **Decline flag** — order frequency is trending down
+
+### Phase 2 — ML Hybrid Engine
+Adds collaborative filtering (ALS) to surface cross-retailer patterns. Final score blends rules + CF:
+
+```
+Final Score = (Rule Score × 0.5) + (CF Score × 0.3) + (Promo Boost × 0.2)
+```
+
+Phase 1 runs on every request. Phase 2 scores are pre-computed, cached in Postgres, and refreshed weekly via Vercel cron.
+
+---
+
+## Project Structure
+
+```
+sales-prompter/
+├── api/                  # Python serverless functions
+│   ├── auth.py
+│   ├── retailers.py
+│   ├── products.py
+│   ├── promotions.py
+│   ├── transactions.py
+│   ├── recommendations.py
+│   ├── model_train.py
+│   └── visits.py
+├── app/                  # Next.js App Router pages
+│   ├── page.tsx          # Login
+│   ├── dashboard/        # Manager KPI overview
+│   ├── salesman/[id]/    # Field view (mobile-first — core screen)
+│   ├── retailers/        # Retailer list + detail
+│   ├── products/         # Product catalog + promo management
+│   └── settings/         # CSV upload, model retraining
+├── components/
+│   ├── shared/           # Navbar, Footer, Background, AuthGate
+│   ├── recommendations/  # RecommendationCard, InsightPanel, PromoTag, ScoreBadge
+│   ├── retailers/        # RetailerCard, PurchaseHistory
+│   ├── salesman/         # SalesmanView (mobile-optimized)
+│   └── upload/           # CsvDropzone
+├── lib/                  # Types, API wrappers, utilities
+└── supabase/
+    └── migrations/       # Database schema
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Python 3.11+
+- A [Supabase](https://supabase.com) project
+
+### 1. Clone & install
+
+```bash
+git clone https://github.com/revinobakmaldi/sales-prompter.git
+cd sales-prompter
+npm install
+pip install -r requirements.txt
+```
+
+### 2. Configure environment
+
+```bash
+cp .env.local.example .env.local
+```
+
+Fill in your values:
+
+```env
+SUPABASE_URL=https://xxxxx.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOi...
+APP_PASSWORD=your-chosen-password
+OPENROUTER_API_KEY=sk-or-...   # optional
+```
+
+### 3. Run database migrations
+
+Run the SQL in `supabase/migrations/001_initial_schema.sql` against your Supabase project.
+
+### 4. Start the dev server
+
+```bash
+npm run dev
+```
+
+---
+
+## Data Ingestion
+
+Upload transaction history via CSV from the Settings page. Expected format:
+
+```csv
+transaction_date,retailer_code,retailer_name,sku,product_name,quantity,amount
+2024-01-15,RT001,Toko Maju Jaya,SKU-001,Wafer Coklat 100g,24,120000
+```
+
+The upload API auto-creates retailers and products if they don't exist, deduplicates records, and triggers a recommendation refresh.
+
+---
+
+## Deployment
+
+Deployed on Vercel. Push to `main` to deploy.
+
+```bash
+vercel --prod
+```
+
+---
+
+*Built by Revino B Akmaldi — SalesPrompter v1.0*
