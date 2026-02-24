@@ -43,9 +43,10 @@ def _latest_recommendation_ts(db, retailer_id: str) -> str | None:
 # ---------------------------------------------------------------------------
 
 @app.route("/api/insights", methods=["GET"])
-def get_insight():
+@app.route("/api/insights/<retailer_id>", methods=["GET"])
+def get_insight(retailer_id=None):
     db = get_db()
-    retailer_id = request.args.get("retailer_id")
+    retailer_id = retailer_id or request.args.get("retailer_id")
     if not retailer_id:
         return jsonify({"error": "retailer_id parameter required"}), 400
 
@@ -75,9 +76,10 @@ def get_insight():
 # ---------------------------------------------------------------------------
 
 @app.route("/api/insights", methods=["POST"])
-def generate_insight():
+@app.route("/api/insights/<retailer_id>", methods=["POST"])
+def generate_insight(retailer_id=None):
     db = get_db()
-    retailer_id = request.args.get("retailer_id")
+    retailer_id = retailer_id or request.args.get("retailer_id")
     if not retailer_id:
         return jsonify({"error": "retailer_id parameter required"}), 400
 

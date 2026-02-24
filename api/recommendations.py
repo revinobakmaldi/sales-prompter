@@ -26,9 +26,10 @@ def get_db():
 # ---------------------------------------------------------------------------
 
 @app.route("/api/recommendations", methods=["GET"])
-def get_recommendations():
+@app.route("/api/recommendations/<retailer_id>", methods=["GET"])
+def get_recommendations(retailer_id=None):
     db = get_db()
-    retailer_id = request.args.get("retailer_id")
+    retailer_id = retailer_id or request.args.get("retailer_id")
     if not retailer_id:
         return jsonify({"error": "retailer_id parameter required"}), 400
 
@@ -71,8 +72,9 @@ def get_recommendations():
 # ---------------------------------------------------------------------------
 
 @app.route("/api/recommendations", methods=["POST"])
+@app.route("/api/recommendations/refresh", methods=["POST"])
 def refresh_recommendations():
-    action = request.args.get("action")
+    action = request.args.get("action", "refresh")
     if action != "refresh":
         return jsonify({"error": "Use ?action=refresh"}), 400
 

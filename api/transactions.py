@@ -54,8 +54,9 @@ def get_transactions():
 # ---------------------------------------------------------------------------
 
 @app.route("/api/transactions", methods=["POST"])
+@app.route("/api/transactions/upload", methods=["POST"])
 def upload_transactions():
-    action = request.args.get("action")
+    action = request.args.get("action", "upload")
     if action != "upload":
         return jsonify({"error": "Use ?action=upload for CSV ingestion"}), 400
 
