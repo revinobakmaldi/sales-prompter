@@ -143,7 +143,7 @@ def upload_transactions():
         batch_size = 500
         for i in range(0, len(records), batch_size):
             batch = records[i : i + batch_size]
-            db.table("transactions").upsert(batch).execute()
+            db.table("transactions").upsert(batch, on_conflict="retailer_id,product_id,transaction_date").execute()
             inserted += len(batch)
 
     return jsonify(
