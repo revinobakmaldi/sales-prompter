@@ -259,12 +259,13 @@ def train_model():
         ["retailer_id", "product_id", "hybrid_score", "rank", "final_tags", "phase"]
     ].rename(columns={"hybrid_score": "score", "final_tags": "reason_tags"})
 
+    records.drop_duplicates(subset=["retailer_id", "product_id"], keep="first", inplace=True)
     records_list = records.to_dict(orient="records")
 
     batch_size = 500
     for i in range(0, len(records_list), batch_size):
         batch = records_list[i : i + batch_size]
-        db.table("recommendations").upsert(batch).execute()
+        db.table("recommendations").upsert(batch, on_conflict="retailer_id,product_id").execute()
 
     return jsonify(
         {
