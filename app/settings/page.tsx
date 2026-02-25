@@ -18,6 +18,8 @@ import { CsvDropzone } from "@/components/upload/CsvDropzone";
 import { fadeInUp, staggerContainer, scaleIn } from "@/lib/animations";
 import {
   uploadTransactionsCsv,
+  uploadSalesmenCsv,
+  uploadRetailersCsv,
   refreshRecommendations,
   triggerModelTrain,
 } from "@/lib/api";
@@ -27,6 +29,19 @@ type TrainStatus = "idle" | "training" | "success" | "error";
 type RefreshStatus = "idle" | "refreshing" | "success" | "error";
 
 export default function SettingsPage() {
+  // Salesman upload state
+  const [salesmanFile, setSalesmanFile] = useState<File | null>(null);
+  const [salesmanUploadStatus, setSalesmanUploadStatus] = useState<UploadStatus>("idle");
+  const [salesmanResult, setSalesmanResult] = useState<{ upserted: number } | null>(null);
+  const [salesmanError, setSalesmanError] = useState<string | null>(null);
+
+  // Retailer upload state
+  const [retailerFile, setRetailerFile] = useState<File | null>(null);
+  const [retailerUploadStatus, setRetailerUploadStatus] = useState<UploadStatus>("idle");
+  const [retailerResult, setRetailerResult] = useState<{ upserted: number; warnings: string[] } | null>(null);
+  const [retailerError, setRetailerError] = useState<string | null>(null);
+
+  // Transaction upload state
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [uploadStatus, setUploadStatus] = useState<UploadStatus>("idle");
   const [uploadResult, setUploadResult] = useState<{
@@ -39,6 +54,36 @@ export default function SettingsPage() {
   const [trainMessage, setTrainMessage] = useState<string | null>(null);
 
   const [refreshStatus, setRefreshStatus] = useState<RefreshStatus>("idle");
+
+  const handleSalesmanUpload = async () => {
+    if (!salesmanFile) return;
+    setSalesmanUploadStatus("uploading");
+    setSalesmanError(null);
+    setSalesmanResult(null);
+    try {
+      const result = await uploadSalesmenCsv(salesmanFile);
+      setSalesmanResult(result);
+      setSalesmanUploadStatus("success");
+    } catch (err) {
+      setSalesmanError(err instanceof Error ? err.message : "Upload failed");
+      setSalesmanUploadStatus("error");
+    }
+  };
+
+  const handleRetailerUpload = async () => {
+    if (!retailerFile) return;
+    setRetailerUploadStatus("uploading");
+    setRetailerError(null);
+    setRetailerResult(null);
+    try {
+      const result = await uploadRetailersCsv(retailerFile);
+      setRetailerResult(result);
+      setRetailerUploadStatus("success");
+    } catch (err) {
+      setRetailerError(err instanceof Error ? err.message : "Upload failed");
+      setRetailerUploadStatus("error");
+    }
+  };
 
   const handleUpload = async () => {
     if (!csvFile) return;
@@ -107,6 +152,149 @@ export default function SettingsPage() {
           animate="visible"
           className="space-y-6"
         >
+          {/* Salesman Data Upload */}
+          <motion.section
+            variants={scaleIn}
+            className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 p-6"
+          >
+            <div className="mb-4 flex items-center gap-3">
+              <div className="rounded-lg bg-primary/10 p-2.5">
+                <Upload className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h2 className="font-semibold text-foreground">
+                  Salesman Data Upload
+                </h2>
+                <p className="text-xs text-zinc-500">
+                  Upload CSV to bulk-import salesmen
+                </p>
+              </div>
+            </div>
+
+            <CsvDropzone
+              onFileSelect={setSalesmanFile}
+              disabled={salesmanUploadStatus === "uploading"}
+            />
+
+            <div className="mt-4 flex items-center gap-3">
+              <button
+                onClick={handleSalesmanUpload}
+                disabled={!salesmanFile || salesmanUploadStatus === "uploading"}
+                className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-dark disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {salesmanUploadStatus === "uploading" ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    Uploading...
+                  </>
+                ) : (
+                  <>
+                    <Upload className="h-4 w-4" />
+                    Upload &amp; Ingest
+                  </>
+                )}
+              </button>
+
+              {salesmanUploadStatus === "success" && salesmanResult && (
+                <div className="flex items-center gap-1.5 text-sm text-primary">
+                  <CheckCircle2 className="h-4 w-4" />
+                  {salesmanResult.upserted} salesmen upserted
+                </div>
+              )}
+
+              {salesmanUploadStatus === "error" && salesmanError && (
+                <div className="flex items-center gap-1.5 text-sm text-red-400">
+                  <AlertCircle className="h-4 w-4" />
+                  {salesmanError}
+                </div>
+              )}
+            </div>
+
+            <div className="mt-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 p-3 text-xs text-zinc-500">
+              <p className="font-medium text-zinc-600 dark:text-zinc-400 mb-1">Expected CSV format:</p>
+              <code className="font-mono">
+                name, code, region
+              </code>
+            </div>
+          </motion.section>
+
+          {/* Retailer Data Upload */}
+          <motion.section
+            variants={scaleIn}
+            className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 p-6"
+          >
+            <div className="mb-4 flex items-center gap-3">
+              <div className="rounded-lg bg-primary/10 p-2.5">
+                <Upload className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h2 className="font-semibold text-foreground">
+                  Retailer Data Upload
+                </h2>
+                <p className="text-xs text-zinc-500">
+                  Upload CSV to bulk-import retailers with salesman mappings
+                </p>
+              </div>
+            </div>
+
+            <CsvDropzone
+              onFileSelect={setRetailerFile}
+              disabled={retailerUploadStatus === "uploading"}
+            />
+
+            <div className="mt-4 flex items-center gap-3">
+              <button
+                onClick={handleRetailerUpload}
+                disabled={!retailerFile || retailerUploadStatus === "uploading"}
+                className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-dark disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {retailerUploadStatus === "uploading" ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    Uploading...
+                  </>
+                ) : (
+                  <>
+                    <Upload className="h-4 w-4" />
+                    Upload &amp; Ingest
+                  </>
+                )}
+              </button>
+
+              {retailerUploadStatus === "success" && retailerResult && (
+                <div className="flex items-center gap-1.5 text-sm text-primary">
+                  <CheckCircle2 className="h-4 w-4" />
+                  {retailerResult.upserted} retailers upserted
+                </div>
+              )}
+
+              {retailerUploadStatus === "error" && retailerError && (
+                <div className="flex items-center gap-1.5 text-sm text-red-400">
+                  <AlertCircle className="h-4 w-4" />
+                  {retailerError}
+                </div>
+              )}
+            </div>
+
+            {retailerUploadStatus === "success" && retailerResult && retailerResult.warnings.length > 0 && (
+              <div className="mt-3 rounded-lg border border-amber-200/50 dark:border-amber-800/20 bg-amber-50 dark:bg-amber-900/10 p-3 text-xs text-amber-700 dark:text-amber-400">
+                <p className="font-medium mb-1">Warnings ({retailerResult.warnings.length}):</p>
+                <ul className="list-disc list-inside space-y-0.5">
+                  {retailerResult.warnings.map((w, i) => (
+                    <li key={i}>{w}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <div className="mt-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 p-3 text-xs text-zinc-500">
+              <p className="font-medium text-zinc-600 dark:text-zinc-400 mb-1">Expected CSV format:</p>
+              <code className="font-mono">
+                name, code, region, tier, salesman_code
+              </code>
+            </div>
+          </motion.section>
+
           {/* CSV Upload */}
           <motion.section
             variants={scaleIn}

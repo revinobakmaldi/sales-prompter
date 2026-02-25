@@ -122,6 +122,30 @@ export async function uploadTransactionsCsv(
   });
 }
 
+// Salesmen CSV upload
+export async function uploadSalesmenCsv(
+  file: File
+): Promise<{ upserted: number }> {
+  const formData = new FormData();
+  formData.append("file", file);
+  return request("/api/salesmen/upload", {
+    method: "POST",
+    body: formData,
+  });
+}
+
+// Retailers CSV upload
+export async function uploadRetailersCsv(
+  file: File
+): Promise<{ upserted: number; warnings: string[] }> {
+  const formData = new FormData();
+  formData.append("file", file);
+  return request("/api/retailers/upload", {
+    method: "POST",
+    body: formData,
+  });
+}
+
 // Recommendations
 export async function getRecommendations(
   retailerId: string
