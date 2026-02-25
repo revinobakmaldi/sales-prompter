@@ -16,7 +16,7 @@ app = Flask(__name__)
 CORS(app)
 
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
-LLM_MODEL = "google/gemini-2.0-flash-001"
+LLM_MODEL = "qwen/qwen3-vl-235b-a22b-thinking"
 
 
 def get_db():
