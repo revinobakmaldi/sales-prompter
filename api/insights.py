@@ -185,3 +185,53 @@ Instructions:
     insight = result.data[0] if result.data else None
 
     return jsonify({"insight": insight, "fresh": True})
+
+
+# ---------------------------------------------------------------------------
+# GET — batch insights for multiple retailers
+# ---------------------------------------------------------------------------
+
+@app.route("/api/insights/batch", methods=["GET"])
+def get_insights_batch():
+    db = get_db()
+    retailer_ids_raw = request.args.get("retailer_ids", "")
+    if not retailer_ids_raw:
+        return jsonify({"error": "retailer_ids parameter required"}), 400
+
+    retailer_ids = [rid.strip() for rid in retailer_ids_raw.split(",") if rid.strip()]
+    if not retailer_ids:
+        return jsonify({"error": "retailer_ids parameter required"}), 400
+
+    # Fetch all insights for the given retailer IDs
+    result = (
+        db.table("insights")
+        .select("*")
+        .in_("retailer_id", retailer_ids)
+        .execute()
+    )
+
+    # Build a map of retailer_id -> latest recommendation timestamp
+    rec_result = (
+        db.table("recommendations")
+        .select("retailer_id, generated_at")
+        .in_("retailer_id", retailer_ids)
+        .order("generated_at", desc=True)
+        .execute()
+    )
+    latest_rec_by_retailer: dict[str, str] = {}
+    for rec in rec_result.data or []:
+        rid = rec["retailer_id"]
+        if rid not in latest_rec_by_retailer:
+            latest_rec_by_retailer[rid] = rec["generated_at"]
+
+    # Build response map
+    insights_map: dict[str, dict] = {}
+    for insight in result.data or []:
+        rid = insight["retailer_id"]
+        latest_rec_ts = latest_rec_by_retailer.get(rid)
+        fresh = True
+        if latest_rec_ts and insight["generated_at"] < latest_rec_ts:
+            fresh = False
+        insights_map[rid] = {"summary": insight["summary"], "fresh": fresh}
+
+    return jsonify(insights_map)

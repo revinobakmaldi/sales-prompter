@@ -140,6 +140,12 @@ export async function refreshRecommendations(
 }
 
 // Insights
+export async function getInsightsBatch(
+  retailerIds: string[]
+): Promise<Record<string, { summary: string; fresh: boolean }>> {
+  return request(`/api/insights/batch?retailer_ids=${retailerIds.join(",")}`);
+}
+
 export async function getInsight(retailerId: string): Promise<InsightResponse> {
   return request(`/api/insights/${retailerId}`);
 }

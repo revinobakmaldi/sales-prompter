@@ -11,6 +11,7 @@ import {
   getSalesman,
   getRetailers,
   getRecommendations,
+  getInsightsBatch,
 } from "@/lib/api";
 import type { Salesman, Retailer, Recommendation } from "@/lib/types";
 
@@ -20,6 +21,9 @@ export default function SalesmanPage() {
   const [retailers, setRetailers] = useState<Retailer[]>([]);
   const [recommendationsByRetailer, setRecommendationsByRetailer] = useState<
     Record<string, Recommendation[]>
+  >({});
+  const [insightsByRetailer, setInsightsByRetailer] = useState<
+    Record<string, { summary: string; fresh: boolean }>
   >({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -35,23 +39,31 @@ export default function SalesmanPage() {
         setSalesman(salesmanData);
         setRetailers(retailersData);
 
-        // Load recommendations for all retailers in parallel
-        const recoResults = await Promise.all(
-          retailersData.map(async (r) => {
-            try {
-              const recos = await getRecommendations(r.id);
-              return { id: r.id, recos };
-            } catch {
-              return { id: r.id, recos: [] };
-            }
-          })
-        );
+        // Load recommendations + insights in parallel
+        const retailerIds = retailersData.map((r) => r.id);
+
+        const [recoResults, insightsData] = await Promise.all([
+          Promise.all(
+            retailersData.map(async (r) => {
+              try {
+                const recos = await getRecommendations(r.id);
+                return { id: r.id, recos };
+              } catch {
+                return { id: r.id, recos: [] };
+              }
+            })
+          ),
+          retailerIds.length > 0
+            ? getInsightsBatch(retailerIds).catch(() => ({}))
+            : Promise.resolve({}),
+        ]);
 
         const recoMap: Record<string, Recommendation[]> = {};
         recoResults.forEach(({ id: rid, recos }) => {
           recoMap[rid] = recos;
         });
         setRecommendationsByRetailer(recoMap);
+        setInsightsByRetailer(insightsData as Record<string, { summary: string; fresh: boolean }>);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to load");
       } finally {
@@ -81,6 +93,7 @@ export default function SalesmanPage() {
             salesman={salesman}
             retailers={retailers}
             recommendationsByRetailer={recommendationsByRetailer}
+            insightsByRetailer={insightsByRetailer}
           />
         )}
       </main>

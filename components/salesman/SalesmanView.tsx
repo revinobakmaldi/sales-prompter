@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { User, MapPin, RefreshCw, Loader2, ChevronDown, ChevronUp } from "lucide-react";
+import { User, MapPin, RefreshCw, Loader2 } from "lucide-react";
 import { staggerContainer, fadeInUp } from "@/lib/animations";
-import { RecommendationCard } from "@/components/recommendations/RecommendationCard";
-import { InsightSummary } from "@/components/recommendations/InsightSummary";
+import { RetailerVisitCard } from "@/components/salesman/RetailerVisitCard";
 import type { Salesman, Retailer, Recommendation } from "@/lib/types";
 import { refreshRecommendations } from "@/lib/api";
 
@@ -13,29 +12,22 @@ interface SalesmanViewProps {
   salesman: Salesman;
   retailers: Retailer[];
   recommendationsByRetailer: Record<string, Recommendation[]>;
+  insightsByRetailer: Record<string, { summary: string; fresh: boolean }>;
 }
 
 export function SalesmanView({
   salesman,
   retailers,
   recommendationsByRetailer,
+  insightsByRetailer,
 }: SalesmanViewProps) {
-  const [selectedRetailerId, setSelectedRetailerId] = useState<string | null>(
-    retailers[0]?.id ?? null
-  );
   const [refreshing, setRefreshing] = useState(false);
-  const [showRetailerList, setShowRetailerList] = useState(false);
 
-  const selectedRetailer = retailers.find((r) => r.id === selectedRetailerId);
-  const recommendations = selectedRetailerId
-    ? (recommendationsByRetailer[selectedRetailerId] ?? [])
-    : [];
-
-  const handleRefresh = async () => {
-    if (!selectedRetailerId) return;
+  const handleRefreshAll = async () => {
     setRefreshing(true);
     try {
-      await refreshRecommendations([selectedRetailerId]);
+      const retailerIds = retailers.map((r) => r.id);
+      await refreshRecommendations(retailerIds);
       window.location.reload();
     } catch {
       // silently fail
@@ -45,7 +37,7 @@ export function SalesmanView({
   };
 
   return (
-    <div className="mx-auto max-w-md px-4 py-6">
+    <div className="mx-auto max-w-lg px-4 py-6">
       {/* Salesman header */}
       <motion.div
         variants={fadeInUp}
@@ -57,91 +49,30 @@ export function SalesmanView({
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
             <User className="h-5 w-5 text-primary" />
           </div>
-          <div>
+          <div className="min-w-0">
             <p className="font-semibold text-foreground">{salesman.name}</p>
-            <p className="text-xs text-zinc-500">
-              {salesman.code} · {salesman.region}
-            </p>
+            <div className="flex items-center gap-1.5">
+              <MapPin className="h-3 w-3 text-zinc-400" />
+              <p className="text-xs text-zinc-500">
+                {salesman.code} · {salesman.region}
+              </p>
+            </div>
           </div>
         </div>
       </motion.div>
 
-      {/* Retailer selector */}
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        animate="visible"
-        className="mb-4"
-      >
-        <button
-          onClick={() => setShowRetailerList(!showRetailerList)}
-          className="w-full rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 p-4 text-left transition-all hover:border-primary/40"
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 min-w-0">
-              <MapPin className="h-4 w-4 text-primary shrink-0" />
-              <div className="min-w-0">
-                <p className="text-xs text-zinc-500">Visiting</p>
-                <p className="font-semibold text-foreground truncate">
-                  {selectedRetailer?.name ?? "Select a retailer"}
-                </p>
-              </div>
-            </div>
-            {showRetailerList ? (
-              <ChevronUp className="h-4 w-4 text-zinc-400 shrink-0" />
-            ) : (
-              <ChevronDown className="h-4 w-4 text-zinc-400 shrink-0" />
-            )}
-          </div>
-        </button>
-
-        {showRetailerList && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mt-1 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-lg overflow-hidden"
-          >
-            {retailers.map((retailer) => (
-              <button
-                key={retailer.id}
-                onClick={() => {
-                  setSelectedRetailerId(retailer.id);
-                  setShowRetailerList(false);
-                }}
-                className={`w-full px-4 py-3 text-left transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-800 border-b border-zinc-100 dark:border-zinc-800 last:border-b-0 ${
-                  selectedRetailerId === retailer.id
-                    ? "text-primary bg-primary/5"
-                    : "text-foreground"
-                }`}
-              >
-                <p className="font-medium">{retailer.name}</p>
-                <p className="text-xs text-zinc-500">
-                  {retailer.code} · {retailer.region}
-                </p>
-              </button>
-            ))}
-          </motion.div>
-        )}
-      </motion.div>
-
-      {/* Visit briefing insight */}
-      {selectedRetailerId && (
-        <InsightSummary retailerId={selectedRetailerId} />
-      )}
-
-      {/* Priority products header */}
+      {/* Visit plan header */}
       <div className="mb-3 flex items-center justify-between">
         <div>
-          <h2 className="font-semibold text-foreground">
-            Today&apos;s Priority Products
-          </h2>
+          <h2 className="font-semibold text-foreground">Visit Plan</h2>
           <p className="text-xs text-zinc-500">
-            {recommendations.length} products to push
+            {retailers.length} retailer{retailers.length !== 1 ? "s" : ""} to
+            visit
           </p>
         </div>
         <button
-          onClick={handleRefresh}
-          disabled={refreshing || !selectedRetailerId}
+          onClick={handleRefreshAll}
+          disabled={refreshing || retailers.length === 0}
           className="flex items-center gap-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 text-xs text-zinc-600 dark:text-zinc-400 transition-all hover:border-primary/40 hover:text-primary disabled:opacity-40"
         >
           {refreshing ? (
@@ -149,12 +80,12 @@ export function SalesmanView({
           ) : (
             <RefreshCw className="h-3.5 w-3.5" />
           )}
-          Refresh
+          Refresh All
         </button>
       </div>
 
-      {/* Recommendation cards */}
-      {recommendations.length === 0 ? (
+      {/* Retailer visit cards */}
+      {retailers.length === 0 ? (
         <motion.div
           variants={fadeInUp}
           initial="hidden"
@@ -162,10 +93,7 @@ export function SalesmanView({
           className="rounded-xl border border-dashed border-zinc-300 dark:border-zinc-700 p-8 text-center"
         >
           <p className="text-sm text-zinc-500">
-            No recommendations yet for this retailer.
-          </p>
-          <p className="mt-1 text-xs text-zinc-400">
-            Upload transaction data or refresh to generate.
+            No retailers assigned to this salesman.
           </p>
         </motion.div>
       ) : (
@@ -175,9 +103,18 @@ export function SalesmanView({
           animate="visible"
           className="space-y-3"
         >
-          {recommendations.map((rec, i) => (
-            <RecommendationCard key={rec.id} recommendation={rec} index={i} />
-          ))}
+          {retailers.map((retailer) => {
+            const recs = recommendationsByRetailer[retailer.id] ?? [];
+            const insight = insightsByRetailer[retailer.id];
+            return (
+              <RetailerVisitCard
+                key={retailer.id}
+                retailer={retailer}
+                recommendations={recs}
+                insightPreview={insight?.summary?.slice(0, 120)}
+              />
+            );
+          })}
         </motion.div>
       )}
     </div>
