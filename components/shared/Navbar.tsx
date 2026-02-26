@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { TrendingUp, LayoutDashboard, Store, Package, Settings, LogOut, User } from "lucide-react";
+import { TrendingUp, LayoutDashboard, Store, Package, Settings, LogOut, User, Tag } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { clearAuth } from "@/lib/auth";
@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/retailers", label: "Retailers", icon: Store },
   { href: "/products", label: "Products", icon: Package },
+  { href: "/promotions", label: "Promotions", icon: Tag },
   { href: "/salesman", label: "Salesman", icon: User },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
