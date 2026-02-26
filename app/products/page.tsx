@@ -11,6 +11,8 @@ import {
   CheckCircle2,
   XCircle,
   Plus,
+  Clock,
+  AlertTriangle,
 } from "lucide-react";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
@@ -54,6 +56,26 @@ export default function ProductsPage() {
       (p.product?.name ?? "").toLowerCase().includes(search.toLowerCase()) ||
       (p.product?.sku ?? "").toLowerCase().includes(search.toLowerCase())
   );
+
+  function daysUntilExpiry(endDate: string | null | undefined): number | null {
+    if (!endDate) return null;
+    const diff = Math.ceil(
+      (new Date(endDate).getTime() - Date.now()) / 86_400_000
+    );
+    return diff;
+  }
+
+  const expiringPromos = promotions.filter((p) => {
+    if (!p.is_active || !p.end_date) return false;
+    const days = daysUntilExpiry(p.end_date);
+    return days !== null && days >= 0 && days <= 7;
+  });
+
+  const expiredActivePromos = promotions.filter((p) => {
+    if (!p.is_active || !p.end_date) return false;
+    const days = daysUntilExpiry(p.end_date);
+    return days !== null && days < 0;
+  });
 
   const handleTogglePromo = async (promo: Promotion) => {
     try {
@@ -215,6 +237,45 @@ export default function ProductsPage() {
             animate="visible"
             className="space-y-3"
           >
+            {/* Expiry alert banners */}
+            {expiredActivePromos.length > 0 && (
+              <motion.div
+                variants={fadeInUp}
+                className="flex items-start gap-3 rounded-xl border border-red-200 dark:border-red-800/40 bg-red-500/10 px-4 py-3 text-sm text-red-600 dark:text-red-400"
+              >
+                <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                <div>
+                  <p className="font-medium">
+                    {expiredActivePromos.length} active promo{expiredActivePromos.length > 1 ? "s have" : " has"} already expired
+                  </p>
+                  <p className="mt-0.5 text-xs text-red-500 dark:text-red-500/80">
+                    {expiredActivePromos.map((p) => p.product?.name ?? "Unknown").join(", ")} — consider deactivating.
+                  </p>
+                </div>
+              </motion.div>
+            )}
+            {expiringPromos.length > 0 && (
+              <motion.div
+                variants={fadeInUp}
+                className="flex items-start gap-3 rounded-xl border border-amber-200 dark:border-amber-800/40 bg-amber-500/10 px-4 py-3 text-sm text-amber-700 dark:text-amber-400"
+              >
+                <Clock className="mt-0.5 h-4 w-4 shrink-0" />
+                <div>
+                  <p className="font-medium">
+                    {expiringPromos.length} promo{expiringPromos.length > 1 ? "s expire" : " expires"} within 7 days
+                  </p>
+                  <p className="mt-0.5 text-xs text-amber-600 dark:text-amber-500/80">
+                    {expiringPromos
+                      .map((p) => {
+                        const d = daysUntilExpiry(p.end_date);
+                        const label = d === 0 ? "today" : d === 1 ? "tomorrow" : `in ${d} days`;
+                        return `${p.product?.name ?? "Unknown"} (${label})`;
+                      })
+                      .join(", ")}
+                  </p>
+                </div>
+              </motion.div>
+            )}
             <div className="flex justify-end">
               <button className="flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-dark">
                 <Plus className="h-4 w-4" />
@@ -240,8 +301,34 @@ export default function ProductsPage() {
                       </span>
                     )}
                   </div>
-                  <p className="text-xs text-zinc-500 mt-0.5">
-                    {promo.product?.sku} · {promo.start_date} → {promo.end_date}
+                  <p className="text-xs text-zinc-500 mt-0.5 flex flex-wrap items-center gap-1.5">
+                    <span>{promo.product?.sku} · {promo.start_date} → {promo.end_date}</span>
+                    {(() => {
+                      const days = daysUntilExpiry(promo.end_date);
+                      if (days === null) return null;
+                      if (days < 0 && promo.is_active)
+                        return (
+                          <span className="inline-flex items-center gap-1 rounded border border-red-300 dark:border-red-700/50 bg-red-500/10 px-1.5 py-0.5 text-xs font-medium text-red-600 dark:text-red-400">
+                            <AlertTriangle className="h-3 w-3" />
+                            Expired
+                          </span>
+                        );
+                      if (days <= 2 && promo.is_active)
+                        return (
+                          <span className="inline-flex items-center gap-1 rounded border border-red-200 dark:border-red-800/30 bg-red-500/10 px-1.5 py-0.5 text-xs font-medium text-red-500 dark:text-red-400">
+                            <Clock className="h-3 w-3" />
+                            {days === 0 ? "Expires today" : days === 1 ? "Expires tomorrow" : `Expires in ${days}d`}
+                          </span>
+                        );
+                      if (days <= 7 && promo.is_active)
+                        return (
+                          <span className="inline-flex items-center gap-1 rounded border border-amber-200 dark:border-amber-800/30 bg-amber-500/10 px-1.5 py-0.5 text-xs font-medium text-amber-600 dark:text-amber-400">
+                            <Clock className="h-3 w-3" />
+                            {`Expires in ${days}d`}
+                          </span>
+                        );
+                      return null;
+                    })()}
                   </p>
                 </div>
                 <button
