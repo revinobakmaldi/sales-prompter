@@ -27,7 +27,7 @@ SalesPrompter helps distributor salesmen know exactly which products to prioriti
 | Database | Supabase Postgres |
 | Auth | Password gate via environment variable |
 | Deployment | Vercel (frontend), local Flask server (backend) |
-| LLM | OpenRouter API (Gemini 2.0 Flash) — visit briefing insights |
+| LLM | OpenRouter API (Qwen) — visit briefing insights |
 
 ---
 
@@ -51,12 +51,27 @@ Phase 1 runs on every request. Phase 2 scores are pre-computed, cached in Postgr
 
 ### LLM-Powered Visit Briefings
 
-Each retailer detail page includes an AI-generated **visit briefing** — a concise 3–4 sentence summary telling the salesman exactly what to focus on. Powered by OpenRouter (Gemini 2.0 Flash), the insight highlights:
+Each retailer detail page includes an AI-generated **visit briefing** — a concise 3–4 sentence summary telling the salesman exactly what to focus on. Powered by OpenRouter (Qwen), the insight highlights:
 - The single most important action for this visit
 - Active promotions the salesman should mention
 - Declining or new-to-retailer products worth pushing
 
 Insights are cached in the `insights` table and flagged as stale when recommendations are refreshed.
+
+### Salesman-Centric View
+
+A dedicated **salesman selector** (`/salesman`) lets each salesman pick their profile and see a personalized dashboard with:
+- **Visit plan cards** — each retailer shows tier, top 3 recommended products, and an AI briefing preview
+- **Search & filter** — find retailers by name, code, or region; filter by tier (Gold/Silver/Bronze)
+- **Batch insights** — briefings are loaded in bulk to avoid slow N+1 requests
+
+### Promotions Management
+
+A full-featured **promotions page** (`/promotions`) provides complete CRUD operations:
+- **Create / edit** promotions via a slide-in modal with product picker, type selector (discount, NPL, bundle, priority), discount %, date range, and active toggle
+- **Delete** with confirmation dialog
+- **Filter tabs** — All, Active, Inactive, Expiring Soon (with counts)
+- **Expiry alerts** — banner warnings for expired and soon-to-expire promos, plus per-card badges with countdowns
 
 ---
 
@@ -73,20 +88,24 @@ sales-prompter/
 │   ├── recommendations.py
 │   ├── insights.py
 │   ├── model_train.py
+│   ├── salesmen.py
+│   ├── dashboard.py
 │   └── visits.py
 ├── server.py             # Local dev server (combines all Flask apps)
 ├── app/                  # Next.js App Router pages
 │   ├── page.tsx          # Login
 │   ├── dashboard/        # Manager KPI overview
+│   ├── salesman/         # Salesman selector page
 │   ├── salesman/[id]/    # Field view (mobile-first — core screen)
 │   ├── retailers/        # Retailer list + detail
-│   ├── products/         # Product catalog + promo management
-│   └── settings/         # CSV upload, model retraining
+│   ├── products/         # Product catalog
+│   ├── promotions/       # Promotions management (CRUD, filters, expiry alerts)
+│   └── settings/         # CSV upload (transactions, salesmen, retailers), model retraining
 ├── components/
 │   ├── shared/           # Navbar, Footer, Background, AuthGate
 │   ├── recommendations/  # RecommendationCard, InsightPanel, PromoTag, ScoreBadge
 │   ├── retailers/        # RetailerCard, PurchaseHistory
-│   ├── salesman/         # SalesmanView (mobile-optimized)
+│   ├── salesman/         # SalesmanView, RetailerVisitCard (mobile-optimized)
 │   └── upload/           # CsvDropzone
 ├── lib/                  # Types, API wrappers, utilities
 └── supabase/
@@ -148,14 +167,27 @@ The Next.js dev server proxies `/api/*` requests to Flask automatically.
 
 ## Data Ingestion
 
-Upload transaction history via CSV from the Settings page. Expected format:
+Upload data via CSV from the Settings page. Three upload types are supported:
 
+**Transactions:**
 ```csv
 transaction_date,retailer_code,retailer_name,sku,product_name,quantity,amount
 2024-01-15,RT001,Toko Maju Jaya,SKU-001,Wafer Coklat 100g,24,120000
 ```
 
-The upload API auto-creates retailers and products if they don't exist, deduplicates records, and triggers a recommendation refresh.
+**Salesmen:**
+```csv
+code,name
+SM001,Budi Santoso
+```
+
+**Retailers:**
+```csv
+code,name,salesman_code,tier
+RT001,Toko Maju Jaya,SM001,Gold
+```
+
+The upload APIs auto-create related records, deduplicate on upsert, and warn about unmatched references (e.g. unknown salesman codes).
 
 ---
 
