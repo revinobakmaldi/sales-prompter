@@ -8,33 +8,28 @@ import {
   Package,
   AlertCircle,
   Tag,
-  CheckCircle2,
-  XCircle,
-  Plus,
+  ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
 import { AuthGate } from "@/components/shared/AuthGate";
-import { PromoTag } from "@/components/recommendations/PromoTag";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
-import { getProducts, getPromotions, updatePromotion } from "@/lib/api";
+import { getProducts, getPromotions } from "@/lib/api";
 import type { Product, Promotion } from "@/lib/types";
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [promotions, setPromotions] = useState<Promotion[]>([]);
+  const [activePromoCount, setActivePromoCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
-  const [activeTab, setActiveTab] = useState<"products" | "promotions">(
-    "products"
-  );
 
   useEffect(() => {
     Promise.all([getProducts(), getPromotions()])
-      .then(([prods, promos]) => {
+      .then(([prods, promos]: [Product[], Promotion[]]) => {
         setProducts(prods);
-        setPromotions(promos);
+        setActivePromoCount(promos.filter((p) => p.is_active).length);
       })
       .catch((err) =>
         setError(err instanceof Error ? err.message : "Failed to load")
@@ -49,25 +44,6 @@ export default function ProductsPage() {
       p.brand.toLowerCase().includes(search.toLowerCase())
   );
 
-  const filteredPromos = promotions.filter(
-    (p) =>
-      (p.product?.name ?? "").toLowerCase().includes(search.toLowerCase()) ||
-      (p.product?.sku ?? "").toLowerCase().includes(search.toLowerCase())
-  );
-
-  const handleTogglePromo = async (promo: Promotion) => {
-    try {
-      const updated = await updatePromotion(promo.id, {
-        is_active: !promo.is_active,
-      });
-      setPromotions((prev) =>
-        prev.map((p) => (p.id === updated.id ? updated : p))
-      );
-    } catch {
-      // silently fail
-    }
-  };
-
   return (
     <AuthGate>
       <Navbar />
@@ -77,24 +53,34 @@ export default function ProductsPage() {
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
-          className="mb-6"
+          className="mb-6 flex flex-wrap items-start justify-between gap-4"
         >
-          <h1 className="text-3xl font-bold">
-            <span className="bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-500 dark:from-zinc-100 dark:via-zinc-300 dark:to-zinc-500 bg-clip-text text-transparent">
-              Products &amp; Promotions
-            </span>
-          </h1>
-          <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-            {products.length} products · {promotions.filter((p) => p.is_active).length} active promos
-          </p>
+          <div>
+            <h1 className="text-3xl font-bold">
+              <span className="bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-500 dark:from-zinc-100 dark:via-zinc-300 dark:to-zinc-500 bg-clip-text text-transparent">
+                Products
+              </span>
+            </h1>
+            <p className="mt-1 text-zinc-500 dark:text-zinc-400 text-sm">
+              {products.length} products · {activePromoCount} active promos
+            </p>
+          </div>
+          <Link
+            href="/promotions"
+            className="flex items-center gap-1.5 rounded-lg border border-primary/30 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
+          >
+            <Tag className="h-4 w-4" />
+            Manage Promotions
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </motion.div>
 
-        {/* Search + tab switcher */}
+        {/* Search */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
-          className="mb-6 flex flex-col gap-3"
+          className="mb-6"
         >
           <div className="relative">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
@@ -105,30 +91,6 @@ export default function ProductsPage() {
               placeholder="Search by name, SKU or brand..."
               className="w-full rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 py-2.5 pl-9 pr-4 text-sm text-foreground placeholder:text-zinc-400 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
             />
-          </div>
-          <div className="flex gap-1 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 p-1">
-            <button
-              onClick={() => setActiveTab("products")}
-              className={`flex flex-1 items-center justify-center gap-1.5 rounded-md py-2 text-sm font-medium transition-all ${
-                activeTab === "products"
-                  ? "bg-white dark:bg-zinc-800 text-foreground shadow-sm"
-                  : "text-zinc-500 hover:text-foreground"
-              }`}
-            >
-              <Package className="h-4 w-4" />
-              Products ({filteredProducts.length})
-            </button>
-            <button
-              onClick={() => setActiveTab("promotions")}
-              className={`flex flex-1 items-center justify-center gap-1.5 rounded-md py-2 text-sm font-medium transition-all ${
-                activeTab === "promotions"
-                  ? "bg-white dark:bg-zinc-800 text-foreground shadow-sm"
-                  : "text-zinc-500 hover:text-foreground"
-              }`}
-            >
-              <Tag className="h-4 w-4" />
-              Promotions ({filteredPromos.length})
-            </button>
           </div>
         </motion.div>
 
@@ -141,131 +103,56 @@ export default function ProductsPage() {
             <AlertCircle className="h-5 w-5 shrink-0" />
             {error}
           </div>
-        ) : activeTab === "products" ? (
-          filteredProducts.length === 0 ? (
-            <div className="flex flex-col items-center gap-3 py-20 text-zinc-500">
-              <Package className="h-10 w-10 opacity-30" />
-              <p className="text-sm">
-                {search
-                  ? "No products match your search."
-                  : "No products yet. Upload transaction data to add products."}
-              </p>
-            </div>
-          ) : (
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              animate="visible"
-              className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800"
-            >
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
-                    <th className="px-4 py-3 text-left font-medium text-zinc-600 dark:text-zinc-400">Product</th>
-                    <th className="px-4 py-3 text-left font-medium text-zinc-600 dark:text-zinc-400">SKU</th>
-                    <th className="px-4 py-3 text-left font-medium text-zinc-600 dark:text-zinc-400">Brand</th>
-                    <th className="px-4 py-3 text-left font-medium text-zinc-600 dark:text-zinc-400">Category</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredProducts.map((product, i) => (
-                    <motion.tr
-                      key={product.id}
-                      variants={fadeInUp}
-                      custom={i}
-                      className="border-b border-zinc-100 dark:border-zinc-800/50 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-800/30 last:border-b-0"
-                    >
-                      <td className="px-4 py-3 font-medium text-foreground">
-                        {product.name}
-                      </td>
-                      <td className="px-4 py-3 font-mono text-xs text-zinc-500">
-                        {product.sku}
-                      </td>
-                      <td className="px-4 py-3 text-zinc-600 dark:text-zinc-400">
-                        {product.brand}
-                      </td>
-                      <td className="px-4 py-3 text-zinc-500 text-xs">
-                        {product.category}
-                        {product.sub_category
-                          ? ` / ${product.sub_category}`
-                          : ""}
-                      </td>
-                    </motion.tr>
-                  ))}
-                </tbody>
-              </table>
-            </motion.div>
-          )
-        ) : /* Promotions tab */
-        filteredPromos.length === 0 ? (
+        ) : filteredProducts.length === 0 ? (
           <div className="flex flex-col items-center gap-3 py-20 text-zinc-500">
-            <Tag className="h-10 w-10 opacity-30" />
+            <Package className="h-10 w-10 opacity-30" />
             <p className="text-sm">
-              {search ? "No promotions match your search." : "No promotions yet."}
+              {search
+                ? "No products match your search."
+                : "No products yet. Upload transaction data to add products."}
             </p>
-            <button className="flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-dark">
-              <Plus className="h-4 w-4" />
-              Add Promotion
-            </button>
           </div>
         ) : (
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="space-y-3"
+            className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800"
           >
-            <div className="flex justify-end">
-              <button className="flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-dark">
-                <Plus className="h-4 w-4" />
-                Add Promotion
-              </button>
-            </div>
-            {filteredPromos.map((promo, i) => (
-              <motion.div
-                key={promo.id}
-                variants={fadeInUp}
-                custom={i}
-                className="flex items-center justify-between rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 px-4 py-3"
-              >
-                <div className="min-w-0 flex-1">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <p className="font-medium text-foreground">
-                      {promo.product?.name ?? "Unknown product"}
-                    </p>
-                    <PromoTag promotion={promo} compact />
-                    {!promo.is_active && (
-                      <span className="rounded border border-zinc-300 dark:border-zinc-600 px-1.5 py-0.5 text-xs text-zinc-400">
-                        Inactive
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-xs text-zinc-500 mt-0.5">
-                    {promo.product?.sku} · {promo.start_date} → {promo.end_date}
-                  </p>
-                </div>
-                <button
-                  onClick={() => handleTogglePromo(promo)}
-                  className={`ml-4 shrink-0 rounded-lg border px-3 py-1.5 text-xs font-medium transition-all ${
-                    promo.is_active
-                      ? "border-red-200 dark:border-red-800/30 text-red-400 hover:bg-red-500/10"
-                      : "border-primary/30 text-primary hover:bg-primary/10"
-                  }`}
-                >
-                  {promo.is_active ? (
-                    <span className="flex items-center gap-1">
-                      <XCircle className="h-3.5 w-3.5" />
-                      Deactivate
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-1">
-                      <CheckCircle2 className="h-3.5 w-3.5" />
-                      Activate
-                    </span>
-                  )}
-                </button>
-              </motion.div>
-            ))}
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
+                  <th className="px-4 py-3 text-left font-medium text-zinc-600 dark:text-zinc-400">Product</th>
+                  <th className="px-4 py-3 text-left font-medium text-zinc-600 dark:text-zinc-400">SKU</th>
+                  <th className="px-4 py-3 text-left font-medium text-zinc-600 dark:text-zinc-400">Brand</th>
+                  <th className="px-4 py-3 text-left font-medium text-zinc-600 dark:text-zinc-400">Category</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredProducts.map((product, i) => (
+                  <motion.tr
+                    key={product.id}
+                    variants={fadeInUp}
+                    custom={i}
+                    className="border-b border-zinc-100 dark:border-zinc-800/50 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-800/30 last:border-b-0"
+                  >
+                    <td className="px-4 py-3 font-medium text-foreground">
+                      {product.name}
+                    </td>
+                    <td className="px-4 py-3 font-mono text-xs text-zinc-500">
+                      {product.sku}
+                    </td>
+                    <td className="px-4 py-3 text-zinc-600 dark:text-zinc-400">
+                      {product.brand}
+                    </td>
+                    <td className="px-4 py-3 text-zinc-500 text-xs">
+                      {product.category}
+                      {product.sub_category ? ` / ${product.sub_category}` : ""}
+                    </td>
+                  </motion.tr>
+                ))}
+              </tbody>
+            </table>
           </motion.div>
         )}
       </main>

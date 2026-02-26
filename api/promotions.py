@@ -43,3 +43,14 @@ def update_promotion():
     data = request.get_json(silent=True) or {}
     result = db.table("promotions").update(data).eq("id", id_).execute()
     return jsonify(result.data[0])
+
+
+@app.route("/api/promotions", methods=["DELETE"])
+def delete_promotion():
+    db = get_db()
+    id_ = request.args.get("id")
+    if not id_:
+        return jsonify({"error": "id parameter required"}), 400
+
+    db.table("promotions").delete().eq("id", id_).execute()
+    return jsonify({"deleted": id_})

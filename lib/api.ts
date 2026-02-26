@@ -106,6 +106,10 @@ export async function updatePromotion(
   });
 }
 
+export async function deletePromotion(id: string): Promise<{ deleted: string }> {
+  return request(`/api/promotions?id=${id}`, { method: "DELETE" });
+}
+
 // Transactions
 export async function getTransactions(retailerId: string): Promise<Transaction[]> {
   return request(`/api/transactions?retailer_id=${retailerId}`);
