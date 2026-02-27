@@ -1,0 +1,301 @@
+transaction_date,retailer_code,retailer_name,sku,product_name,quantity,amount
+2026-02-06,RT-001,Toko Maju Jaya,BEV-011,Minuman Mango 250ml,48,216000
+2026-01-22,RT-001,Toko Maju Jaya,BEV-009,Minuman Isoton 500ml,24,168000
+2026-02-10,RT-001,Toko Maju Jaya,BEV-009,Minuman Isoton 500ml,12,84000
+2026-01-22,RT-001,Toko Maju Jaya,BEV-005,Jus Apel 200ml,24,120000
+2026-02-12,RT-001,Toko Maju Jaya,BEV-005,Jus Apel 200ml,12,60000
+2026-01-25,RT-001,Toko Maju Jaya,SNK-012,Snack Jagung 100g,48,216000
+2026-02-09,RT-001,Toko Maju Jaya,SNK-012,Snack Jagung 100g,12,54000
+2026-02-06,RT-001,Toko Maju Jaya,SNK-005,Permen Mint 50g,6,18000
+2026-02-05,RT-001,Toko Maju Jaya,PC-001,Sampo 170ml,12,180000
+2026-01-31,RT-001,Toko Maju Jaya,BEV-012,Teh Lemon 330ml,48,216000
+2026-02-01,RT-001,Toko Maju Jaya,SNK-010,Permen Buah 50g,12,36000
+2026-02-05,RT-001,Toko Maju Jaya,SNK-011,Wafer Stroberi 100g,12,60000
+2026-02-07,RT-002,Minimart Sejahtera,BEV-006,Minuman Soda 330ml,12,60000
+2026-01-24,RT-002,Minimart Sejahtera,BEV-010,Kopi Susu 200ml,6,48000
+2026-02-07,RT-002,Minimart Sejahtera,BEV-010,Kopi Susu 200ml,6,48000
+2026-01-31,RT-002,Minimart Sejahtera,DAI-001,Susu Full Cream 1L,12,216000
+2026-02-02,RT-002,Minimart Sejahtera,BEV-012,Teh Lemon 330ml,24,108000
+2026-01-23,RT-002,Minimart Sejahtera,DAI-007,Yogurt Plain 200g,12,132000
+2026-02-06,RT-002,Minimart Sejahtera,DAI-007,Yogurt Plain 200g,6,66000
+2026-02-02,RT-002,Minimart Sejahtera,SNK-008,Keripik Tempe 100g,12,66000
+2026-02-02,RT-002,Minimart Sejahtera,SNK-003,Keripik Singkong 250g,48,336000
+2026-01-28,RT-002,Minimart Sejahtera,BEV-001,Minuman Jeruk 250ml,48,192000
+2026-02-11,RT-002,Minimart Sejahtera,BEV-001,Minuman Jeruk 250ml,24,96000
+2026-01-28,RT-003,Warung Berkah,BEV-009,Minuman Isoton 500ml,24,168000
+2026-02-09,RT-003,Warung Berkah,DAI-003,Yogurt Stroberi 150g,12,144000
+2026-02-02,RT-003,Warung Berkah,DAI-004,Keju Slice 100g,6,90000
+2026-01-22,RT-003,Warung Berkah,INS-006,Mie Instan Seafood 85g,48,192000
+2026-02-11,RT-003,Warung Berkah,INS-006,Mie Instan Seafood 85g,24,96000
+2026-02-05,RT-003,Warung Berkah,SNK-011,Wafer Stroberi 100g,24,120000
+2026-02-09,RT-003,Warung Berkah,BEV-008,Air Mineral 1500ml,48,240000
+2026-01-27,RT-003,Warung Berkah,INS-007,Sup Instan 30g,48,192000
+2026-02-05,RT-003,Warung Berkah,SNK-013,Biskuit Soda 200g,48,360000
+2026-02-10,RT-003,Warung Berkah,DAI-008,Susu UHT 200ml,24,120000
+2026-01-26,RT-003,Warung Berkah,SNK-002,Biskuit Susu 200g,12,102000
+2026-02-07,RT-003,Warung Berkah,SNK-002,Biskuit Susu 200g,48,408000
+2026-01-30,RT-004,Toko Harapan,INS-004,Nasi Instan 150g,12,144000
+2026-02-13,RT-004,Toko Harapan,INS-004,Nasi Instan 150g,24,288000
+2026-01-30,RT-004,Toko Harapan,BEV-004,Susu Coklat 200ml,24,144000
+2026-02-09,RT-004,Toko Harapan,SNK-005,Permen Mint 50g,6,18000
+2026-02-10,RT-004,Toko Harapan,SNK-006,Wafer Vanilla 100g,6,30000
+2026-01-25,RT-004,Toko Harapan,PC-003,Pasta Gigi 120g,12,144000
+2026-02-08,RT-004,Toko Harapan,PC-003,Pasta Gigi 120g,6,72000
+2026-02-08,RT-004,Toko Harapan,BEV-002,Teh Manis 330ml,6,27000
+2026-01-22,RT-004,Toko Harapan,DAI-007,Yogurt Plain 200g,24,264000
+2026-02-06,RT-004,Toko Harapan,DAI-007,Yogurt Plain 200g,24,264000
+2026-01-31,RT-004,Toko Harapan,PC-005,Pelembab Tangan 50ml,6,108000
+2026-01-30,RT-004,Toko Harapan,SNK-012,Snack Jagung 100g,6,27000
+2026-02-14,RT-004,Toko Harapan,SNK-012,Snack Jagung 100g,12,54000
+2026-02-01,RT-004,Toko Harapan,DAI-004,Keju Slice 100g,12,180000
+2026-02-13,RT-004,Toko Harapan,BEV-010,Kopi Susu 200ml,12,96000
+2026-01-25,RT-004,Toko Harapan,SNK-002,Biskuit Susu 200g,12,102000
+2026-02-14,RT-004,Toko Harapan,SNK-002,Biskuit Susu 200g,48,408000
+2026-02-06,RT-005,Kios Sentosa,PC-001,Sampo 170ml,6,90000
+2026-02-06,RT-005,Kios Sentosa,SNK-006,Wafer Vanilla 100g,48,240000
+2026-01-23,RT-005,Kios Sentosa,DAI-005,Mentega 200g,6,84000
+2026-02-08,RT-005,Kios Sentosa,DAI-005,Mentega 200g,6,84000
+2026-02-11,RT-005,Kios Sentosa,SNK-001,Wafer Coklat 100g,48,240000
+2026-02-07,RT-005,Kios Sentosa,INS-001,Mie Instan Ayam 85g,48,168000
+2026-01-31,RT-005,Kios Sentosa,PC-005,Pelembab Tangan 50ml,12,216000
+2026-02-03,RT-005,Kios Sentosa,BEV-007,Teh Hijau 250ml,48,216000
+2026-01-26,RT-005,Kios Sentosa,INS-010,Bihun Instan 70g,48,144000
+2026-02-14,RT-005,Kios Sentosa,INS-010,Bihun Instan 70g,12,36000
+2026-01-29,RT-005,Kios Sentosa,INS-004,Nasi Instan 150g,12,144000
+2026-02-14,RT-005,Kios Sentosa,INS-004,Nasi Instan 150g,12,144000
+2026-01-26,RT-005,Kios Sentosa,SNK-014,Keripik Pisang 200g,12,96000
+2026-02-11,RT-005,Kios Sentosa,SNK-014,Keripik Pisang 200g,24,192000
+2026-01-31,RT-005,Kios Sentosa,INS-003,Mie Instan Goreng 85g,48,168000
+2026-02-03,RT-006,Toko Mandiri,SNK-014,Keripik Pisang 200g,24,192000
+2026-01-22,RT-006,Toko Mandiri,BEV-003,Air Mineral 600ml,12,36000
+2026-02-10,RT-006,Toko Mandiri,BEV-003,Air Mineral 600ml,24,72000
+2026-02-05,RT-006,Toko Mandiri,SNK-006,Wafer Vanilla 100g,24,120000
+2026-01-25,RT-006,Toko Mandiri,BEV-002,Teh Manis 330ml,24,108000
+2026-02-10,RT-006,Toko Mandiri,BEV-002,Teh Manis 330ml,12,54000
+2026-01-23,RT-006,Toko Mandiri,SNK-013,Biskuit Soda 200g,24,180000
+2026-02-12,RT-006,Toko Mandiri,SNK-013,Biskuit Soda 200g,48,360000
+2026-01-24,RT-006,Toko Mandiri,SNK-005,Permen Mint 50g,12,36000
+2026-02-14,RT-006,Toko Mandiri,SNK-005,Permen Mint 50g,48,144000
+2026-02-05,RT-006,Toko Mandiri,BEV-010,Kopi Susu 200ml,6,48000
+2026-01-31,RT-006,Toko Mandiri,SNK-004,Kacang Goreng 150g,48,288000
+2026-02-05,RT-006,Toko Mandiri,SNK-015,Mochi Kacang 100g,12,84000
+2026-01-22,RT-006,Toko Mandiri,SNK-007,Biskuit Keju 200g,6,54000
+2026-02-08,RT-006,Toko Mandiri,SNK-007,Biskuit Keju 200g,12,108000
+2026-01-29,RT-007,Warung Barokah,BEV-010,Kopi Susu 200ml,48,384000
+2026-01-29,RT-007,Warung Barokah,BEV-004,Susu Coklat 200ml,12,72000
+2026-02-12,RT-007,Warung Barokah,BEV-004,Susu Coklat 200ml,12,72000
+2026-01-29,RT-007,Warung Barokah,SNK-013,Biskuit Soda 200g,12,90000
+2026-02-12,RT-007,Warung Barokah,SNK-013,Biskuit Soda 200g,24,180000
+2026-01-30,RT-007,Warung Barokah,DAI-007,Yogurt Plain 200g,12,132000
+2026-02-15,RT-007,Warung Barokah,DAI-007,Yogurt Plain 200g,12,132000
+2026-01-23,RT-007,Warung Barokah,BEV-003,Air Mineral 600ml,48,144000
+2026-02-07,RT-007,Warung Barokah,BEV-003,Air Mineral 600ml,12,36000
+2026-01-30,RT-007,Warung Barokah,PC-004,Sabun Cuci 800g,12,264000
+2026-02-08,RT-007,Warung Barokah,DAI-006,Susu Kental Manis 370g,24,312000
+2026-01-30,RT-007,Warung Barokah,SNK-015,Mochi Kacang 100g,48,336000
+2026-01-31,RT-007,Warung Barokah,INS-003,Mie Instan Goreng 85g,24,84000
+2026-01-27,RT-007,Warung Barokah,PC-005,Pelembab Tangan 50ml,12,216000
+2026-02-15,RT-007,Warung Barokah,PC-005,Pelembab Tangan 50ml,6,108000
+2026-01-29,RT-007,Warung Barokah,BEV-011,Minuman Mango 250ml,6,27000
+2026-02-11,RT-007,Warung Barokah,DAI-002,Susu Skim 1L,6,102000
+2026-01-28,RT-008,Toko Sumber Rejeki,BEV-006,Minuman Soda 330ml,24,120000
+2026-02-13,RT-008,Toko Sumber Rejeki,BEV-006,Minuman Soda 330ml,6,30000
+2026-02-05,RT-008,Toko Sumber Rejeki,SNK-011,Wafer Stroberi 100g,12,60000
+2026-01-29,RT-008,Toko Sumber Rejeki,BEV-011,Minuman Mango 250ml,6,27000
+2026-01-23,RT-008,Toko Sumber Rejeki,DAI-005,Mentega 200g,6,84000
+2026-02-08,RT-008,Toko Sumber Rejeki,DAI-005,Mentega 200g,12,168000
+2026-01-25,RT-008,Toko Sumber Rejeki,SNK-002,Biskuit Susu 200g,6,51000
+2026-02-11,RT-008,Toko Sumber Rejeki,SNK-002,Biskuit Susu 200g,12,102000
+2026-01-30,RT-008,Toko Sumber Rejeki,INS-004,Nasi Instan 150g,12,144000
+2026-01-23,RT-008,Toko Sumber Rejeki,INS-008,Oatmeal Instan 40g,12,96000
+2026-02-06,RT-008,Toko Sumber Rejeki,INS-008,Oatmeal Instan 40g,48,384000
+2026-01-25,RT-008,Toko Sumber Rejeki,BEV-002,Teh Manis 330ml,6,27000
+2026-02-12,RT-008,Toko Sumber Rejeki,BEV-002,Teh Manis 330ml,6,27000
+2026-01-22,RT-008,Toko Sumber Rejeki,DAI-004,Keju Slice 100g,12,180000
+2026-02-05,RT-008,Toko Sumber Rejeki,DAI-004,Keju Slice 100g,24,360000
+2026-02-01,RT-008,Toko Sumber Rejeki,INS-010,Bihun Instan 70g,24,72000
+2026-02-15,RT-008,Toko Sumber Rejeki,INS-010,Bihun Instan 70g,12,36000
+2026-01-26,RT-008,Toko Sumber Rejeki,SNK-006,Wafer Vanilla 100g,12,60000
+2026-01-28,RT-008,Toko Sumber Rejeki,SNK-006,Wafer Vanilla 100g,24,120000
+2026-02-02,RT-009,Toko Baru,PC-003,Pasta Gigi 120g,6,72000
+2026-01-28,RT-009,Toko Baru,BEV-003,Air Mineral 600ml,12,36000
+2026-02-15,RT-009,Toko Baru,BEV-003,Air Mineral 600ml,6,18000
+2026-01-24,RT-009,Toko Baru,BEV-006,Minuman Soda 330ml,12,60000
+2026-02-12,RT-009,Toko Baru,BEV-006,Minuman Soda 330ml,12,60000
+2026-02-02,RT-009,Toko Baru,INS-007,Sup Instan 30g,24,96000
+2026-02-02,RT-009,Toko Baru,BEV-007,Teh Hijau 250ml,48,216000
+2026-01-24,RT-009,Toko Baru,SNK-014,Keripik Pisang 200g,12,96000
+2026-02-11,RT-009,Toko Baru,SNK-014,Keripik Pisang 200g,48,384000
+2026-02-02,RT-009,Toko Baru,DAI-008,Susu UHT 200ml,6,30000
+2026-01-26,RT-009,Toko Baru,PC-005,Pelembab Tangan 50ml,6,108000
+2026-02-14,RT-009,Toko Baru,PC-005,Pelembab Tangan 50ml,6,108000
+2026-02-07,RT-009,Toko Baru,PC-004,Sabun Cuci 800g,12,264000
+2026-01-31,RT-009,Toko Baru,SNK-015,Mochi Kacang 100g,48,336000
+2026-02-04,RT-009,Toko Baru,INS-006,Mie Instan Seafood 85g,12,48000
+2026-02-08,RT-009,Toko Baru,SNK-003,Keripik Singkong 250g,24,168000
+2026-01-30,RT-010,Warung Asri,BEV-004,Susu Coklat 200ml,24,144000
+2026-02-09,RT-010,Warung Asri,BEV-009,Minuman Isoton 500ml,48,336000
+2026-01-26,RT-010,Warung Asri,SNK-008,Keripik Tempe 100g,48,264000
+2026-02-02,RT-010,Warung Asri,SNK-004,Kacang Goreng 150g,12,72000
+2026-02-07,RT-010,Warung Asri,BEV-001,Minuman Jeruk 250ml,12,48000
+2026-01-26,RT-010,Warung Asri,INS-008,Oatmeal Instan 40g,12,96000
+2026-02-09,RT-010,Warung Asri,INS-008,Oatmeal Instan 40g,48,384000
+2026-01-27,RT-010,Warung Asri,SNK-003,Keripik Singkong 250g,48,336000
+2026-02-11,RT-010,Warung Asri,SNK-003,Keripik Singkong 250g,12,84000
+2026-01-31,RT-010,Warung Asri,SNK-005,Permen Mint 50g,24,72000
+2026-02-05,RT-010,Warung Asri,BEV-007,Teh Hijau 250ml,6,27000
+2026-01-26,RT-010,Warung Asri,SNK-006,Wafer Vanilla 100g,24,120000
+2026-02-11,RT-010,Warung Asri,SNK-006,Wafer Vanilla 100g,6,30000
+2026-01-25,RT-010,Warung Asri,DAI-003,Yogurt Stroberi 150g,24,288000
+2026-01-25,RT-010,Warung Asri,BEV-010,Kopi Susu 200ml,24,192000
+2026-02-12,RT-010,Warung Asri,BEV-010,Kopi Susu 200ml,48,384000
+2026-01-24,RT-011,Kios Makmur,BEV-010,Kopi Susu 200ml,12,96000
+2026-02-13,RT-011,Kios Makmur,BEV-010,Kopi Susu 200ml,24,192000
+2026-01-23,RT-011,Kios Makmur,SNK-005,Permen Mint 50g,48,144000
+2026-02-08,RT-011,Kios Makmur,SNK-005,Permen Mint 50g,24,72000
+2026-01-23,RT-011,Kios Makmur,DAI-004,Keju Slice 100g,6,90000
+2026-02-09,RT-011,Kios Makmur,DAI-004,Keju Slice 100g,24,360000
+2026-02-01,RT-011,Kios Makmur,SNK-015,Mochi Kacang 100g,6,42000
+2026-02-15,RT-011,Kios Makmur,SNK-015,Mochi Kacang 100g,12,84000
+2026-02-01,RT-011,Kios Makmur,BEV-009,Minuman Isoton 500ml,48,336000
+2026-02-15,RT-011,Kios Makmur,BEV-009,Minuman Isoton 500ml,48,336000
+2026-01-30,RT-011,Kios Makmur,SNK-008,Keripik Tempe 100g,24,132000
+2026-02-14,RT-011,Kios Makmur,SNK-008,Keripik Tempe 100g,24,132000
+2026-02-02,RT-011,Kios Makmur,SNK-006,Wafer Vanilla 100g,6,30000
+2026-01-24,RT-011,Kios Makmur,INS-010,Bihun Instan 70g,48,144000
+2026-02-10,RT-011,Kios Makmur,INS-010,Bihun Instan 70g,24,72000
+2026-01-29,RT-011,Kios Makmur,SNK-003,Keripik Singkong 250g,12,84000
+2026-02-08,RT-011,Kios Makmur,SNK-007,Biskuit Keju 200g,12,108000
+2026-02-01,RT-011,Kios Makmur,INS-009,Mie Instan Kari 85g,48,192000
+2026-02-03,RT-011,Kios Makmur,INS-009,Mie Instan Kari 85g,24,96000
+2026-02-03,RT-012,Toko Pelangi,BEV-003,Air Mineral 600ml,24,72000
+2026-02-04,RT-012,Toko Pelangi,INS-005,Bubur Instan 40g,24,120000
+2026-02-09,RT-012,Toko Pelangi,INS-006,Mie Instan Seafood 85g,48,192000
+2026-01-27,RT-012,Toko Pelangi,BEV-004,Susu Coklat 200ml,24,144000
+2026-02-13,RT-012,Toko Pelangi,BEV-004,Susu Coklat 200ml,48,288000
+2026-01-23,RT-012,Toko Pelangi,BEV-011,Minuman Mango 250ml,24,108000
+2026-02-13,RT-012,Toko Pelangi,BEV-011,Minuman Mango 250ml,48,216000
+2026-02-05,RT-012,Toko Pelangi,BEV-010,Kopi Susu 200ml,48,384000
+2026-02-04,RT-012,Toko Pelangi,BEV-005,Jus Apel 200ml,6,30000
+2026-02-01,RT-012,Toko Pelangi,SNK-003,Keripik Singkong 250g,12,84000
+2026-01-28,RT-012,Toko Pelangi,INS-010,Bihun Instan 70g,24,72000
+2026-02-15,RT-012,Toko Pelangi,INS-010,Bihun Instan 70g,12,36000
+2026-02-02,RT-012,Toko Pelangi,DAI-008,Susu UHT 200ml,12,60000
+2026-02-12,RT-012,Toko Pelangi,SNK-002,Biskuit Susu 200g,12,102000
+2026-02-05,RT-012,Toko Pelangi,PC-005,Pelembab Tangan 50ml,6,108000
+2026-01-25,RT-013,Warung Subur,PC-003,Pasta Gigi 120g,6,72000
+2026-02-11,RT-013,Warung Subur,PC-003,Pasta Gigi 120g,6,72000
+2026-01-28,RT-013,Warung Subur,BEV-005,Jus Apel 200ml,48,240000
+2026-02-11,RT-013,Warung Subur,BEV-005,Jus Apel 200ml,12,60000
+2026-01-30,RT-013,Warung Subur,PC-002,Sabun Mandi 85g,12,48000
+2026-02-03,RT-013,Warung Subur,SNK-007,Biskuit Keju 200g,12,108000
+2026-01-25,RT-013,Warung Subur,SNK-004,Kacang Goreng 150g,12,72000
+2026-02-15,RT-013,Warung Subur,SNK-004,Kacang Goreng 150g,6,36000
+2026-02-02,RT-013,Warung Subur,SNK-013,Biskuit Soda 200g,24,180000
+2026-02-04,RT-013,Warung Subur,BEV-004,Susu Coklat 200ml,24,144000
+2026-01-31,RT-013,Warung Subur,INS-009,Mie Instan Kari 85g,24,96000
+2026-02-09,RT-013,Warung Subur,INS-002,Mie Instan Soto 85g,48,168000
+2026-01-22,RT-013,Warung Subur,SNK-006,Wafer Vanilla 100g,24,120000
+2026-02-12,RT-013,Warung Subur,SNK-006,Wafer Vanilla 100g,48,240000
+2026-01-30,RT-013,Warung Subur,BEV-007,Teh Hijau 250ml,12,54000
+2026-01-23,RT-013,Warung Subur,INS-003,Mie Instan Goreng 85g,48,168000
+2026-02-14,RT-013,Warung Subur,BEV-011,Minuman Mango 250ml,24,108000
+2026-01-29,RT-014,Minimart Bersama,INS-003,Mie Instan Goreng 85g,12,42000
+2026-02-03,RT-014,Minimart Bersama,PC-003,Pasta Gigi 120g,6,72000
+2026-02-02,RT-014,Minimart Bersama,BEV-005,Jus Apel 200ml,6,30000
+2026-01-31,RT-014,Minimart Bersama,INS-008,Oatmeal Instan 40g,12,96000
+2026-02-01,RT-014,Minimart Bersama,DAI-005,Mentega 200g,12,168000
+2026-02-04,RT-014,Minimart Bersama,SNK-002,Biskuit Susu 200g,48,408000
+2026-01-31,RT-014,Minimart Bersama,INS-010,Bihun Instan 70g,48,144000
+2026-02-03,RT-014,Minimart Bersama,SNK-014,Keripik Pisang 200g,6,48000
+2026-01-25,RT-014,Minimart Bersama,DAI-003,Yogurt Stroberi 150g,12,144000
+2026-01-26,RT-014,Minimart Bersama,SNK-012,Snack Jagung 100g,6,27000
+2026-02-02,RT-014,Minimart Bersama,SNK-005,Permen Mint 50g,48,144000
+2026-02-07,RT-015,Toko Surya,SNK-006,Wafer Vanilla 100g,24,120000
+2026-01-23,RT-015,Toko Surya,SNK-010,Permen Buah 50g,6,18000
+2026-02-12,RT-015,Toko Surya,SNK-010,Permen Buah 50g,12,36000
+2026-01-31,RT-015,Toko Surya,DAI-001,Susu Full Cream 1L,6,108000
+2026-02-15,RT-015,Toko Surya,DAI-001,Susu Full Cream 1L,24,432000
+2026-01-27,RT-015,Toko Surya,BEV-001,Minuman Jeruk 250ml,6,24000
+2026-02-13,RT-015,Toko Surya,BEV-001,Minuman Jeruk 250ml,6,24000
+2026-01-26,RT-015,Toko Surya,SNK-003,Keripik Singkong 250g,48,336000
+2026-02-01,RT-015,Toko Surya,PC-003,Pasta Gigi 120g,6,72000
+2026-01-22,RT-015,Toko Surya,SNK-008,Keripik Tempe 100g,24,132000
+2026-02-12,RT-015,Toko Surya,SNK-008,Keripik Tempe 100g,48,264000
+2026-02-05,RT-015,Toko Surya,INS-008,Oatmeal Instan 40g,48,384000
+2026-01-23,RT-015,Toko Surya,DAI-002,Susu Skim 1L,6,102000
+2026-02-07,RT-015,Toko Surya,DAI-002,Susu Skim 1L,6,102000
+2026-02-05,RT-015,Toko Surya,INS-009,Mie Instan Kari 85g,48,192000
+2026-01-28,RT-016,Warung Mekar,INS-010,Bihun Instan 70g,24,72000
+2026-01-30,RT-016,Warung Mekar,SNK-007,Biskuit Keju 200g,12,108000
+2026-02-04,RT-016,Warung Mekar,INS-007,Sup Instan 30g,12,48000
+2026-02-09,RT-016,Warung Mekar,PC-004,Sabun Cuci 800g,12,264000
+2026-01-30,RT-016,Warung Mekar,INS-008,Oatmeal Instan 40g,12,96000
+2026-01-29,RT-016,Warung Mekar,SNK-010,Permen Buah 50g,48,144000
+2026-01-28,RT-016,Warung Mekar,BEV-008,Air Mineral 1500ml,48,240000
+2026-02-15,RT-016,Warung Mekar,BEV-008,Air Mineral 1500ml,12,60000
+2026-01-28,RT-016,Warung Mekar,BEV-007,Teh Hijau 250ml,6,27000
+2026-02-11,RT-016,Warung Mekar,BEV-007,Teh Hijau 250ml,6,27000
+2026-01-30,RT-016,Warung Mekar,SNK-014,Keripik Pisang 200g,24,192000
+2026-02-03,RT-016,Warung Mekar,SNK-008,Keripik Tempe 100g,6,33000
+2026-02-09,RT-016,Warung Mekar,BEV-006,Minuman Soda 330ml,12,60000
+2026-01-25,RT-017,Kios Abadi,SNK-004,Kacang Goreng 150g,6,36000
+2026-02-13,RT-017,Kios Abadi,SNK-004,Kacang Goreng 150g,24,144000
+2026-02-11,RT-017,Kios Abadi,PC-002,Sabun Mandi 85g,12,48000
+2026-01-30,RT-017,Kios Abadi,INS-002,Mie Instan Soto 85g,48,168000
+2026-01-26,RT-017,Kios Abadi,DAI-008,Susu UHT 200ml,6,30000
+2026-02-12,RT-017,Kios Abadi,DAI-008,Susu UHT 200ml,24,120000
+2026-02-09,RT-017,Kios Abadi,INS-006,Mie Instan Seafood 85g,24,96000
+2026-02-01,RT-017,Kios Abadi,SNK-008,Keripik Tempe 100g,6,33000
+2026-02-15,RT-017,Kios Abadi,SNK-008,Keripik Tempe 100g,24,132000
+2026-01-25,RT-017,Kios Abadi,BEV-006,Minuman Soda 330ml,12,60000
+2026-02-11,RT-017,Kios Abadi,BEV-006,Minuman Soda 330ml,48,240000
+2026-02-02,RT-017,Kios Abadi,SNK-010,Permen Buah 50g,24,72000
+2026-02-02,RT-017,Kios Abadi,BEV-003,Air Mineral 600ml,12,36000
+2026-01-25,RT-017,Kios Abadi,BEV-007,Teh Hijau 250ml,24,108000
+2026-02-11,RT-017,Kios Abadi,BEV-007,Teh Hijau 250ml,6,27000
+2026-01-24,RT-017,Kios Abadi,SNK-003,Keripik Singkong 250g,6,42000
+2026-02-12,RT-017,Kios Abadi,SNK-003,Keripik Singkong 250g,48,336000
+2026-01-26,RT-018,Toko Cahaya,BEV-006,Minuman Soda 330ml,12,60000
+2026-01-26,RT-018,Toko Cahaya,INS-010,Bihun Instan 70g,12,36000
+2026-02-11,RT-018,Toko Cahaya,INS-010,Bihun Instan 70g,48,144000
+2026-01-23,RT-018,Toko Cahaya,SNK-005,Permen Mint 50g,12,36000
+2026-02-12,RT-018,Toko Cahaya,SNK-005,Permen Mint 50g,6,18000
+2026-02-01,RT-018,Toko Cahaya,PC-005,Pelembab Tangan 50ml,12,216000
+2026-02-04,RT-018,Toko Cahaya,INS-005,Bubur Instan 40g,48,240000
+2026-01-28,RT-018,Toko Cahaya,DAI-008,Susu UHT 200ml,6,30000
+2026-02-15,RT-018,Toko Cahaya,DAI-008,Susu UHT 200ml,24,120000
+2026-02-02,RT-018,Toko Cahaya,BEV-005,Jus Apel 200ml,48,240000
+2026-01-24,RT-018,Toko Cahaya,DAI-007,Yogurt Plain 200g,12,132000
+2026-02-12,RT-018,Toko Cahaya,DAI-007,Yogurt Plain 200g,6,66000
+2026-02-03,RT-018,Toko Cahaya,DAI-002,Susu Skim 1L,12,204000
+2026-02-07,RT-018,Toko Cahaya,BEV-009,Minuman Isoton 500ml,12,84000
+2026-02-08,RT-018,Toko Cahaya,BEV-009,Minuman Isoton 500ml,12,84000
+2026-02-05,RT-019,Warung Jaya,SNK-015,Mochi Kacang 100g,6,42000
+2026-01-29,RT-019,Warung Jaya,SNK-003,Keripik Singkong 250g,12,84000
+2026-02-14,RT-019,Warung Jaya,SNK-003,Keripik Singkong 250g,6,42000
+2026-01-27,RT-019,Warung Jaya,INS-004,Nasi Instan 150g,24,288000
+2026-02-13,RT-019,Warung Jaya,INS-004,Nasi Instan 150g,12,144000
+2026-02-01,RT-019,Warung Jaya,DAI-003,Yogurt Stroberi 150g,24,288000
+2026-01-28,RT-019,Warung Jaya,INS-010,Bihun Instan 70g,24,72000
+2026-01-27,RT-019,Warung Jaya,INS-006,Mie Instan Seafood 85g,48,192000
+2026-01-31,RT-019,Warung Jaya,PC-005,Pelembab Tangan 50ml,12,216000
+2026-02-09,RT-019,Warung Jaya,INS-007,Sup Instan 30g,12,48000
+2026-02-10,RT-019,Warung Jaya,INS-009,Mie Instan Kari 85g,12,48000
+2026-01-28,RT-019,Warung Jaya,BEV-004,Susu Coklat 200ml,48,288000
+2026-02-11,RT-019,Warung Jaya,BEV-004,Susu Coklat 200ml,24,144000
+2026-02-01,RT-020,Toko Mutiara,SNK-013,Biskuit Soda 200g,48,360000
+2026-01-24,RT-020,Toko Mutiara,INS-005,Bubur Instan 40g,24,120000
+2026-02-13,RT-020,Toko Mutiara,INS-005,Bubur Instan 40g,48,240000
+2026-02-05,RT-020,Toko Mutiara,BEV-004,Susu Coklat 200ml,48,288000
+2026-01-22,RT-020,Toko Mutiara,BEV-007,Teh Hijau 250ml,48,216000
+2026-02-07,RT-020,Toko Mutiara,BEV-007,Teh Hijau 250ml,48,216000
+2026-01-31,RT-020,Toko Mutiara,SNK-005,Permen Mint 50g,12,36000
+2026-02-01,RT-020,Toko Mutiara,BEV-009,Minuman Isoton 500ml,12,84000
+2026-02-01,RT-020,Toko Mutiara,DAI-007,Yogurt Plain 200g,12,132000
+2026-01-27,RT-020,Toko Mutiara,SNK-015,Mochi Kacang 100g,24,168000
+2026-02-07,RT-020,Toko Mutiara,SNK-010,Permen Buah 50g,24,72000
+2026-01-23,RT-020,Toko Mutiara,INS-008,Oatmeal Instan 40g,24,192000
+2026-02-10,RT-020,Toko Mutiara,INS-008,Oatmeal Instan 40g,12,96000
+2026-02-02,RT-020,Toko Mutiara,DAI-001,Susu Full Cream 1L,6,108000
+2026-01-29,RT-020,Toko Mutiara,SNK-001,Wafer Coklat 100g,24,120000
