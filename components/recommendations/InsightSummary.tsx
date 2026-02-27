@@ -118,9 +118,15 @@ export function InsightSummary({ retailerId }: InsightSummaryProps) {
       )}
 
       {insight && (
-        <p className="text-sm leading-relaxed text-foreground/80">
-          {insight.summary}
-        </p>
+        <ul className="list-disc list-outside ml-4 space-y-1 text-sm leading-relaxed text-foreground/80">
+          {insight.summary
+            .split(/\n/)
+            .map((line) => line.replace(/^[\s]*[-•●*]\s*/, "").replace(/^\d+[.)]\s*/, "").trim())
+            .filter(Boolean)
+            .map((line, i) => (
+              <li key={i}>{line}</li>
+            ))}
+        </ul>
       )}
     </motion.div>
   );

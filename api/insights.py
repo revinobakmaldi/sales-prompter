@@ -136,11 +136,12 @@ Today's recommended products (ranked by priority):
 {rec_text}
 
 Instructions:
-- Write exactly 3-4 sentences.
+- Write exactly 3-5 bullet points, each starting with "- ".
 - Lead with the single most important action.
 - Highlight any active promotions the salesman should mention.
 - Note any declining or new-to-retailer products.
-- Use a direct, actionable tone — no greetings or fluff."""
+- Use a direct, actionable tone — no greetings or fluff.
+- Do NOT write paragraphs. Output ONLY bullet points, one per line."""
 
     # Call OpenRouter
     try:
