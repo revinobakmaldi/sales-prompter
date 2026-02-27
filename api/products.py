@@ -1,4 +1,4 @@
-"""GET|POST /api/products — product catalog."""
+"""GET|POST|PUT /api/products — product catalog."""
 import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -25,3 +25,15 @@ def create_product():
     data = request.get_json(silent=True) or {}
     result = db.table("products").insert(data).execute()
     return jsonify(result.data[0]), 201
+
+
+@app.route("/api/products", methods=["PUT"])
+def update_product():
+    db = get_db()
+    id_ = request.args.get("id")
+    if not id_:
+        return jsonify({"error": "id parameter required"}), 400
+
+    data = request.get_json(silent=True) or {}
+    result = db.table("products").update(data).eq("id", id_).execute()
+    return jsonify(result.data[0])

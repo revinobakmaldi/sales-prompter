@@ -80,6 +80,17 @@ export async function createProduct(
   });
 }
 
+export async function updateProduct(
+  id: string,
+  data: Partial<Product>
+): Promise<Product> {
+  return request(`/api/products?id=${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+}
+
 // Promotions
 export async function getPromotions(activeOnly = false): Promise<Promotion[]> {
   return request(`/api/promotions${activeOnly ? "?active=true" : ""}`);
