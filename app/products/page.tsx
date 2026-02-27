@@ -88,9 +88,9 @@ export default function ProductsPage() {
   const filteredProducts = products.filter((p) => {
     const q = search.toLowerCase();
     const matchSearch =
-      p.name.toLowerCase().includes(q) ||
-      p.sku.toLowerCase().includes(q) ||
-      p.brand.toLowerCase().includes(q);
+      (p.name ?? "").toLowerCase().includes(q) ||
+      (p.sku ?? "").toLowerCase().includes(q) ||
+      (p.brand ?? "").toLowerCase().includes(q);
     if (!matchSearch) return false;
     if (categoryFilter !== "all" && p.category !== categoryFilter) return false;
     return true;
@@ -105,9 +105,9 @@ export default function ProductsPage() {
 
   function openEdit(product: Product) {
     setForm({
-      name: product.name,
-      sku: product.sku,
-      brand: product.brand,
+      name: product.name ?? "",
+      sku: product.sku ?? "",
+      brand: product.brand ?? "",
       category: product.category ?? "",
       sub_category: product.sub_category ?? "",
       price: product.price != null ? String(product.price) : "",
