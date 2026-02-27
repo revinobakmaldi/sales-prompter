@@ -6,6 +6,25 @@ called from any serverless handler without creating a new connection.
 """
 from datetime import date, timedelta
 
+WEIGHT_DEFAULTS = {
+    "recency_weight": 0.50,
+    "promo_boost": 0.30,
+    "new_product_bonus": 0.20,
+    "decline_flag": 0.15,
+    "decline_threshold": 0.70,
+}
+
+
+def _load_weights(db) -> dict:
+    """Load scoring weights from config table, falling back to defaults."""
+    try:
+        result = db.table("config").select("value").eq("key", "scoring_weights").execute()
+        if result.data:
+            return {**WEIGHT_DEFAULTS, **result.data[0]["value"]}
+    except Exception:
+        pass
+    return WEIGHT_DEFAULTS
+
 
 # ---------------------------------------------------------------------------
 # Refresh Phase 1 recommendations for one retailer (bulk approach)
@@ -64,6 +83,8 @@ def refresh_phase1_for_retailer(retailer_id: str, db) -> int:
     if not eligible:
         return 0
 
+    w = _load_weights(db)
+
     scored = []
     for pid in eligible:
         signals: dict[str, float] = {}
@@ -77,18 +98,18 @@ def refresh_phase1_for_retailer(retailer_id: str, db) -> int:
         signals["recency_score"] = min(days_inactive / 90, 1.0)
 
         # Signal 2 — Active promo
-        signals["promo_boost"] = 0.3 if pid in promo_pids else 0.0
+        signals["promo_boost"] = w["promo_boost"] if pid in promo_pids else 0.0
 
         # Signal 3 — Never purchased
-        signals["new_product_bonus"] = 0.2 if pid not in bought_pids else 0.0
+        signals["new_product_bonus"] = w["new_product_bonus"] if pid not in bought_pids else 0.0
 
         # Signal 4 — Declining order frequency
         r_qty = recent_qty.get(pid, 0.0)
         o_qty = older_qty.get(pid, 0.0)
-        signals["decline_flag"] = 0.15 if (o_qty > 0 and r_qty < o_qty * 0.7) else 0.0
+        signals["decline_flag"] = w["decline_flag"] if (o_qty > 0 and r_qty < o_qty * w["decline_threshold"]) else 0.0
 
         total = (
-            signals["recency_score"] * 0.50
+            signals["recency_score"] * w["recency_weight"]
             + signals["promo_boost"]
             + signals["new_product_bonus"]
             + signals["decline_flag"]

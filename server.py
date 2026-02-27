@@ -21,7 +21,7 @@ CORS(app)
 _modules = [
     "auth", "salesmen", "retailers", "products",
     "visits", "promotions", "dashboard", "transactions",
-    "recommendations", "model_train", "insights",
+    "recommendations", "model_train", "insights", "scoring_config",
 ]
 
 for name in _modules:

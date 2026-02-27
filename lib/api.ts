@@ -195,6 +195,29 @@ export async function generateInsight(
   return request(`/api/insights/${retailerId}`, { method: "POST" });
 }
 
+// Scoring config
+export interface ScoringWeights {
+  recency_weight: number;
+  promo_boost: number;
+  new_product_bonus: number;
+  decline_flag: number;
+  decline_threshold: number;
+}
+
+export async function getScoringConfig(): Promise<ScoringWeights> {
+  return request("/api/scoring-config");
+}
+
+export async function updateScoringConfig(
+  data: ScoringWeights
+): Promise<ScoringWeights> {
+  return request("/api/scoring-config", {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+}
+
 // Model training
 export async function triggerModelTrain(): Promise<{ message: string }> {
   return request("/api/model/train", { method: "POST" });

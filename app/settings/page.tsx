@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Upload,
@@ -22,11 +22,23 @@ import {
   uploadRetailersCsv,
   refreshRecommendations,
   triggerModelTrain,
+  getScoringConfig,
+  updateScoringConfig,
 } from "@/lib/api";
+import type { ScoringWeights } from "@/lib/api";
 
 type UploadStatus = "idle" | "uploading" | "success" | "error";
 type TrainStatus = "idle" | "training" | "success" | "error";
 type RefreshStatus = "idle" | "refreshing" | "success" | "error";
+type ConfigStatus = "idle" | "loading" | "saving" | "success" | "error";
+
+const WEIGHT_FIELDS: { key: keyof ScoringWeights; label: string; desc: string; step: number; min: number; max: number }[] = [
+  { key: "recency_weight", label: "Recency Score Weight", desc: "Multiplier for inactive-days signal (0–1)", step: 0.05, min: 0, max: 1 },
+  { key: "promo_boost", label: "Promo Boost", desc: "Flat boost for products in active promo", step: 0.05, min: 0, max: 1 },
+  { key: "new_product_bonus", label: "New Product Bonus", desc: "Boost for products never bought by retailer", step: 0.05, min: 0, max: 1 },
+  { key: "decline_flag", label: "Decline Flag Boost", desc: "Boost for declining order frequency", step: 0.05, min: 0, max: 1 },
+  { key: "decline_threshold", label: "Decline Threshold", desc: "Trigger when recent qty drops below this % of prior period", step: 0.05, min: 0, max: 1 },
+];
 
 export default function SettingsPage() {
   // Salesman upload state
@@ -54,6 +66,32 @@ export default function SettingsPage() {
   const [trainMessage, setTrainMessage] = useState<string | null>(null);
 
   const [refreshStatus, setRefreshStatus] = useState<RefreshStatus>("idle");
+
+  // Scoring config state
+  const [weights, setWeights] = useState<ScoringWeights>({
+    recency_weight: 0.50, promo_boost: 0.30, new_product_bonus: 0.20,
+    decline_flag: 0.15, decline_threshold: 0.70,
+  });
+  const [configStatus, setConfigStatus] = useState<ConfigStatus>("loading");
+
+  useEffect(() => {
+    getScoringConfig()
+      .then((data) => { setWeights(data); setConfigStatus("idle"); })
+      .catch(() => setConfigStatus("idle"));
+  }, []);
+
+  const handleSaveWeights = async () => {
+    setConfigStatus("saving");
+    try {
+      const saved = await updateScoringConfig(weights);
+      setWeights(saved);
+      setConfigStatus("success");
+      setTimeout(() => setConfigStatus("idle"), 3000);
+    } catch {
+      setConfigStatus("error");
+      setTimeout(() => setConfigStatus("idle"), 3000);
+    }
+  };
 
   const handleSalesmanUpload = async () => {
     if (!salesmanFile) return;
@@ -471,7 +509,7 @@ export default function SettingsPage() {
             </div>
           </motion.section>
 
-          {/* Config */}
+          {/* Scoring Config */}
           <motion.section
             variants={scaleIn}
             className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 p-6"
@@ -485,29 +523,68 @@ export default function SettingsPage() {
                   Scoring Configuration
                 </h2>
                 <p className="text-xs text-zinc-500">
-                  Phase 1 rule weights (read-only — configure via env)
+                  Phase 1 rule weights — adjust and save, then refresh recommendations
                 </p>
               </div>
             </div>
 
             <div className="space-y-3">
-              {[
-                { label: "Recency Score Weight", value: "0.50", desc: "Higher = inactive products rank higher" },
-                { label: "Promo Boost", value: "+0.30", desc: "Flat boost for products in active promo" },
-                { label: "New Product Bonus", value: "+0.20", desc: "Products never bought by this retailer" },
-                { label: "Decline Flag", value: "+0.15", desc: "Products with declining order frequency" },
-              ].map(({ label, value, desc }) => (
+              {WEIGHT_FIELDS.map(({ key, label, desc, step, min, max }) => (
                 <div
-                  key={label}
-                  className="flex items-center justify-between rounded-lg bg-zinc-50 dark:bg-zinc-800/50 px-4 py-3"
+                  key={key}
+                  className="flex items-center justify-between gap-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 px-4 py-3"
                 >
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-sm font-medium text-foreground">{label}</p>
                     <p className="text-xs text-zinc-500">{desc}</p>
                   </div>
-                  <span className="font-mono text-sm font-semibold text-primary">{value}</span>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <input
+                      type="range"
+                      min={min}
+                      max={max}
+                      step={step}
+                      value={weights[key]}
+                      onChange={(e) => setWeights((w) => ({ ...w, [key]: parseFloat(e.target.value) }))}
+                      className="w-24 accent-primary"
+                      disabled={configStatus === "loading"}
+                    />
+                    <span className="w-12 text-right font-mono text-sm font-semibold text-primary">
+                      {weights[key].toFixed(2)}
+                    </span>
+                  </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-4 flex items-center gap-3">
+              <button
+                onClick={handleSaveWeights}
+                disabled={configStatus === "saving" || configStatus === "loading"}
+                className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {configStatus === "saving" ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    Saving...
+                  </>
+                ) : (
+                  "Save Weights"
+                )}
+              </button>
+
+              {configStatus === "success" && (
+                <div className="flex items-center gap-1.5 text-sm text-primary">
+                  <CheckCircle2 className="h-4 w-4" />
+                  Weights saved
+                </div>
+              )}
+              {configStatus === "error" && (
+                <div className="flex items-center gap-1.5 text-sm text-red-400">
+                  <AlertCircle className="h-4 w-4" />
+                  Save failed
+                </div>
+              )}
             </div>
           </motion.section>
         </motion.div>
